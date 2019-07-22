@@ -17,6 +17,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(9000);
   // in docker replace the above line
-  // await app.listen(9000, '0.0.0.0.)
+  // await app.listen(9000, '0.0.0.0.');
 }
 bootstrap();
