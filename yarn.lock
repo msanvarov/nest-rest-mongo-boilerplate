@@ -5052,10 +5052,10 @@ ts-node@8.3.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tsc-watch@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-2.2.1.tgz#6e41a091e07d26dbcf5c815bfb514435ded33286"
-  integrity sha512-E61+ozEutLDgmXN+1+rkoCaUmd2g/cpa4mpEPMA3gPi89PBJiAcIUtH0xdCxeChXlR9TcuwOuTqu5jZDRhgfRw==
+tsc-watch@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-2.4.0.tgz#0b3b9d98d8032ba02acae1d38a7ebb16da0591f7"
+  integrity sha512-HTNRQm/P2YdP34b7bhaSOjVQ/YdTJGkNYyAD0scEcK7qXX7BWsBG8n3YlYHC9a6mX//gs5ouWQ3DXrBWjVp6rQ==
   dependencies:
     cross-spawn "^5.1.0"
     node-cleanup "^2.1.2"
