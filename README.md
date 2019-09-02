@@ -101,7 +101,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Salim Anvarov](https://msanvarov.github.io/personal-portfolio/]
+- Author - [Salim Anvarov](https://msanvarov.github.io/personal-portfolio/)
 
 ## License
 
