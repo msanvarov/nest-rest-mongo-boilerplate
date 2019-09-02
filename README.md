@@ -42,7 +42,7 @@
 
 ### Deploying with Docker
 
-- Execute the bash script using the following command:
+- Execute the following command in app directory:
 
 ```bash
 # creates and loads the docker container with required configuration
