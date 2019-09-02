@@ -85,7 +85,7 @@ By default the application comes with a config module that can inject the `Confi
 
 ## Swagger (Open API)
 
-Restful APIs can be described using the Swagger module. To view the current endpoints and test authentication visit http://localhost:9000/api/docs (non docker) or http://localhost/api/docs (docker)
+Restful APIs can be described using the Swagger module. To view the current endpoints and test authentication visit http://localhost:9001/api/docs (non docker) or http://localhost/api/docs (docker)
 
 ## Mongoose Integrated
 
