@@ -23,4 +23,5 @@ export interface ProfileI extends mongoose.Document {
 export class ProfileFillableFields {
   username: string;
   email: string;
+  password: string;
 }

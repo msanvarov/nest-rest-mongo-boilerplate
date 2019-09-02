@@ -10,18 +10,16 @@ export class ProfileService {
     @InjectModel("Profile") private readonly profileModel: Model<ProfileI>,
   ) {}
   async get(id: number): Promise<ProfileI> {
-    return await this.profileModel.findById(id).exec();
+    return this.profileModel.findById(id).exec();
   }
 
   async getByEmail(email: string) {
-    return await this.profileModel.findOne({ email }).exec();
+    return this.profileModel.findOne({ email }).exec();
   }
 
   async getByEmailAndPass(email: string, password: string) {
     const passHash = crypto.createHmac("sha256", password).digest("hex");
-    return await this.profileModel
-      .findOne({ email, password: passHash })
-      .exec();
+    return this.profileModel.findOne({ email, password: passHash }).exec();
   }
 
   async create(payload: ProfileFillableFields) {
@@ -29,7 +27,10 @@ export class ProfileService {
     if (user) {
       throw new NotAcceptableException("The email already exists in system.");
     }
-    const createdProfile = new this.profileModel(payload);
-    return await createdProfile.save();
+    const createdProfile = new this.profileModel({
+      ...payload,
+      password: crypto.createHmac("sha256", payload.password).digest("hex"),
+    });
+    return createdProfile.save();
   }
 }
