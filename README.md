@@ -34,24 +34,22 @@
 
 ## Setup
 
-### Manually Deploying on non Docker Machine
+### Manually Deploying without Docker
 
 - Create a .env file using the `cp .env.example .env` command and replace the existing env variables with the correct variables (mongodb url either srv or no auth localhost)
 - Install depedencies using `npm i` or `yarn`
 - Start the app for pre-production using `npm run start` or for development using `npm run start:dev` (the app will be exposed on the port 9000; not to conflict with React)
 
-### Deploying on Docker Container
+### Deploying with Docker
 
 - Execute the bash script using the following command:
 
 ```bash
-# intializes the nestjs project for first time use
-$ ./init
+# creates and loads the docker container with required configuration
+$ docker-compose up
 ```
 
-- The following command will setup the project for you (building the Docker images, starting docker-compose stack). The NestJS app running in dev mode will be exposed on http://localhost:80
-
-- Navigate to the `main.ts` file and uncomment the line `await app.listen(9000, '0.0.0.0.');` to replace with the default `await app.listen(9000);`
+- The following command will setup the project for you (building the Docker images, starting docker-compose stack). The Web application and mongo will exposed on http://localhost:9001 and http://localhost:27017 respectively
 
 ## Testing
 
@@ -103,9 +101,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Salim Anvarov](https://msanvarov.github.io/personal-portfolio/]
 
 ## License
 
