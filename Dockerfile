@@ -1,13 +1,19 @@
-FROM node:lts-alpine
-
+FROM node:carbon
+# App directory
 WORKDIR /app
 
-ENV NODE_ENV development
-COPY package.json yarn.lock ./
-RUN yarn
+# App dependencies
+COPY package*.json ./
+RUN npm i
 
+# Copy app source code
 COPY . .
 
-EXPOSE 3000
+# Env setup
+COPY .env.example .env
 
-CMD [ "yarn", "start:dev" ]
+#Expose port and begin application
+EXPOSE 9001
+
+# Start the app
+CMD [ "npm", "run", "start:dev"]
