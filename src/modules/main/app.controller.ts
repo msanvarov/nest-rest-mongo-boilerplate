@@ -13,7 +13,7 @@ export class AppController {
   @ApiResponse({ status: 200, description: "Request Received" })
   @ApiResponse({ status: 400, description: "Request Failed" })
   getString(): string {
-    return this.appService.getHello();
+    return this.appService.mainRoute();
   }
 
   @Get("/profile")
