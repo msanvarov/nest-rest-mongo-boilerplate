@@ -2,8 +2,10 @@ import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { MongooseModule, MongooseModuleAsyncOptions } from "@nestjs/mongoose";
-import { ConfigModule, ConfigService } from "../config";
-import { AuthModule } from "../auth";
+import { ConfigModule } from "../config/config.module";
+import { ConfigService } from "../config/config.service";
+import { AuthModule } from "../auth/auth.module";
+import { ProfileModule } from "../profile/profile.module";
 
 @Module({
   imports: [
@@ -18,6 +20,7 @@ import { AuthModule } from "../auth";
     }),
     ConfigModule,
     AuthModule,
+    ProfileModule,
   ],
   controllers: [AppController],
   providers: [AppService],

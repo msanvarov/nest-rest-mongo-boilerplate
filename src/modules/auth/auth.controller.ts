@@ -1,7 +1,9 @@
 import { Controller, Body, Post } from "@nestjs/common";
 import { ApiResponse, ApiUseTags } from "@nestjs/swagger";
-import { AuthService, LoginPayload, RegisterPayload } from "./";
-import { ProfileService } from "../profile";
+import { AuthService } from "./auth.service";
+import { LoginPayload } from "./login.payload";
+import { RegisterPayload } from "./register.payload";
+import { ProfileService } from "../profile/profile.service";
 
 @Controller("api/auth")
 @ApiUseTags("authentication")

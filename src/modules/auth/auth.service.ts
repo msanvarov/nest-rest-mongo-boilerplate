@@ -1,7 +1,8 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { ConfigService } from "../config";
-import { IProfile, ProfileService } from "../profile";
+import { ConfigService } from "../config/config.service";
+import { ProfileService } from "../profile/profile.service";
+import { IProfile } from "../profile/profile.model";
 import { LoginPayload } from "./login.payload";
 
 @Injectable()
