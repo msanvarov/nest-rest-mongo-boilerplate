@@ -1,7 +1,7 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { ConfigService } from "./../config";
-import { ProfileI, ProfileService } from "../profile";
+import { ConfigService } from "../config";
+import { IProfile, ProfileService } from "../profile";
 import { LoginPayload } from "./login.payload";
 
 @Injectable()
@@ -12,17 +12,16 @@ export class AuthService {
     private readonly profileService: ProfileService,
   ) {}
 
-  async createToken(user: ProfileI) {
+  async createToken({ _id, username, email, avatar }: IProfile) {
     return {
       expiresIn: this.configService.get("JWT_EXPIRATION_TIME"),
-      accessToken: this.jwtService.sign({ id: user.id }),
-      user,
+      accessToken: this.jwtService.sign({ _id, username, email, avatar }),
     };
   }
 
-  async validateUser(payload: LoginPayload): Promise<any> {
-    const user = await this.profileService.getByEmailAndPass(
-      payload.email,
+  async validateUser(payload: LoginPayload) {
+    const user = await this.profileService.getByUsernameAndPass(
+      payload.username,
       payload.password,
     );
     if (!user) {
