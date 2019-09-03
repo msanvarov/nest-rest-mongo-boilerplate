@@ -24,12 +24,9 @@ export class ConfigService {
         .string()
         .valid(["dev", "prod"])
         .default("dev"),
-      APP_URL: joi
-        .string()
-        .regex(/:\/\/[0-9a-z-.]+\.[a-z]+\//i)
-        .uri({
-          scheme: [/https?/],
-        }),
+      APP_URL: joi.string().uri({
+        scheme: [/https?/],
+      }),
       WEBTOKEN_SECRET_KEY: joi.string().required(),
       WEBTOKEN_EXPIRATION_TIME: joi.number().default(1800),
       DB_URL: joi.string().regex(/^mongodb/),
