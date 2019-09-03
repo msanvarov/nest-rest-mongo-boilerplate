@@ -14,7 +14,7 @@ export class ProfileService {
   constructor(
     @InjectModel("Profile") private readonly profileModel: Model<IProfile>,
   ) {}
-  async get(id: number): Promise<IProfile> {
+  async get(id: string): Promise<IProfile> {
     return this.profileModel
       .findById(id)
       .then((user: IProfile) =>
