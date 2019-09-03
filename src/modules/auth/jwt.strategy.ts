@@ -27,8 +27,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     if (Object.entries(user).length === 0 && user.constructor === Object) {
       throw new UnauthorizedException();
     }
-
-    console.log("validation for jwt strategy:", user);
     done(null, user);
   }
 }
