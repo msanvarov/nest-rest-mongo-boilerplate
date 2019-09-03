@@ -11,8 +11,8 @@ export const Profile = new mongoose.Schema({
   },
 });
 
-export interface ProfileI extends mongoose.Document {
-  readonly id: mongoose.ObjectID;
+export interface IProfile extends mongoose.Document {
+  readonly _id: mongoose.ObjectID;
   readonly username: string;
   readonly email: string;
   password: string;
