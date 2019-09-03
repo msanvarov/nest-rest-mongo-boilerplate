@@ -3,6 +3,7 @@ import * as gravatar from "gravatar";
 import { Model } from "mongoose";
 import { InjectModel } from "@nestjs/mongoose";
 import {
+  BadRequestException,
   Injectable,
   InternalServerErrorException,
   NotAcceptableException,
@@ -71,5 +72,17 @@ export class ProfileService {
       }),
     });
     return createdProfile.save();
+  }
+
+  async delete(username: string) {
+    return this.profileModel.deleteOne({ username }).then(profile => {
+      if (profile.deletedCount === 1) {
+        return { message: `Deleted ${username} from records` };
+      } else {
+        throw new BadRequestException(
+          `Failed to delete a profile by the name of ${username}.`,
+        );
+      }
+    });
   }
 }
