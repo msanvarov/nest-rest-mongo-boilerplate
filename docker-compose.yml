@@ -1,7 +1,7 @@
 version: "3"
 services:
   nest:
-    container_name: webapp
+    container_name: nest
     build: ./
     ports:
       - "9001:9001"
