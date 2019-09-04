@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-mongoose-boilerplate",
+  "name": "nest-mongoose-boilerplate",
   "version": "0.0.1",
   "description": "",
   "author": "msanvarov",
@@ -12,6 +12,7 @@
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
     "start:prod": "node dist/main.js",
     "lint": "tslint -p tsconfig.json -c tslint.json",
+    "typedocs": "npx compodoc -p tsconfig.json -s -d docs",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -33,6 +34,8 @@
     "class-validator": "0.10.0",
     "crypto": "1.0.1",
     "dotenv": "8.1.0",
+    "fastify-helmet": "^3.0.1",
+    "fastify-rate-limit": "^2.2.0",
     "fastify-swagger": "2.4.0",
     "gravatar": "1.8.0",
     "mongoose": "5.6.12",
@@ -42,9 +45,12 @@
     "rimraf": "3.0.0",
     "rxjs": "6.5.3",
     "swagger-ui-express": "4.0.7",
-    "typeorm": "0.2.18"
+    "typeorm": "0.2.18",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.10.0"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "1.1.10",
     "@nestjs/testing": "6.6.7",
     "@types/express": "4.17.1",
     "@types/gravatar": "1.8.0",
@@ -52,6 +58,7 @@
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
     "@types/supertest": "2.0.8",
+    "chai": "^4.2.0",
     "jest": "24.9.0",
     "prettier": "1.18.2",
     "supertest": "4.0.2",
