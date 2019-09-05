@@ -81,7 +81,7 @@ describe("AppController (e2e)", () => {
       });
   });
 
-  it("/api/auth/login (POST) login with unregistered account", () => {
+  it("/api/auth/login (POST) try to login with unregistered account", () => {
     return request(app.getHttpServer())
       .post("/api/auth/login")
       .send({
@@ -102,6 +102,16 @@ describe("AppController (e2e)", () => {
       .send({
         username: "test",
         email: "test.test@gmail.com",
+        password: "asdasd12321",
+      })
+      .expect(201);
+  });
+
+  it("/api/auth/login (POST) login to created account", () => {
+    return request(app.getHttpServer())
+      .post("/api/auth/login")
+      .send({
+        username: "test",
         password: "asdasd12321",
       })
       .expect(201);
