@@ -4,8 +4,9 @@ node_js:
 cache:
   directories:
     - "node_modules"
+services:
+  - "mongodb"
 before_script:
-  - "npm install"
   - "cp .env.example .env"
 script:
   - "npm run test:e2e"
