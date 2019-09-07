@@ -4,11 +4,12 @@ node_js:
 cache:
   directories:
     - "node_modules"
-before_script: [
+before_script:
     - "npm install",
     - "cp .env.example .env"
-  ],
-script: ["npm run test:e2e", "npm run start:dev"]
+script: 
+  - "npm run test:e2e", 
+  - "npm run start:dev"
 branches:
   only:
     - masters
