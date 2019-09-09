@@ -10,7 +10,6 @@ before_script:
   - "cp .env.example .env"
 script:
   - "npm run test:e2e"
-  - "npm run start:dev"
 branches:
   only:
     - master
