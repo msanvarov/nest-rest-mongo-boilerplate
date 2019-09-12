@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import joi from "@hapi/joi";
+import * as joi from "@hapi/joi";
 import * as fs from "fs";
 
 export interface EnvConfig {
@@ -32,9 +32,8 @@ export class ConfigService {
       DB_URL: joi.string().regex(/^mongodb/),
     });
 
-    const { error, value: validatedEnvConfig } = joi.validate(
+    const { error, value: validatedEnvConfig } = envVarsSchema.validate(
       envConfig,
-      envVarsSchema,
     );
     if (error) {
       throw new Error(`Config validation error: ${error.message}`);

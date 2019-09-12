@@ -4,7 +4,7 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
-import { AppModule } from "./modules/main/app.module";
+import { AppModule } from "./modules/app/app.module";
 import { setupSwagger } from "./swagger";
 
 declare const module: any;
