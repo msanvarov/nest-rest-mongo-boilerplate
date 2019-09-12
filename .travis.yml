@@ -3,9 +3,11 @@ node_js:
   - "stable"
 cache:
   directories:
-    - "node_modules"
+    - ./node_modules
 services:
   - "mongodb"
+install:
+  - npm install
 before_script:
   - "cp .env.example .env"
 script:
