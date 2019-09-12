@@ -22,7 +22,7 @@ export class ConfigService {
     const envVarsSchema: joi.ObjectSchema = joi.object({
       APP_ENV: joi
         .string()
-        .valid(["dev", "prod"])
+        .valid("dev", "prod")
         .default("dev"),
       APP_URL: joi.string().uri({
         scheme: [/https?/],
