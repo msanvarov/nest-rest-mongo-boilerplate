@@ -51,8 +51,6 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 ```bash
 # creates and loads the docker container with required configuration
 $ docker-compose up
-# copy the .env file from .env.example
-$ docker exec -it nest cp .env .env.example
 ```
 
 - The following command will setup the project for you (building the Docker images, starting docker-compose stack). The Web application and mongo will exposed on http://localhost:9001 and http://localhost:27017 respectively
