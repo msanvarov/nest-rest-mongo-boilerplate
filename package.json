@@ -64,15 +64,15 @@
     "prettier": "1.18.2",
     "supertest": "4.0.2",
     "ts-jest": "24.1.0",
-    "ts-loader": "^6.1.0",
+    "ts-loader": "6.1.0",
     "ts-node": "8.4.1",
     "tsc-watch": "4.0.0",
     "tsconfig-paths": "3.9.0",
     "tslint": "5.20.0",
     "typescript": "3.6.3",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9",
-    "webpack-node-externals": "^1.7.2"
+    "webpack": "4.40.2",
+    "webpack-cli": "3.3.9",
+    "webpack-node-externals": "1.7.2"
   },
   "jest": {
     "moduleFileExtensions": [
