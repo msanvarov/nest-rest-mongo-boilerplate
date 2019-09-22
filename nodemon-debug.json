@@ -1,6 +1,10 @@
 {
-  "watch": ["src"],
+  "watch": [
+    "src"
+  ],
   "ext": "ts",
-  "ignore": ["src/**/*.spec.ts"],
-  "exec": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\""
+  "ignore": [
+    "src/**/*.spec.ts"
+  ],
+  "exec": "node --inspect-brk -r ts-node/register src/main.ts"
 }
