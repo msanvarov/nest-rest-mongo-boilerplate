@@ -5,7 +5,7 @@ import {
 } from "@nestjs/platform-fastify";
 import * as helmet from "fastify-helmet";
 import * as fastifyRateLimit from "fastify-rate-limit";
-import { AppModule } from "./modules/main/app.module";
+import { AppModule } from "./modules/app/app.module";
 import { setupSwagger } from "./swagger";
 import { ValidationPipe } from "@nestjs/common";
 

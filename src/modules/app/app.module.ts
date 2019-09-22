@@ -19,6 +19,7 @@ import { WinstonModule } from "../winston/winston.module";
         ({
           uri: configService.get("DB_URL"),
           useNewUrlParser: true,
+          useUnifiedTopology: true,
         } as MongooseModuleAsyncOptions),
     }),
     WinstonModule.forRoot({

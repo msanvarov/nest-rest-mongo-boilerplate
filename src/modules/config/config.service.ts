@@ -22,7 +22,7 @@ export class ConfigService {
     const envVarsSchema: joi.ObjectSchema = joi.object({
       APP_ENV: joi
         .string()
-        .valid(["dev", "prod"])
+        .valid("dev", "prod")
         .default("dev"),
       APP_URL: joi.string().uri({
         scheme: [/https?/],
@@ -32,9 +32,8 @@ export class ConfigService {
       DB_URL: joi.string().regex(/^mongodb/),
     });
 
-    const { error, value: validatedEnvConfig } = joi.validate(
+    const { error, value: validatedEnvConfig } = envVarsSchema.validate(
       envConfig,
-      envVarsSchema,
     );
     if (error) {
       throw new Error(`Config validation error: ${error.message}`);
