@@ -1,0 +1,695 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nest-mongoose-boilerplate documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#configureOpenAPI" title="src/swagger/index.ts"><b>configureOpenAPI</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createWinstonAsyncProviders" title="src/modules/winston/winston.providers.ts"><b>createWinstonAsyncProviders</b>&nbsp;&nbsp;&nbsp;(src/.../winston.providers.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createWinstonProviders" title="src/modules/winston/winston.providers.ts"><b>createWinstonProviders</b>&nbsp;&nbsp;&nbsp;(src/.../winston.providers.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#module" title="src/main.hmr.ts"><b>module</b>&nbsp;&nbsp;&nbsp;(src/.../main.hmr.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Profile" title="src/modules/profile/profile.model.ts"><b>Profile</b>&nbsp;&nbsp;&nbsp;(src/.../profile.model.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#roles" title="src/modules/app/app.roles.ts"><b>roles</b>&nbsp;&nbsp;&nbsp;(src/.../app.roles.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_AUTH_LOCATION" title="src/swagger/constants.ts"><b>SWAGGER_API_AUTH_LOCATION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_AUTH_NAME" title="src/swagger/constants.ts"><b>SWAGGER_API_AUTH_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_CURRENT_VERSION" title="src/swagger/constants.ts"><b>SWAGGER_API_CURRENT_VERSION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_DESCRIPTION" title="src/swagger/constants.ts"><b>SWAGGER_API_DESCRIPTION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_NAME" title="src/swagger/constants.ts"><b>SWAGGER_API_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_ROOT" title="src/swagger/constants.ts"><b>SWAGGER_API_ROOT</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SWAGGER_API_SCHEMES" title="src/swagger/constants.ts"><b>SWAGGER_API_SCHEMES</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WINSTON_MODULE_OPTIONS" title="src/modules/winston/winston.constants.ts"><b>WINSTON_MODULE_OPTIONS</b>&nbsp;&nbsp;&nbsp;(src/.../winston.constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WINSTON_MODULE_PROVIDER" title="src/modules/winston/winston.constants.ts"><b>WINSTON_MODULE_PROVIDER</b>&nbsp;&nbsp;&nbsp;(src/.../winston.constants.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/swagger/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="configureOpenAPI"></a>
+                        <span class="name">
+                            <b>
+                            configureOpenAPI</b>
+                            <a href="#configureOpenAPI"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(app: INestApplication) &#x3D;&gt; {
+  const options &#x3D; new DocumentBuilder()
+    .setTitle(SWAGGER_API_NAME)
+    .setDescription(SWAGGER_API_DESCRIPTION)
+    .setVersion(SWAGGER_API_CURRENT_VERSION)
+    .setSchemes(...SWAGGER_API_SCHEMES)
+    .addBearerAuth(SWAGGER_API_AUTH_NAME, SWAGGER_API_AUTH_LOCATION)
+    .build();
+  const document &#x3D; SwaggerModule.createDocument(app, options);
+  SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Open api configuration to be used as a basis for web application</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/modules/winston/winston.providers.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createWinstonAsyncProviders"></a>
+                        <span class="name">
+                            <b>
+                            createWinstonAsyncProviders</b>
+                            <a href="#createWinstonAsyncProviders"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+  options: WinstonModuleAsyncOptions,
+): Provider[] &#x3D;&gt; {
+  return [
+    {
+      provide: WINSTON_MODULE_OPTIONS,
+      useFactory: options.useFactory,
+      inject: options.inject || [],
+    },
+    {
+      provide: WINSTON_MODULE_PROVIDER,
+      useFactory: (loggerOpts: LoggerOptions) &#x3D;&gt; createLogger(loggerOpts),
+      inject: [WINSTON_MODULE_OPTIONS],
+    },
+  ];
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Async constructor for a winston provider</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createWinstonProviders"></a>
+                        <span class="name">
+                            <b>
+                            createWinstonProviders</b>
+                            <a href="#createWinstonProviders"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+  loggerOpts: WinstonModuleOptions,
+): Provider[] &#x3D;&gt; {
+  return [
+    {
+      provide: WINSTON_MODULE_PROVIDER,
+      useFactory: () &#x3D;&gt; createLogger(loggerOpts),
+    },
+  ];
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Constructor a winston provider</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/main.hmr.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="module"></a>
+                        <span class="name">
+                            <b>
+                            module</b>
+                            <a href="#module"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Represents the webpack meta data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/modules/profile/profile.model.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Profile"></a>
+                        <span class="name">
+                            <b>
+                            Profile</b>
+                            <a href="#Profile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Schema({
+  username: { type: String, required: true },
+  email: { type: String, required: true },
+  name: { type: String, required: true },
+  password: { type: String, required: true },
+  avatar: { type: String, required: true },
+  roles: [{ type: String }],
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+})</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Mongoose Profile Schema</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/modules/app/app.roles.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="roles"></a>
+                        <span class="name">
+                            <b>
+                            roles</b>
+                            <a href="#roles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>RolesBuilder</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new RolesBuilder()</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Roles Builder</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/swagger/constants.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_AUTH_LOCATION"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_AUTH_LOCATION</b>
+                            <a href="#SWAGGER_API_AUTH_LOCATION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;header&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Where the SWAGGER_API_AUTH_NAME will be used in the request</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_AUTH_NAME"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_AUTH_NAME</b>
+                            <a href="#SWAGGER_API_AUTH_NAME"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;Authorization&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The default authentication method</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_CURRENT_VERSION"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_CURRENT_VERSION</b>
+                            <a href="#SWAGGER_API_CURRENT_VERSION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;1.0&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Current version of the api</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_DESCRIPTION"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_DESCRIPTION</b>
+                            <a href="#SWAGGER_API_DESCRIPTION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;API Description&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A short description for api</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_NAME"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_NAME</b>
+                            <a href="#SWAGGER_API_NAME"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;API&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The name given to the api</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_ROOT"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_ROOT</b>
+                            <a href="#SWAGGER_API_ROOT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;api/docs&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The endpoint for open api ui</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SWAGGER_API_SCHEMES"></a>
+                        <span class="name">
+                            <b>
+                            SWAGGER_API_SCHEMES</b>
+                            <a href="#SWAGGER_API_SCHEMES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;&quot;http&quot; | &quot;https&quot;&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;http&quot;, &quot;https&quot;]</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Types of api schemes</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/modules/winston/winston.constants.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WINSTON_MODULE_OPTIONS"></a>
+                        <span class="name">
+                            <b>
+                            WINSTON_MODULE_OPTIONS</b>
+                            <a href="#WINSTON_MODULE_OPTIONS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;WinstonModuleOptions&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Token for the type of configuration to be used when declaring in the app module</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WINSTON_MODULE_PROVIDER"></a>
+                        <span class="name">
+                            <b>
+                            WINSTON_MODULE_PROVIDER</b>
+                            <a href="#WINSTON_MODULE_PROVIDER"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;winston&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>An identifier to use for injecting the winston provider</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
