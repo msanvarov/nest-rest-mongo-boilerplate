@@ -1,27 +1,29 @@
-import * as mongoose from "mongoose";
+import { Schema, Document } from "mongoose";
 
-export const Profile = new mongoose.Schema({
-  username: String,
-  email: String,
-  password: String,
-  avatar: String,
+/**
+ * Mongoose Profile Schema
+ */
+export const Profile = new Schema({
+  username: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  avatar: { type: String, required: true },
+  roles: [{ type: String }],
   date: {
     type: Date,
     default: Date.now,
   },
 });
 
-export interface IProfile extends mongoose.Document {
-  readonly _id: mongoose.ObjectID;
+/**
+ * Mongoose Profile Document
+ */
+export interface IProfile extends Document {
+  readonly _id: Schema.Types.ObjectId;
   readonly username: string;
   readonly email: string;
   password: string;
   readonly avatar: string;
+  readonly roles: string[];
   readonly date: Date;
-}
-
-export class ProfileFillableFields {
-  username: string;
-  email: string;
-  password: string;
 }

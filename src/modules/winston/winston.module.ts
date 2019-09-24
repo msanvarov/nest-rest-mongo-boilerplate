@@ -10,7 +10,14 @@ import {
 
 @Global()
 @Module({})
+/**
+ * Represents a Winston Module
+ */
 export class WinstonModule {
+  /**
+   * Constructor for winson module
+   * @param options
+   */
   public static forRoot(options: WinstonModuleOptions): DynamicModule {
     const providers = createWinstonProviders(options);
 
@@ -21,6 +28,10 @@ export class WinstonModule {
     };
   }
 
+  /**
+   * Asynchronous constructor for winston module
+   * @param options
+   */
   public static forRootAsync(
     options: WinstonModuleAsyncOptions,
   ): DynamicModule {

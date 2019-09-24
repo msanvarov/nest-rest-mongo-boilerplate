@@ -4,7 +4,7 @@ import { expect } from "chai";
 import { WINSTON_MODULE_PROVIDER } from "./winston.constants";
 import { WinstonModule } from "./winston.module";
 
-describe("Winston module", () => {
+describe("Winston Module", () => {
   it("boots successfully", async () => {
     const rootModule = await Test.createTestingModule({
       imports: [WinstonModule.forRoot({})],

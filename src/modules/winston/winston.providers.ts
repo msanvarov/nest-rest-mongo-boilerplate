@@ -9,20 +9,28 @@ import {
   WinstonModuleOptions,
 } from "./winston.interfaces";
 
-export function createWinstonProviders(
+/**
+ * Constructor a winston provider
+ * @param loggerOpts
+ */
+export const createWinstonProviders = (
   loggerOpts: WinstonModuleOptions,
-): Provider[] {
+): Provider[] => {
   return [
     {
       provide: WINSTON_MODULE_PROVIDER,
       useFactory: () => createLogger(loggerOpts),
     },
   ];
-}
+};
 
-export function createWinstonAsyncProviders(
+/**
+ * Async constructor for a winston provider
+ * @param options
+ */
+export const createWinstonAsyncProviders = (
   options: WinstonModuleAsyncOptions,
-): Provider[] {
+): Provider[] => {
   return [
     {
       provide: WINSTON_MODULE_OPTIONS,
@@ -35,4 +43,4 @@ export function createWinstonAsyncProviders(
       inject: [WINSTON_MODULE_OPTIONS],
     },
   ];
-}
+};

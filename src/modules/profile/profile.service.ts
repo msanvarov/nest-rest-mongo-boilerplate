@@ -8,59 +8,65 @@ import {
   InternalServerErrorException,
   NotAcceptableException,
 } from "@nestjs/common";
-import { IProfile, ProfileFillableFields } from "./profile.model";
+import { IProfile } from "./profile.model";
+import { RegisterPayload } from "modules/auth/payload/register.payload";
+import { AppRoles } from "../app/app.roles";
 
+/**
+ * Profile Service
+ */
 @Injectable()
 export class ProfileService {
+  /**
+   * Constructor
+   * @param {Model<IProfile>} profileModel
+   */
   constructor(
     @InjectModel("Profile") private readonly profileModel: Model<IProfile>,
   ) {}
-  async get(id: string): Promise<IProfile> {
-    return this.profileModel
-      .findById(id)
-      .then((user: IProfile) =>
-        user
-          ? {
-              _id: user._id,
-              username: user.username,
-              email: user.email,
-              avatar: user.avatar,
-            }
-          : {},
-      )
-      .catch(err => {
-        throw new InternalServerErrorException(err.message);
-      });
+
+  /**
+   * Fetches profile from database by UUID
+   * @param {string} id
+   */
+  get(id: string): Promise<IProfile> {
+    return this.profileModel.findById(id).exec();
   }
 
-  async getByUsername(username: string) {
-    return this.profileModel
-      .findOne({ username })
-      .then(profile => profile)
-      .catch(err => {
-        throw new InternalServerErrorException(err.message);
-      });
+  /**
+   * Fetches profile from database by username
+   * @param {string} username
+   */
+  getByUsername(username: string): Promise<IProfile> {
+    return this.profileModel.findOne({ username }).exec();
   }
 
-  async getByUsernameAndPass(username: string, password: string) {
+  /**
+   * Fetches profile by username and hashed password
+   * @param {string} username
+   * @param {string} password
+   */
+  getByUsernameAndPass(username: string, password: string) {
     return this.profileModel
       .findOne({
         username,
         password: crypto.createHmac("sha256", password).digest("hex"),
       })
-      .then(profile => profile)
-      .catch(err => {
-        throw new InternalServerErrorException(err.message);
-      });
+      .exec();
   }
 
-  async create(payload: ProfileFillableFields) {
+  /**
+   * Creates a profile
+   * @param {RegisterPayload} payload profile payload
+   */
+  async create(payload: RegisterPayload): Promise<IProfile> {
     const user = await this.getByUsername(payload.username);
     if (user) {
       throw new NotAcceptableException(
-        "The username specified already exists in system.",
+        "The account with the provided username currently exists. Please choose another one.",
       );
     }
+    // this will auto assign the admin role to each created user
     const createdProfile = new this.profileModel({
       ...payload,
       password: crypto.createHmac("sha256", payload.password).digest("hex"),
@@ -70,11 +76,17 @@ export class ProfileService {
         r: "pg",
         d: "404",
       }),
+      roles: AppRoles.ADMIN_DELETE_PROFILES,
     });
+
     return createdProfile.save();
   }
 
-  async delete(username: string) {
+  /**
+   * Deletes profile from provided username
+   * @param {string} username
+   */
+  delete(username: string) {
     return this.profileModel.deleteOne({ username }).then(profile => {
       if (profile.deletedCount === 1) {
         return { message: `Deleted ${username} from records` };
