@@ -2,7 +2,7 @@ version: "3"
 services:
   nest:
     container_name: nest
-    build: ./
+    build: .
     ports:
       - "9001:9001"
     volumes:
@@ -19,4 +19,4 @@ services:
     volumes:
       - data-volume:/data/db
 volumes:
-    data-volume:
+  data-volume:
