@@ -4,9 +4,9 @@ import {
   IsNotEmpty,
   MinLength,
   IsAlphanumeric,
+  Matches,
 } from "class-validator";
 
-//TODO make name another field, support for name
 /**
  * Register Payload Class
  */
@@ -30,6 +30,16 @@ export class RegisterPayload {
   @IsAlphanumeric()
   @IsNotEmpty()
   username: string;
+
+  /**
+   * Name field
+   */
+  @ApiModelProperty({
+    required: true,
+  })
+  @Matches(/^[a-zA-Z ]+$/)
+  @IsNotEmpty()
+  name: string;
 
   /**
    * Password field

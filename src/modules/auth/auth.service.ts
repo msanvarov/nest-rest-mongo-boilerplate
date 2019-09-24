@@ -68,7 +68,7 @@ export class AuthService {
     );
     if (!user) {
       throw new UnauthorizedException(
-        "Unable to authenticate. Please try again.",
+        "Could not authenticate. Please try again.",
       );
     }
     return user;
