@@ -6,6 +6,7 @@ import { Schema, Document } from "mongoose";
 export const Profile = new Schema({
   username: { type: String, required: true },
   email: { type: String, required: true },
+  name: { type: String, required: true },
   password: { type: String, required: true },
   avatar: { type: String, required: true },
   roles: [{ type: String }],
@@ -22,6 +23,7 @@ export interface IProfile extends Document {
   readonly _id: Schema.Types.ObjectId;
   readonly username: string;
   readonly email: string;
+  readonly name: string;
   password: string;
   readonly avatar: string;
   readonly roles: string[];
