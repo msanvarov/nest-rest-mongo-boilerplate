@@ -20,12 +20,36 @@ export const Profile = new Schema({
  * Mongoose Profile Document
  */
 export interface IProfile extends Document {
+  /**
+   * UUID
+   */
   readonly _id: Schema.Types.ObjectId;
+  /**
+   * Username
+   */
   readonly username: string;
+  /**
+   * Email
+   */
   readonly email: string;
+  /**
+   * Name
+   */
   readonly name: string;
+  /**
+   * Password
+   */
   password: string;
+  /**
+   * Gravatar
+   */
   readonly avatar: string;
+  /**
+   * Roles
+   */
   readonly roles: string[];
+  /**
+   * Date
+   */
   readonly date: Date;
 }
