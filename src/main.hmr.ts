@@ -5,16 +5,19 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 import { AppModule } from "./modules/app/app.module";
-import { setupSwagger } from "./swagger";
+import { configureOpenAPI } from "./swagger";
 
+/**
+ * Represents the webpack meta data
+ */
 declare const module: any;
 
-async function bootstrap() {
+(async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter(),
+    new FastifyAdapter({ logger: console }),
   );
-  setupSwagger(app);
+  configureOpenAPI(app);
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(9000);
@@ -23,5 +26,4 @@ async function bootstrap() {
     module.hot.accept();
     module.hot.dispose(() => app.close());
   }
-}
-bootstrap();
+})();
