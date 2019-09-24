@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv";
+import { parse } from "dotenv";
 import * as joi from "@hapi/joi";
 import * as fs from "fs";
 
@@ -23,7 +23,7 @@ export class ConfigService {
    * @param {string} filePath
    */
   constructor(filePath: string) {
-    const config = dotenv.parse(fs.readFileSync(filePath));
+    const config = parse(fs.readFileSync(filePath));
     this.envConfig = ConfigService.validateInput(config);
   }
 
