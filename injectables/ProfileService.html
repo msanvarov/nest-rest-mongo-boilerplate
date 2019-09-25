@@ -90,6 +90,10 @@
                                 <a href="#delete">delete</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#edit">edit</a>
+                            </li>
+                            <li>
                                 <a href="#get">get</a>
                             </li>
                             <li>
@@ -121,7 +125,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/modules/profile/profile.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/modules/profile/profile.service.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -190,8 +194,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:63</a></div>
                 </td>
             </tr>
 
@@ -267,8 +271,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:108</a></div>
                 </td>
             </tr>
 
@@ -321,6 +325,80 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="edit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            edit
+                        </b>
+                        <a href="#edit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>edit(payload: <a href="../classes/PatchProfilePayload.html">PatchProfilePayload</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update profile information</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>payload</td>
+                                    <td>
+                                                <code><a href="../classes/PatchProfilePayload.html" target="_self" >PatchProfilePayload</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="get"></a>
                     <span class="name">
                         <b>
@@ -339,8 +417,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:33</a></div>
                 </td>
             </tr>
 
@@ -411,8 +489,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:41</a></div>
                 </td>
             </tr>
 
@@ -483,8 +561,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/modules/profile/profile.service.ts:50</a></div>
                 </td>
             </tr>
 
@@ -564,6 +642,7 @@ import {
 import { IProfile } from &quot;./profile.model&quot;;
 import { RegisterPayload } from &quot;modules/auth/payload/register.payload&quot;;
 import { AppRoles } from &quot;../app/app.roles&quot;;
+import { PatchProfilePayload } from &quot;./payload/patch.profile.payload&quot;;
 
 /**
  * Profile Service
@@ -633,6 +712,24 @@ export class ProfileService {
     });
 
     return createdProfile.save();
+  }
+
+  /**
+   * Update profile information
+   * @param {PatchProfilePayload} payload
+   */
+  async edit(payload: PatchProfilePayload) {
+    const { username } &#x3D; payload;
+    const updatedProfile &#x3D; await this.profileModel.updateOne(
+      { username },
+      payload,
+    );
+    if (updatedProfile.nModified !&#x3D;&#x3D; 1) {
+      throw new BadRequestException(
+        &quot;The profile with that username does not exist in the system. Please try another username.&quot;,
+      );
+    }
+    return this.getByUsername(username);
   }
 
   /**

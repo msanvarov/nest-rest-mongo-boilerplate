@@ -151,6 +151,15 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
+                    <h3>Controllers<a href="https://docs.nestjs.com/controllers" target="_blank" title="Official documentation about module controllers"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../controllers/ProfileController.html">ProfileController</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
                     <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
@@ -171,11 +180,17 @@
 import { ProfileService } from &quot;./profile.service&quot;;
 import { MongooseModule } from &quot;@nestjs/mongoose&quot;;
 import { Profile } from &quot;./profile.model&quot;;
+import { ProfileController } from &quot;./profile.controller&quot;;
+import { PassportModule } from &quot;@nestjs/passport&quot;;
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: &quot;Profile&quot;, schema: Profile }])],
+  imports: [
+    MongooseModule.forFeature([{ name: &quot;Profile&quot;, schema: Profile }]),
+    PassportModule.register({ defaultStrategy: &quot;jwt&quot; }),
+  ],
   providers: [ProfileService],
   exports: [ProfileService],
+  controllers: [ProfileController],
 })
 export class ProfileModule {}
 </code></pre>
