@@ -11,6 +11,7 @@ import {
 import { IProfile } from "./profile.model";
 import { RegisterPayload } from "modules/auth/payload/register.payload";
 import { AppRoles } from "../app/app.roles";
+import { PatchProfilePayload } from "./payload/patch.profile.payload";
 
 /**
  * Profile Service
@@ -80,6 +81,24 @@ export class ProfileService {
     });
 
     return createdProfile.save();
+  }
+
+  /**
+   * Update profile information
+   * @param {PatchProfilePayload} payload
+   */
+  async edit(payload: PatchProfilePayload) {
+    const { username } = payload;
+    const updatedProfile = await this.profileModel.updateOne(
+      { username },
+      payload,
+    );
+    if (updatedProfile.nModified !== 1) {
+      throw new BadRequestException(
+        "The profile with that username does not exist in the system. Please try another username.",
+      );
+    }
+    return this.getByUsername(username);
   }
 
   /**
