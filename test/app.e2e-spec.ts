@@ -6,6 +6,7 @@ import { ValidationPipe } from "@nestjs/common";
 describe("AppController (e2e)", () => {
   let app;
   let bearer;
+  let payload;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -162,6 +163,31 @@ describe("AppController (e2e)", () => {
         password: "123456789",
       })
       .expect(201);
+  });
+
+  it("/api/profile/{username} (GET) fetch created account", () => {
+    return request(app.getHttpServer())
+      .get("/api/profile/test")
+      .set("Authorization", `Bearer ${bearer}`)
+      .expect(200)
+      .then(res => (payload = res.body));
+  });
+
+  it("/api/profile (PATCH) update created account information", () => {
+    return request(app.getHttpServer())
+      .patch("/api/profile")
+      .set("Authorization", `Bearer ${bearer}`)
+      .send({
+        ...payload,
+        name: "changing name",
+        email: "changed.emal@gmail.com",
+      })
+      .expect(200)
+      .expect({
+        ...payload,
+        name: "changing name",
+        email: "changed.emal@gmail.com",
+      });
   });
 
   it("/api/profile/{username} (DELETE) teardown created account", () => {
