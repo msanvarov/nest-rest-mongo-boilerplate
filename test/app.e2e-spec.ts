@@ -128,9 +128,9 @@ describe("AppController (e2e)", () => {
       .expect(200);
   });
 
-  it("/api/profile (GET) get request user object", () => {
+  it("/request/user (GET) get request user object", () => {
     return request(app.getHttpServer())
-      .get("/api/profile")
+      .get("/request/user")
       .set("Authorization", `Bearer ${bearer}`)
       .expect(200);
   });
