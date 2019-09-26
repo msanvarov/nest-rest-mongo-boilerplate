@@ -29,7 +29,7 @@ export class ProfileController {
   constructor(private readonly profileService: ProfileService) {}
 
   /**
-   * Get a particular profile
+   * Retrieves a particular profile
    * @param username the profile given username to fetch
    * @returns {Promise<IProfile>} queried profile data
    */
