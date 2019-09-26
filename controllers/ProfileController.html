@@ -148,15 +148,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="78"
-                            class="link-to-prism">src/modules/profile/profile.controller.ts:78</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/modules/profile/profile.controller.ts:82</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Delete route to remove profiles from app</p>
+                    <div class="io-description"><p>Removes a profile from the database</p>
 </div>
 
                     <div class="io-description">
@@ -193,11 +193,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/IGenericMessageBody.html" target="_self" >Promise&lt;IGenericMessageBody&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>whether or not the profile has been deleted</p>
+
                     </div>
                 </td>
             </tr>
@@ -234,15 +235,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/modules/profile/profile.controller.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/modules/profile/profile.controller.ts:40</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get a particular profile</p>
+                    <div class="io-description"><p>Retrieves a particular profile</p>
 </div>
 
                     <div class="io-description">
@@ -279,11 +280,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>queried profile data</p>
+
                     </div>
                 </td>
             </tr>
@@ -320,15 +322,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/modules/profile/profile.controller.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/modules/profile/profile.controller.ts:64</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Edit profile information</p>
+                    <div class="io-description"><p>Edit a profile</p>
 </div>
 
                     <div class="io-description">
@@ -364,7 +366,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>mutated profile data</p>
+
                     </div>
                 </td>
             </tr>
@@ -387,8 +390,9 @@
 import { AuthGuard } from &quot;@nestjs/passport&quot;;
 import { ACGuard, UseRoles } from &quot;nest-access-control&quot;;
 import { ApiBearerAuth, ApiResponse, ApiUseTags } from &quot;@nestjs/swagger&quot;;
-import { ProfileService } from &quot;./profile.service&quot;;
+import { ProfileService, IGenericMessageBody } from &quot;./profile.service&quot;;
 import { PatchProfilePayload } from &quot;./payload/patch.profile.payload&quot;;
+import { IProfile } from &quot;./profile.model&quot;;
 
 /**
  * Profile Controller
@@ -404,14 +408,15 @@ export class ProfileController {
   constructor(private readonly profileService: ProfileService) {}
 
   /**
-   * Get a particular profile
+   * Retrieves a particular profile
    * @param username the profile given username to fetch
+   * @returns {Promise&lt;IProfile&gt;} queried profile data
    */
   @Get(&quot;:username&quot;)
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard(&quot;jwt&quot;))
   @ApiResponse({ status: 200, description: &quot;Fetch Profile Request Received&quot; })
   @ApiResponse({ status: 400, description: &quot;Fetch Profile Request Failed&quot; })
-  async getProfile(@Param(&quot;username&quot;) username: string) {
+  async getProfile(@Param(&quot;username&quot;) username: string): Promise&lt;IProfile&gt; {
     const profile &#x3D; await this.profileService.getByUsername(username);
     if (!profile) {
       throw new BadRequestException(
@@ -422,11 +427,12 @@ export class ProfileController {
   }
 
   /**
-   * Edit profile information
+   * Edit a profile
    * @param {RegisterPayload} payload
+   * @returns {Promise&lt;IProfile&gt;} mutated profile data
    */
   @Patch()
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard(&quot;jwt&quot;))
   @UseRoles({
     resource: &quot;profiles&quot;,
     action: &quot;update&quot;,
@@ -439,11 +445,12 @@ export class ProfileController {
   }
 
   /**
-   * Delete route to remove profiles from app
+   * Removes a profile from the database
    * @param {string} username the username to remove
+   * @returns {Promise&lt;IGenericMessageBody&gt;} whether or not the profile has been deleted
    */
   @Delete(&quot;:username&quot;)
-  @UseGuards(AuthGuard(), ACGuard)
+  @UseGuards(AuthGuard(&quot;jwt&quot;), ACGuard)
   @UseRoles({
     resource: &quot;profiles&quot;,
     action: &quot;delete&quot;,
@@ -451,7 +458,9 @@ export class ProfileController {
   })
   @ApiResponse({ status: 200, description: &quot;Delete Profile Request Received&quot; })
   @ApiResponse({ status: 400, description: &quot;Delete Profile Request Failed&quot; })
-  async delete(@Param(&quot;username&quot;) username: string) {
+  async delete(
+    @Param(&quot;username&quot;) username: string,
+  ): Promise&lt;IGenericMessageBody&gt; {
     return await this.profileService.delete(username);
   }
 }

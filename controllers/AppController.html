@@ -83,10 +83,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#delete">delete</a>
-                            </li>
-                            <li>
                                 <a href="#getProfile">getProfile</a>
                             </li>
                             <li>
@@ -113,92 +109,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="delete"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            delete
-                        </b>
-                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>delete(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@UseGuards(undefined, ACGuard)<br />@UseRoles({resource: &#x27;profiles&#x27;, action: &#x27;delete&#x27;, possession: &#x27;any&#x27;})<br />@Delete(&#x27;/api/profile/:username&#x27;)<br />@ApiResponse({status: 200, description: &#x27;Request Received&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Request Failed&#x27;})<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/modules/app/app.controller.ts:63</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Delete route to remove profiles from app</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>username</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>the username to remove</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getProfile"></a>
                     <span class="name">
                         <b>
@@ -218,21 +128,21 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;/api/profile&#x27;)<br />@UseGuards(undefined)<br />@ApiResponse({status: 200, description: &#x27;Request Received&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Request Failed&#x27;})<br /></code>
+                    <code>@Get(&#x27;request/user&#x27;)<br />@UseGuards(undefined)<br />@ApiResponse({status: 200, description: &#x27;Request Received&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Request Failed&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/modules/app/app.controller.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/modules/app/app.controller.ts:41</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Debug route</p>
+                    <div class="io-description"><p>Fetches request metadata</p>
 </div>
 
                     <div class="io-description">
@@ -265,11 +175,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Partial&lt;Request&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>the request user populated from the passport module</p>
+
                     </div>
                 </td>
             </tr>
@@ -304,15 +215,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/modules/app/app.controller.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/modules/app/app.controller.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Main route</p>
+                    <div class="io-description"><p>Returns the an environment variable from config file</p>
 </div>
 
                     <div>
@@ -337,8 +248,7 @@
 import { AppService } from &quot;./app.service&quot;;
 import { ApiBearerAuth, ApiResponse } from &quot;@nestjs/swagger&quot;;
 import { AuthGuard } from &quot;@nestjs/passport&quot;;
-import { ProfileService } from &quot;../profile/profile.service&quot;;
-import { ACGuard, UseRoles } from &quot;nest-access-control&quot;;
+import { Request } from &quot;express&quot;;
 
 /**
  * App Controller
@@ -351,52 +261,31 @@ export class AppController {
    * @param appService
    * @param profileService
    */
-  constructor(
-    private readonly appService: AppService,
-    private readonly profileService: ProfileService,
-  ) {}
+  constructor(private readonly appService: AppService) {}
 
   /**
-   * Main route
+   * Returns the an environment variable from config file
    * @returns {string} the application environment url
    */
   @Get()
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard(&quot;jwt&quot;))
   @ApiResponse({ status: 200, description: &quot;Request Received&quot; })
   @ApiResponse({ status: 400, description: &quot;Request Failed&quot; })
   getString(): string {
     return this.appService.root();
   }
 
-  // These routes can be moved to the profile module.
-
   /**
-   * Debug route
-   * @param{Req} req the request body
+   * Fetches request metadata
+   * @param {Req} req the request body
+   * @returns {Partial&lt;Request&gt;} the request user populated from the passport module
    */
-  @Get(&quot;/api/profile&quot;)
-  @UseGuards(AuthGuard())
+  @Get(&quot;request/user&quot;)
+  @UseGuards(AuthGuard(&quot;jwt&quot;))
   @ApiResponse({ status: 200, description: &quot;Request Received&quot; })
   @ApiResponse({ status: 400, description: &quot;Request Failed&quot; })
-  getProfile(@Req() req) {
+  getProfile(@Req() req): Partial&lt;Request&gt; {
     return req.user;
-  }
-
-  /**
-   * Delete route to remove profiles from app
-   * @param {string} username the username to remove
-   */
-  @UseGuards(AuthGuard(), ACGuard)
-  @UseRoles({
-    resource: &quot;profiles&quot;,
-    action: &quot;delete&quot;,
-    possession: &quot;any&quot;,
-  })
-  @Delete(&quot;/api/profile/:username&quot;)
-  @ApiResponse({ status: 200, description: &quot;Request Received&quot; })
-  @ApiResponse({ status: 400, description: &quot;Request Failed&quot; })
-  async delete(@Param(&quot;username&quot;) username: string) {
-    return await this.profileService.delete(username);
   }
 }
 </code></pre>

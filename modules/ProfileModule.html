@@ -181,13 +181,9 @@ import { ProfileService } from &quot;./profile.service&quot;;
 import { MongooseModule } from &quot;@nestjs/mongoose&quot;;
 import { Profile } from &quot;./profile.model&quot;;
 import { ProfileController } from &quot;./profile.controller&quot;;
-import { PassportModule } from &quot;@nestjs/passport&quot;;
 
 @Module({
-  imports: [
-    MongooseModule.forFeature([{ name: &quot;Profile&quot;, schema: Profile }]),
-    PassportModule.register({ defaultStrategy: &quot;jwt&quot; }),
-  ],
+  imports: [MongooseModule.forFeature([{ name: &quot;Profile&quot;, schema: Profile }])],
   providers: [ProfileService],
   exports: [ProfileService],
   controllers: [ProfileController],

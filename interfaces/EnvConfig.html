@@ -130,6 +130,8 @@ export class ConfigService {
   /**
    * Ensures all needed variables are set, and returns the validated JavaScript object
    * including the applied default values.
+   * @param {EnvConfig} envConfig the configuration object with variables from the configuration file
+   * @returns {EnvConfig} a validated environment configuration object
    */
   private static validateInput(envConfig: EnvConfig): EnvConfig {
     /**

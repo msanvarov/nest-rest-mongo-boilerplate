@@ -152,7 +152,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Authentication route to login</p>
+                    <div class="io-description"><p>Login route to validate and create tokens for users</p>
 </div>
 
                     <div class="io-description">
@@ -189,7 +189,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/ITokenReturnBody.html" target="_self" >Promise&lt;ITokenReturnBody&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -238,7 +238,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Authentication route to register</p>
+                    <div class="io-description"><p>Registration route to create and generate tokens for users</p>
 </div>
 
                     <div class="io-description">
@@ -275,7 +275,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/ITokenReturnBody.html" target="_self" >Promise&lt;ITokenReturnBody&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -291,7 +291,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Body, Post } from &quot;@nestjs/common&quot;;
 import { ApiResponse, ApiUseTags } from &quot;@nestjs/swagger&quot;;
-import { AuthService } from &quot;./auth.service&quot;;
+import { AuthService, ITokenReturnBody } from &quot;./auth.service&quot;;
 import { LoginPayload } from &quot;./payload/login.payload&quot;;
 import { RegisterPayload } from &quot;./payload/register.payload&quot;;
 import { ProfileService } from &quot;../profile/profile.service&quot;;
@@ -313,27 +313,27 @@ export class AuthController {
   ) {}
 
   /**
-   * Authentication route to login
+   * Login route to validate and create tokens for users
    * @param {LoginPayload} payload the login dto
    */
   @Post(&quot;login&quot;)
   @ApiResponse({ status: 201, description: &quot;Login Completed&quot; })
   @ApiResponse({ status: 400, description: &quot;Bad Request&quot; })
   @ApiResponse({ status: 401, description: &quot;Unauthorized&quot; })
-  async login(@Body() payload: LoginPayload) {
+  async login(@Body() payload: LoginPayload): Promise&lt;ITokenReturnBody&gt; {
     const user &#x3D; await this.authService.validateUser(payload);
     return await this.authService.createToken(user);
   }
 
   /**
-   * Authentication route to register
+   * Registration route to create and generate tokens for users
    * @param {RegisterPayload} payload the registration dto
    */
   @Post(&quot;register&quot;)
   @ApiResponse({ status: 201, description: &quot;Registration Completed&quot; })
   @ApiResponse({ status: 400, description: &quot;Bad Request&quot; })
   @ApiResponse({ status: 401, description: &quot;Unauthorized&quot; })
-  async register(@Body() payload: RegisterPayload) {
+  async register(@Body() payload: RegisterPayload): Promise&lt;ITokenReturnBody&gt; {
     const user &#x3D; await this.profileService.create(payload);
     return await this.authService.createToken(user);
   }

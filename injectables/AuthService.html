@@ -133,7 +133,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/modules/auth/auth.service.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/modules/auth/auth.service.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -237,15 +237,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/modules/auth/auth.service.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/modules/auth/auth.service.ts:56</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Creates a signed jwt token based on payload</p>
+                    <div class="io-description"><p>Creates a signed jwt token based on IProfile payload</p>
 </div>
 
                     <div class="io-description">
@@ -276,11 +276,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/ITokenReturnBody.html" target="_self" >Promise&lt;ITokenReturnBody&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>token body</p>
+
                     </div>
                 </td>
             </tr>
@@ -310,8 +311,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/modules/auth/auth.service.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/modules/auth/auth.service.ts:74</a></div>
                 </td>
             </tr>
 
@@ -354,7 +355,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>hrf time</p>
+
                     </div>
                 </td>
             </tr>
@@ -384,8 +386,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/modules/auth/auth.service.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/modules/auth/auth.service.ts:90</a></div>
                 </td>
             </tr>
 
@@ -429,11 +431,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>registered profile</p>
+
                     </div>
                 </td>
             </tr>
@@ -467,7 +470,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/modules/auth/auth.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/modules/auth/auth.service.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -492,6 +495,24 @@ import { ConfigService } from &quot;../config/config.service&quot;;
 import { ProfileService } from &quot;../profile/profile.service&quot;;
 import { IProfile } from &quot;../profile/profile.model&quot;;
 import { LoginPayload } from &quot;./payload/login.payload&quot;;
+
+/**
+ * Models a typical Login/Register route return body
+ */
+export interface ITokenReturnBody {
+  /**
+   * When the token is to expire in seconds
+   */
+  expires: string;
+  /**
+   * A human-readable format of expires
+   */
+  expiresPrettyPrint: string;
+  /**
+   * The Bearer token
+   */
+  token: string;
+}
 
 /**
  * Authentication Service
@@ -519,10 +540,16 @@ export class AuthService {
   }
 
   /**
-   * Creates a signed jwt token based on payload
+   * Creates a signed jwt token based on IProfile payload
    * @param {Profile} param dto to generate token from
+   * @returns {Promise&lt;ITokenReturnBody&gt;} token body
    */
-  async createToken({ _id, username, email, avatar }: IProfile) {
+  async createToken({
+    _id,
+    username,
+    email,
+    avatar,
+  }: IProfile): Promise&lt;ITokenReturnBody&gt; {
     return {
       expires: this.expiration,
       expiresPrettyPrint: this.prettyPrintSeconds(this.expiration),
@@ -533,8 +560,9 @@ export class AuthService {
   /**
    * Formats the time in seconds into human-readable format
    * @param {string} time
+   * @returns {string} hrf time
    */
-  private prettyPrintSeconds(time: string) {
+  private prettyPrintSeconds(time: string): string {
     const ntime &#x3D; Number(time);
     const hours &#x3D; Math.floor(ntime / 3600);
     const minutes &#x3D; Math.floor((ntime % 3600) / 60);
@@ -548,8 +576,9 @@ export class AuthService {
   /**
    * Validates whether or not the profile exists in the database
    * @param {LoginPayload} payload login payload to authenticate with
+   * @returns {Promise&lt;IProfile&gt;} registered profile
    */
-  async validateUser(payload: LoginPayload) {
+  async validateUser(payload: LoginPayload): Promise&lt;IProfile&gt; {
     const user &#x3D; await this.profileService.getByUsernameAndPass(
       payload.username,
       payload.password,

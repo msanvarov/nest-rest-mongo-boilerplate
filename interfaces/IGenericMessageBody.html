@@ -1,0 +1,334 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nest-mongoose-boilerplate documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>IGenericMessageBody</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/modules/profile/profile.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Models a typical response for a crud operation</p>
+
+            </p>
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#message">message</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="message"></a>
+                                        <span class="name"><b>message</b><a href="#message"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>message:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Status message to return</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as crypto from &quot;crypto&quot;;
+import * as gravatar from &quot;gravatar&quot;;
+import { Model } from &quot;mongoose&quot;;
+import { InjectModel } from &quot;@nestjs/mongoose&quot;;
+import {
+  BadRequestException,
+  Injectable,
+  NotAcceptableException,
+} from &quot;@nestjs/common&quot;;
+import { IProfile } from &quot;./profile.model&quot;;
+import { RegisterPayload } from &quot;modules/auth/payload/register.payload&quot;;
+import { AppRoles } from &quot;../app/app.roles&quot;;
+import { PatchProfilePayload } from &quot;./payload/patch.profile.payload&quot;;
+
+/**
+ * Models a typical response for a crud operation
+ */
+export interface IGenericMessageBody {
+  /**
+   * Status message to return
+   */
+  message: string;
+}
+
+/**
+ * Profile Service
+ */
+@Injectable()
+export class ProfileService {
+  /**
+   * Constructor
+   * @param {Model&lt;IProfile&gt;} profileModel
+   */
+  constructor(
+    @InjectModel(&quot;Profile&quot;) private readonly profileModel: Model&lt;IProfile&gt;,
+  ) {}
+
+  /**
+   * Fetches a profile from database by UUID
+   * @param {string} id
+   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   */
+  get(id: string): Promise&lt;IProfile&gt; {
+    return this.profileModel.findById(id).exec();
+  }
+
+  /**
+   * Fetches a profile from database by username
+   * @param {string} username
+   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   */
+  getByUsername(username: string): Promise&lt;IProfile&gt; {
+    return this.profileModel.findOne({ username }).exec();
+  }
+
+  /**
+   * Fetches a profile by their username and hashed password
+   * @param {string} username
+   * @param {string} password
+   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   */
+  getByUsernameAndPass(username: string, password: string): Promise&lt;IProfile&gt; {
+    return this.profileModel
+      .findOne({
+        username,
+        password: crypto.createHmac(&quot;sha256&quot;, password).digest(&quot;hex&quot;),
+      })
+      .exec();
+  }
+
+  /**
+   * Create a profile with RegisterPayload fields
+   * @param {RegisterPayload} payload profile payload
+   * @returns {Promise&lt;IProfile&gt;} created profile data
+   */
+  async create(payload: RegisterPayload): Promise&lt;IProfile&gt; {
+    const user &#x3D; await this.getByUsername(payload.username);
+    if (user) {
+      throw new NotAcceptableException(
+        &quot;The account with the provided username currently exists. Please choose another one.&quot;,
+      );
+    }
+    // this will auto assign the admin role to each created user
+    const createdProfile &#x3D; new this.profileModel({
+      ...payload,
+      password: crypto.createHmac(&quot;sha256&quot;, payload.password).digest(&quot;hex&quot;),
+      avatar: gravatar.url(payload.email, {
+        protocol: &quot;http&quot;,
+        s: &quot;200&quot;,
+        r: &quot;pg&quot;,
+        d: &quot;404&quot;,
+      }),
+      roles: AppRoles.ADMIN,
+    });
+
+    return createdProfile.save();
+  }
+
+  /**
+   * Edit profile data
+   * @param {PatchProfilePayload} payload
+   * @returns {Promise&lt;IProfile&gt;} mutated profile data
+   */
+  async edit(payload: PatchProfilePayload): Promise&lt;IProfile&gt; {
+    const { username } &#x3D; payload;
+    const updatedProfile &#x3D; await this.profileModel.updateOne(
+      { username },
+      payload,
+    );
+    if (updatedProfile.nModified !&#x3D;&#x3D; 1) {
+      throw new BadRequestException(
+        &quot;The profile with that username does not exist in the system. Please try another username.&quot;,
+      );
+    }
+    return this.getByUsername(username);
+  }
+
+  /**
+   * Delete profile given a username
+   * @param {string} username
+   * @returns {Promise&lt;IGenericMessageBody&gt;} whether or not the crud operation was completed
+   */
+  delete(username: string): Promise&lt;IGenericMessageBody&gt; {
+    return this.profileModel.deleteOne({ username }).then(profile &#x3D;&gt; {
+      if (profile.deletedCount &#x3D;&#x3D;&#x3D; 1) {
+        return { message: &#x60;Deleted ${username} from records&#x60; };
+      } else {
+        throw new BadRequestException(
+          &#x60;Failed to delete a profile by the name of ${username}.&#x60;,
+        );
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'IGenericMessageBody.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

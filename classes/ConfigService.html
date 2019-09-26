@@ -246,8 +246,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/modules/config/config.service.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/modules/config/config.service.ts:70</a></div>
                 </td>
             </tr>
 
@@ -319,8 +319,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/modules/config/config.service.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/modules/config/config.service.ts:79</a></div>
                 </td>
             </tr>
 
@@ -395,8 +395,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/modules/config/config.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/modules/config/config.service.ts:36</a></div>
                 </td>
             </tr>
 
@@ -415,6 +415,7 @@ including the applied default values.</p>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -429,6 +430,10 @@ including the applied default values.</p>
                                     </td>
 
 
+                                    <td>
+                                        <p>the configuration object with variables from the configuration file</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -440,7 +445,8 @@ including the applied default values.</p>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>a validated environment configuration object</p>
+
                     </div>
                 </td>
             </tr>
@@ -488,6 +494,8 @@ export class ConfigService {
   /**
    * Ensures all needed variables are set, and returns the validated JavaScript object
    * including the applied default values.
+   * @param {EnvConfig} envConfig the configuration object with variables from the configuration file
+   * @returns {EnvConfig} a validated environment configuration object
    */
   private static validateInput(envConfig: EnvConfig): EnvConfig {
     /**
