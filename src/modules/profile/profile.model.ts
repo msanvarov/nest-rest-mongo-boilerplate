@@ -1,4 +1,5 @@
 import { Schema, Document } from "mongoose";
+import { AppRoles } from "modules/app/app.roles";
 
 /**
  * Mongoose Profile Schema
@@ -47,7 +48,7 @@ export interface IProfile extends Document {
   /**
    * Roles
    */
-  readonly roles: string[];
+  readonly roles: AppRoles;
   /**
    * Date
    */

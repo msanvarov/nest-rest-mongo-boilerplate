@@ -32,9 +32,9 @@ export class AppController {
   /**
    * Fetches request metadata
    * @param {Req} req the request body
-   * @returns {Request} the request user populated from the passport module
+   * @returns {Partial<Request>} the request user populated from the passport module
    */
-  @Get("/api/profile")
+  @Get("request/user")
   @UseGuards(AuthGuard("jwt"))
   @ApiResponse({ status: 200, description: "Request Received" })
   @ApiResponse({ status: 400, description: "Request Failed" })

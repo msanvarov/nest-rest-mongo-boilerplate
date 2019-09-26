@@ -5,6 +5,9 @@ import { ProfileService } from "../profile/profile.service";
 import { IProfile } from "../profile/profile.model";
 import { LoginPayload } from "./payload/login.payload";
 
+/**
+ * Models a typical Login/Register route return body
+ */
 export interface ITokenReturnBody {
   expires: string;
   expiresPrettyPrint: string;
