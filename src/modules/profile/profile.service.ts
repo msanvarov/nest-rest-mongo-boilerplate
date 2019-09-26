@@ -5,13 +5,16 @@ import { InjectModel } from "@nestjs/mongoose";
 import {
   BadRequestException,
   Injectable,
-  InternalServerErrorException,
   NotAcceptableException,
 } from "@nestjs/common";
 import { IProfile } from "./profile.model";
 import { RegisterPayload } from "modules/auth/payload/register.payload";
 import { AppRoles } from "../app/app.roles";
 import { PatchProfilePayload } from "./payload/patch.profile.payload";
+
+export interface IGenericMessageBody {
+  message: string;
+}
 
 /**
  * Profile Service
@@ -27,7 +30,7 @@ export class ProfileService {
   ) {}
 
   /**
-   * Fetches profile from database by UUID
+   * Fetch a profile from database by UUID
    * @param {string} id
    */
   get(id: string): Promise<IProfile> {
@@ -35,7 +38,7 @@ export class ProfileService {
   }
 
   /**
-   * Fetches profile from database by username
+   * Fetch a profile from database by username
    * @param {string} username
    */
   getByUsername(username: string): Promise<IProfile> {
@@ -43,7 +46,7 @@ export class ProfileService {
   }
 
   /**
-   * Fetches profile by username and hashed password
+   * Fetch a profile by their username and hashed password
    * @param {string} username
    * @param {string} password
    */
@@ -57,7 +60,7 @@ export class ProfileService {
   }
 
   /**
-   * Creates a profile
+   * Create a profile with RegisterPayload fields
    * @param {RegisterPayload} payload profile payload
    */
   async create(payload: RegisterPayload): Promise<IProfile> {
@@ -84,7 +87,7 @@ export class ProfileService {
   }
 
   /**
-   * Update profile information
+   * Edit profile data
    * @param {PatchProfilePayload} payload
    */
   async edit(payload: PatchProfilePayload) {
@@ -102,7 +105,7 @@ export class ProfileService {
   }
 
   /**
-   * Deletes profile from provided username
+   * Delete profile given a username
    * @param {string} username
    */
   delete(username: string) {

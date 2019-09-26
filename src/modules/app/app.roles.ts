@@ -6,7 +6,7 @@ export enum AppRoles {
 }
 
 /**
- * Roles Builder
+ * Roles Builder for Role Based Authentication
  */
 export const roles: RolesBuilder = new RolesBuilder();
 

@@ -21,6 +21,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      ignoreExpiration: false,
       secretOrKey: configService.get("WEBTOKEN_SECRET_KEY"),
     });
   }
@@ -29,8 +30,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
    * Checks if the bearer token is a valid token
    * @param {JwtPayload} jwtPayload validation method for jwt token
    * @param {any} done callback to resolve the request user with
+   * @returns {boolean} whether or not to validate the jwt token
    */
-  async validate({ iat, exp, _id }: JwtPayload, done) {
+  async validate({ iat, exp, _id }: JwtPayload, done): Promise<boolean> {
     const timeDiff = exp - iat;
     if (timeDiff <= 0) {
       throw new UnauthorizedException();

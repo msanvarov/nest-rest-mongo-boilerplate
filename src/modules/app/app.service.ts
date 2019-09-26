@@ -18,7 +18,7 @@ export class AppService {
   ) {}
 
   /**
-   * Main application method
+   * Fetches and logs the APP_URL environment variable from the configuration file.
    * @returns {string} the application url
    */
   root(): string {

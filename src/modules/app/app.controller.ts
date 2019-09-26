@@ -2,8 +2,7 @@ import { Controller, Delete, Get, Param, Req, UseGuards } from "@nestjs/common";
 import { AppService } from "./app.service";
 import { ApiBearerAuth, ApiResponse } from "@nestjs/swagger";
 import { AuthGuard } from "@nestjs/passport";
-import { ProfileService } from "../profile/profile.service";
-import { ACGuard, UseRoles } from "nest-access-control";
+import { Request } from "express";
 
 /**
  * App Controller
@@ -16,51 +15,30 @@ export class AppController {
    * @param appService
    * @param profileService
    */
-  constructor(
-    private readonly appService: AppService,
-    private readonly profileService: ProfileService,
-  ) {}
+  constructor(private readonly appService: AppService) {}
 
   /**
-   * Main route
+   * Returns the an environment variable from config file
    * @returns {string} the application environment url
    */
   @Get()
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard("jwt"))
   @ApiResponse({ status: 200, description: "Request Received" })
   @ApiResponse({ status: 400, description: "Request Failed" })
   getString(): string {
     return this.appService.root();
   }
 
-  // These routes can be moved to the profile module.
-
   /**
-   * Debug route
-   * @param{Req} req the request body
+   * Fetches request metadata
+   * @param {Req} req the request body
+   * @returns {Request} the request user populated from the passport module
    */
   @Get("/api/profile")
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard("jwt"))
   @ApiResponse({ status: 200, description: "Request Received" })
   @ApiResponse({ status: 400, description: "Request Failed" })
-  getProfile(@Req() req) {
+  getProfile(@Req() req): Partial<Request> {
     return req.user;
-  }
-
-  /**
-   * Delete route to remove profiles from app
-   * @param {string} username the username to remove
-   */
-  @UseGuards(AuthGuard(), ACGuard)
-  @UseRoles({
-    resource: "profiles",
-    action: "delete",
-    possession: "any",
-  })
-  @Delete("/api/profile/:username")
-  @ApiResponse({ status: 200, description: "Request Received" })
-  @ApiResponse({ status: 400, description: "Request Failed" })
-  async delete(@Param("username") username: string) {
-    return await this.profileService.delete(username);
   }
 }
