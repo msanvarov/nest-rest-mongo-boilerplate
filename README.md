@@ -36,9 +36,9 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 
 ---
 
-### 🚀 Setup
+### 🚀 Deployment
 
-#### Manually Deploying without Docker
+#### Manual Deployment without Docker
 
 - Create a .env file using the `cp .env.example .env` command and replace the existing env variables with personal settings (MongoDB URL either srv or localhost)
 
