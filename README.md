@@ -52,7 +52,7 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 
 ```bash
 # creates and loads the docker container with required configuration
-$ docker-compose up
+$ docker-compose up -d 
 ```
 
 - The following command will set up the project for you (building the Docker images, starting docker-compose stack). The Web application and mongo will be exposed to http://localhost:9000 and http://localhost:27017 respectively
