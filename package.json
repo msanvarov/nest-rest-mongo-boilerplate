@@ -11,9 +11,8 @@
     "start:dev": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
     "start:prod": "node dist/main.js",
-    "webpack": "webpack --config webpack.config.js",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
     "typedocs": "npx compodoc -p tsconfig.json -s -d docs",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -40,8 +39,8 @@
     "fastify-rate-limit": "2.4.0",
     "fastify-swagger": "2.4.0",
     "gravatar": "1.8.0",
+    "helmet": "^3.21.1",
     "mongoose": "5.7.3",
-    "nodemon": "1.19.3",
     "nest-access-control": "2.0.1",
     "passport": "0.4.0",
     "passport-jwt": "4.0.0",
@@ -56,6 +55,7 @@
   "devDependencies": {
     "@compodoc/compodoc": "1.1.10",
     "@nestjs/testing": "6.8.0",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "4.17.1",
     "@types/gravatar": "1.8.0",
     "@types/hapi__joi": "15.0.4",
@@ -74,10 +74,7 @@
     "tsc-watch": "4.0.0",
     "tsconfig-paths": "3.9.0",
     "tslint": "5.20.0",
-    "typescript": "3.6.3",
-    "webpack": "4.41.0",
-    "webpack-cli": "3.3.9",
-    "webpack-node-externals": "1.7.2"
+    "typescript": "3.6.3"
   },
   "jest": {
     "moduleFileExtensions": [
