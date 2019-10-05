@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json --detectOpenHandles --forceExit"
   },
   "dependencies": {
-    "@hapi/joi": "16.1.6",
+    "@hapi/joi": "16.1.7",
     "@nestjs/common": "6.8.2",
     "@nestjs/core": "6.8.2",
     "@nestjs/jwt": "6.1.1",
