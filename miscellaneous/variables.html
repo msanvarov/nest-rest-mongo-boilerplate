@@ -58,16 +58,10 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#configureOpenAPI" title="src/swagger/index.ts"><b>configureOpenAPI</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
-                        </li>
-                        <li>
                             <a href="#createWinstonAsyncProviders" title="src/modules/winston/winston.providers.ts"><b>createWinstonAsyncProviders</b>&nbsp;&nbsp;&nbsp;(src/.../winston.providers.ts)</a>
                         </li>
                         <li>
                             <a href="#createWinstonProviders" title="src/modules/winston/winston.providers.ts"><b>createWinstonProviders</b>&nbsp;&nbsp;&nbsp;(src/.../winston.providers.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#module" title="src/main.hmr.ts"><b>module</b>&nbsp;&nbsp;&nbsp;(src/.../main.hmr.ts)</a>
                         </li>
                         <li>
                             <a href="#Profile" title="src/modules/profile/profile.model.ts"><b>Profile</b>&nbsp;&nbsp;&nbsp;(src/.../profile.model.ts)</a>
@@ -76,25 +70,25 @@
                             <a href="#roles" title="src/modules/app/app.roles.ts"><b>roles</b>&nbsp;&nbsp;&nbsp;(src/.../app.roles.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_AUTH_LOCATION" title="src/swagger/constants.ts"><b>SWAGGER_API_AUTH_LOCATION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_AUTH_LOCATION" title="src/main.ts"><b>SWAGGER_API_AUTH_LOCATION</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_AUTH_NAME" title="src/swagger/constants.ts"><b>SWAGGER_API_AUTH_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_AUTH_NAME" title="src/main.ts"><b>SWAGGER_API_AUTH_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_CURRENT_VERSION" title="src/swagger/constants.ts"><b>SWAGGER_API_CURRENT_VERSION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_CURRENT_VERSION" title="src/main.ts"><b>SWAGGER_API_CURRENT_VERSION</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_DESCRIPTION" title="src/swagger/constants.ts"><b>SWAGGER_API_DESCRIPTION</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_DESCRIPTION" title="src/main.ts"><b>SWAGGER_API_DESCRIPTION</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_NAME" title="src/swagger/constants.ts"><b>SWAGGER_API_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_NAME" title="src/main.ts"><b>SWAGGER_API_NAME</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_ROOT" title="src/swagger/constants.ts"><b>SWAGGER_API_ROOT</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_ROOT" title="src/main.ts"><b>SWAGGER_API_ROOT</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
-                            <a href="#SWAGGER_API_SCHEMES" title="src/swagger/constants.ts"><b>SWAGGER_API_SCHEMES</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                            <a href="#SWAGGER_API_SCHEMES" title="src/main.ts"><b>SWAGGER_API_SCHEMES</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
                         </li>
                         <li>
                             <a href="#WINSTON_MODULE_OPTIONS" title="src/modules/winston/winston.constants.ts"><b>WINSTON_MODULE_OPTIONS</b>&nbsp;&nbsp;&nbsp;(src/.../winston.constants.ts)</a>
@@ -109,46 +103,6 @@
     </table>
 </section>
 
-    <h3>src/swagger/index.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="configureOpenAPI"></a>
-                        <span class="name">
-                            <b>
-                            configureOpenAPI</b>
-                            <a href="#configureOpenAPI"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(app: INestApplication) &#x3D;&gt; {
-  const options &#x3D; new DocumentBuilder()
-    .setTitle(SWAGGER_API_NAME)
-    .setDescription(SWAGGER_API_DESCRIPTION)
-    .setVersion(SWAGGER_API_CURRENT_VERSION)
-    .setSchemes(...SWAGGER_API_SCHEMES)
-    .addBearerAuth(SWAGGER_API_AUTH_NAME, SWAGGER_API_AUTH_LOCATION)
-    .build();
-  const document &#x3D; SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
-}</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Open api configuration to be used as a basis for web application</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
     <h3>src/modules/winston/winston.providers.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -223,37 +177,6 @@
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Constructor a winston provider</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>src/main.hmr.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="module"></a>
-                        <span class="name">
-                            <b>
-                            module</b>
-                            <a href="#module"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Represents the webpack meta data</p>
 </div>
                     </td>
                 </tr>
@@ -338,7 +261,7 @@
             </tbody>
         </table>
 </section>
-    <h3>src/swagger/constants.ts</h3>
+    <h3>src/main.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>

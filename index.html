@@ -58,8 +58,8 @@
 <li>Please make sure to have docker desktop setup on any preferred operating system to quickly compose both the MongoDB and web application. Then follow the steps outlined below.</li>
 </ul>
 <hr>
-<h3 id="🚀-setup">🚀 Setup</h3>
-<h4 id="manually-deploying-without-docker">Manually Deploying without Docker</h4>
+<h3 id="🚀-deployment">🚀 Deployment</h3>
+<h4 id="manual-deployment-without-docker">Manual Deployment without Docker</h4>
 <ul>
 <li><p>Create a .env file using the <code>cp .env.example .env</code> command and replace the existing env variables with personal settings (MongoDB URL either srv or localhost)</p>
 </li>
@@ -73,7 +73,7 @@
 <li>Execute the following command in-app directory:</li>
 </ul>
 <div><pre class="line-numbers"><code class="language-bash"># creates and loads the docker container with required configuration
-$ docker-compose up</code></pre></div><ul>
+$ docker-compose up -d </code></pre></div><ul>
 <li>The following command will set up the project for you (building the Docker images, starting docker-compose stack). The Web application and mongo will be exposed to <a href="http://localhost:9000">http://localhost:9000</a> and <a href="http://localhost:27017">http://localhost:27017</a> respectively</li>
 </ul>
 <h3 id="🔒-environment-configuration">🔒 Environment Configuration</h3>
@@ -151,12 +151,12 @@ $ npm run typedocs</code></pre></div><hr>
 <p>Out of the box, the web app comes with an <a href="https://swagger.io/specification/">open api specification</a>, that is used to describe RESTful APIs. Nest provides a <a href="https://docs.nestjs.com/recipes/swagger">dedicated module to work with it</a>.</p>
 <p>The configuration for Swagger can be found at this <a href="https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/master/src/swagger">location</a>.</p>
 <hr>
-<h3 id="✨-typeorm">✨ TypeORM</h3>
-<p>TypeORM is an object-relational mapping that acts as an abstraction layer over operations on databases. Please view the <a href="https://typeorm.io/#/">documentation</a> for further details.</p>
-<p>The configuration for TypeORM can be found in the <a href="https://github.com/msanvarov/nest-rest-typeorm-boilerplate/blob/master/src/modules/app/app.module.ts#L17">app module</a>.</p>
+<h3 id="✨-mongoose">✨ Mongoose</h3>
+<p>Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. Please view the <a href="https://mongoosejs.com">documentation</a> for further details.</p>
+<p>The configuration for Mongoose can be found in the <a href="https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L17">app module</a>.</p>
 <hr>
 <h3 id="🔊-logs">🔊 Logs</h3>
-<p>This boilerplate comes with a Winston module for logging, the configurations for Winston can be found in the <a href="https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/main/app.module.ts#L24">app module</a>.</p>
+<p>This boilerplate comes with a Winston module for logging, the configurations for Winston can be found in the <a href="https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L27">app module</a>.</p>
 <hr>
 <h3 id="👥-support">👥 Support</h3>
 <p>Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you&#39;d like to join them, please <a href="https://docs.nestjs.com/support">read more here</a>.</p>
