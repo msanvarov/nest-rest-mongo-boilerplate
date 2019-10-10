@@ -42,7 +42,7 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 
 - Download dependencies using `npm i` or `yarn`
 
-- Start the app in pre-production mode using `npm run start` or for development use `npm run start:dev` (the app will be exposed on the port 9000; not to conflict with React, Angular, or Vue)
+- Start the app in pre-production mode using `npm run start` or `npm run start:dev` for development (the app will be exposed on the port 9000; not to conflict with React, Angular, or Vue)
 
 #### Deploying with Docker 🐳
 
