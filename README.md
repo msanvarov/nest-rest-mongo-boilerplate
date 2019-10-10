@@ -79,6 +79,8 @@ For interchangeability:
 
 - Replace the following lines of code in the [main.ts file](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/main.ts) with the ones detailed below.
 
+Fastify:
+
 ```ts
 // for fastify:
 import {
@@ -97,7 +99,9 @@ app.register(fastifyRateLimiter, {
   timeWindow: '1 minute',
 });
 ```
-To:
+
+Express:
+
 ```ts
 // for express:
 import * as headers from 'helmet';
