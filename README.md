@@ -203,7 +203,7 @@ This boilerplate comes with an integrated Winston module for logging, the config
 
 ### 👥 Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest has been able to grown because of sponsors and support from backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ---
 
