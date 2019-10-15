@@ -53,7 +53,7 @@
     "winston-daily-rotate-file": "4.2.1"
   },
   "devDependencies": {
-    "@compodoc/compodoc": "1.1.10",
+    "@compodoc/compodoc": "1.1.11",
     "@nestjs/testing": "6.8.3",
     "@types/dotenv": "6.1.1",
     "@types/express": "4.17.1",
