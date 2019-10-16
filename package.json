@@ -33,7 +33,7 @@
     "class-transformer": "0.2.3",
     "class-validator": "0.10.2",
     "crypto": "1.0.1",
-    "dotenv": "8.1.0",
+    "dotenv": "8.2.0",
     "express-rate-limit": "5.0.0",
     "fastify-helmet": "3.0.1",
     "fastify-rate-limit": "2.4.0",
