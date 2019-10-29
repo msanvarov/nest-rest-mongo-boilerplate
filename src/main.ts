@@ -10,17 +10,17 @@ import { ValidationPipe } from "@nestjs/common";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
 /**
- * The endpoint for open api ui
+ * The url endpoint for open api ui
  * @type {string}
  */
 export const SWAGGER_API_ROOT = "api/docs";
 /**
- * The name given to the api
+ * The name of the api
  * @type {string}
  */
 export const SWAGGER_API_NAME = "API";
 /**
- * A short description for api
+ * A short description of the api
  * @type {string}
  */
 export const SWAGGER_API_DESCRIPTION = "API Description";
