@@ -61,7 +61,7 @@ export class AuthService {
   }: IProfile): Promise<ITokenReturnBody> {
     return {
       expires: this.expiration,
-      expiresPrettyPrint: this.prettyPrintSeconds(this.expiration),
+      expiresPrettyPrint: AuthService.prettyPrintSeconds(this.expiration),
       token: this.jwtService.sign({ _id, username, email, avatar }),
     };
   }
@@ -71,7 +71,7 @@ export class AuthService {
    * @param {string} time
    * @returns {string} hrf time
    */
-  private prettyPrintSeconds(time: string): string {
+  private static prettyPrintSeconds(time: string): string {
     const ntime = Number(time);
     const hours = Math.floor(ntime / 3600);
     const minutes = Math.floor((ntime % 3600) / 60);
