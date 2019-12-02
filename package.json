@@ -36,7 +36,7 @@
     "dotenv": "8.2.0",
     "express-rate-limit": "5.0.0",
     "fastify-helmet": "3.0.2",
-    "fastify-rate-limit": "2.4.0",
+    "fastify-rate-limit": "3.0.0",
     "fastify-swagger": "2.4.0",
     "gravatar": "1.8.0",
     "helmet": "3.21.2",
