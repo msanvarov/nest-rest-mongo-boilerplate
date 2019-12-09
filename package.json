@@ -42,7 +42,7 @@
     "helmet": "3.21.2",
     "mongoose": "5.7.14",
     "nest-access-control": "2.0.1",
-    "passport": "0.4.0",
+    "passport": "0.4.1",
     "passport-jwt": "4.0.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.0",
