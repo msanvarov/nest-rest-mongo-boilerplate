@@ -50,7 +50,7 @@
     "swagger-ui-express": "4.1.2",
     "typeorm": "0.2.22",
     "winston": "3.2.1",
-    "winston-daily-rotate-file": "4.4.0"
+    "winston-daily-rotate-file": "4.4.1"
   },
   "devDependencies": {
     "@compodoc/compodoc": "1.1.11",
