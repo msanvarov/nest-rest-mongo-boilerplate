@@ -73,7 +73,7 @@
     "ts-node": "8.6.2",
     "tsc-watch": "4.0.0",
     "tsconfig-paths": "3.9.0",
-    "tslint": "5.20.1",
+    "tslint": "6.0.0",
     "typescript": "3.7.5"
   },
   "jest": {
