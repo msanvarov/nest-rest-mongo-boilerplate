@@ -24,7 +24,7 @@
     "@nestjs/common": "6.11.11",
     "@nestjs/core": "6.11.11",
     "@nestjs/jwt": "6.1.2",
-    "@nestjs/mongoose": "6.3.1",
+    "@nestjs/mongoose": "6.4.0",
     "@nestjs/passport": "7.0.0",
     "@nestjs/platform-express": "6.11.11",
     "@nestjs/platform-fastify": "6.11.11",
