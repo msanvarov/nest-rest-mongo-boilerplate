@@ -29,21 +29,6 @@ export const SWAGGER_API_DESCRIPTION = "API Description";
  * @type {string}
  */
 export const SWAGGER_API_CURRENT_VERSION = "1.0";
-/**
- * The default authentication method
- * @type {string}
- */
-export const SWAGGER_API_AUTH_NAME = "Authorization";
-/**
- * Where the SWAGGER_API_AUTH_NAME will be used in the request
- * @type {string}
- */
-export const SWAGGER_API_AUTH_LOCATION = "header";
-/**
- * Types of api schemes
- * @type {string[]}
- */
-export const SWAGGER_API_SCHEMES: Array<"http" | "https"> = ["http", "https"];
 
 (async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -54,8 +39,7 @@ export const SWAGGER_API_SCHEMES: Array<"http" | "https"> = ["http", "https"];
     .setTitle(SWAGGER_API_NAME)
     .setDescription(SWAGGER_API_DESCRIPTION)
     .setVersion(SWAGGER_API_CURRENT_VERSION)
-    .setSchemes(...SWAGGER_API_SCHEMES)
-    .addBearerAuth(SWAGGER_API_AUTH_NAME, SWAGGER_API_AUTH_LOCATION)
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup(SWAGGER_API_ROOT, app, document);

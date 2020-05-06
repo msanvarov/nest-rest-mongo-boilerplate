@@ -1,4 +1,4 @@
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiProperty } from "@nestjs/swagger";
 import {
   IsEmail,
   IsNotEmpty,
@@ -14,7 +14,7 @@ export class PatchProfilePayload {
   /**
    * Email field
    */
-  @ApiModelProperty()
+  @ApiProperty()
   @IsEmail()
   @IsNotEmpty()
   email: string;
@@ -22,7 +22,7 @@ export class PatchProfilePayload {
   /**
    * Username field
    */
-  @ApiModelProperty({
+  @ApiProperty({
     required: true,
   })
   @IsAlphanumeric()
@@ -32,7 +32,7 @@ export class PatchProfilePayload {
   /**
    * Name field
    */
-  @ApiModelProperty()
+  @ApiProperty()
   @Matches(/^[a-zA-Z ]+$/)
   @IsNotEmpty()
   name: string;
@@ -40,7 +40,7 @@ export class PatchProfilePayload {
   /**
    * Password field
    */
-  @ApiModelProperty()
+  @ApiProperty()
   @IsNotEmpty()
   @MinLength(8)
   password: string;

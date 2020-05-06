@@ -1,4 +1,4 @@
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiProperty } from "@nestjs/swagger";
 import {
   IsEmail,
   IsNotEmpty,
@@ -14,7 +14,7 @@ export class RegisterPayload {
   /**
    * Email field
    */
-  @ApiModelProperty({
+  @ApiProperty({
     required: true,
   })
   @IsEmail()
@@ -24,7 +24,7 @@ export class RegisterPayload {
   /**
    * Username field
    */
-  @ApiModelProperty({
+  @ApiProperty({
     required: true,
   })
   @IsAlphanumeric()
@@ -34,7 +34,7 @@ export class RegisterPayload {
   /**
    * Name field
    */
-  @ApiModelProperty({
+  @ApiProperty({
     required: true,
   })
   @Matches(/^[a-zA-Z ]+$/)
@@ -44,7 +44,7 @@ export class RegisterPayload {
   /**
    * Password field
    */
-  @ApiModelProperty({
+  @ApiProperty({
     required: true,
   })
   @IsNotEmpty()
