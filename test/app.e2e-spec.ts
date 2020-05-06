@@ -23,7 +23,7 @@ describe("AppController (e2e)", () => {
     return request(app.getHttpServer())
       .get("/")
       .expect(401)
-      .expect({ statusCode: 401, error: "Unauthorized" });
+      .expect({ statusCode: 401, message: "Unauthorized" });
   });
 
   it("/api/auth/login (POST) validate username is alphanumeric", () => {
@@ -37,20 +37,7 @@ describe("AppController (e2e)", () => {
       .expect({
         statusCode: 400,
         error: "Bad Request",
-        message: [
-          {
-            target: {
-              username: "@#!@@/$%%^)(*+_=",
-              password: "test123456789",
-            },
-            value: "@#!@@/$%%^)(*+_=",
-            property: "username",
-            children: [],
-            constraints: {
-              isAlphanumeric: "username must contain only letters and numbers",
-            },
-          },
-        ],
+        message: ["username must contain only letters and numbers"],
       });
   });
 
@@ -65,21 +52,7 @@ describe("AppController (e2e)", () => {
       .expect({
         statusCode: 400,
         error: "Bad Request",
-        message: [
-          {
-            target: {
-              username: "test",
-              password: "<8",
-            },
-            value: "<8",
-            property: "password",
-            children: [],
-            constraints: {
-              minLength:
-                "password must be longer than or equal to 8 characters",
-            },
-          },
-        ],
+        message: ["password must be longer than or equal to 8 characters"],
       });
   });
 
@@ -118,7 +91,7 @@ describe("AppController (e2e)", () => {
         password: "test123456789",
       })
       .expect(201)
-      .then(res => (bearer = res.body.token));
+      .then((res) => (bearer = res.body.token));
   });
 
   it("/ (GET) fetch main route when authorized", () => {
@@ -170,7 +143,7 @@ describe("AppController (e2e)", () => {
       .get("/api/profile/test")
       .set("Authorization", `Bearer ${bearer}`)
       .expect(200)
-      .then(res => (payload = res.body));
+      .then((res) => (payload = res.body));
   });
 
   it("/api/profile (PATCH) update created account information", () => {
