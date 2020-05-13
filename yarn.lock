@@ -7501,10 +7501,10 @@ ts-simple-ast@12.4.0:
     tslib "^1.9.0"
     typescript "2.9.1"
 
-tsc-watch@4.2.4:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.2.4.tgz#3ba901a1746e92ad829b763f5e465981b17aa6ee"
-  integrity sha512-HvpKSdpSk5ti2nffWQQxfvAnCP17OFHLqj13ERfqb2FIk6bUMdlSfX4SP+iANjyBo8fob0rrhr7zF9OBx56o3A==
+tsc-watch@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.2.5.tgz#3ee680cfd02087bb76cbecd2d5f290a0d6302454"
+  integrity sha512-scXpL5SFJevvtKOtQIRxJvyEwCKSIZS9bDrO/cy/dWlETTVwSlfRm2WmakdRPM0Rg90DbYyJjkUr2z74HXcxzQ==
   dependencies:
     cross-spawn "^5.1.0"
     node-cleanup "^2.1.2"
