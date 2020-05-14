@@ -607,10 +607,10 @@
     "@types/jsonwebtoken" "8.3.8"
     jsonwebtoken "8.5.1"
 
-"@nestjs/mapped-types@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-0.0.3.tgz#7b50206935452e74a270ed9a07ad05a6305b0b42"
-  integrity sha512-PKxWOVaMyvj9/82afLpMZ/+Pb5JacCURRP/FY/tCDtsoS+MABeQGj2oqbtH4uQUiL4n+H0IigvQGHWQ1zPPknA==
+"@nestjs/mapped-types@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-0.0.4.tgz#a55d3e78905a019abb42c69763d04b976e6a8a92"
+  integrity sha512-+LER9UCm/BHPRm0qk3Uv0KLywedru4cr211oaGYA7bIDrHlQZeeqGAfGhVXBiVgZ6w5JWJkBwzsPEFtt5Zw78Q==
 
 "@nestjs/mongoose@7.0.0":
   version "7.0.0"
@@ -644,12 +644,12 @@
     path-to-regexp "3.2.0"
     tslib "1.11.2"
 
-"@nestjs/swagger@4.5.5":
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-4.5.5.tgz#6d3c8ee182d8e0186d55dd5a5d62d1cdba07a1d2"
-  integrity sha512-c8y0XbGyqhFVfAWEC0hYkSgXmzewmv6b1DfE9A5pk8T1uaYSgQ5RNH9RxYJSbjCkyUgOPXujy704lqQWWPpFdw==
+"@nestjs/swagger@4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-4.5.6.tgz#36c6b67896ce157a7605f62e3ba43fb51e3e0cf5"
+  integrity sha512-q45xccaEfPuMp6+QBJNgWw4Ip/7S+mrU8tPNR4kRvV9Ic/EV0rAWDEZ1G+XmUr3O8PcpJAv5CBrf913DU4+x4A==
   dependencies:
-    "@nestjs/mapped-types" "0.0.3"
+    "@nestjs/mapped-types" "0.0.4"
     lodash "4.17.15"
     path-to-regexp "3.2.0"
 
