@@ -661,10 +661,10 @@
     optional "0.1.4"
     tslib "2.0.0"
 
-"@nestjs/typeorm@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-7.0.1.tgz#9c26a890a3f79d44139b3bb871f30ae3883be9a1"
-  integrity sha512-nMg3UBTFAU00o9ib5e0KHaan16qGmo71TIcbwniNX019l8ReAhNbUG+RpPTde28k59q1tn0ex31loR3J034p8A==
+"@nestjs/typeorm@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-7.1.0.tgz#ea964ff1724524e585f75bf7469784ca787e7983"
+  integrity sha512-xKqvhMF68TDFjptBerLD6HDe7qrb9RpZ2X1zBTdGKipFQrlVBTJtgs6Hmy+deuPJ3OnFzw0oe78U57Ur87xq8g==
   dependencies:
     uuid "8.1.0"
 
