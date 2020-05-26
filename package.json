@@ -29,7 +29,7 @@
     "@nestjs/platform-express": "7.1.0",
     "@nestjs/platform-fastify": "7.1.0",
     "@nestjs/swagger": "4.5.8",
-    "@nestjs/typeorm": "7.0.1",
+    "@nestjs/typeorm": "7.1.0",
     "class-transformer": "0.2.3",
     "class-validator": "0.12.2",
     "crypto": "1.0.1",
