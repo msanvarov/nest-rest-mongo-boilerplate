@@ -7977,10 +7977,10 @@ windows-release@^3.1.0:
   dependencies:
     execa "^1.0.0"
 
-winston-daily-rotate-file@4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/winston-daily-rotate-file/-/winston-daily-rotate-file-4.4.2.tgz#7a4dd34fc26ab3873bdee8c4f9d5bf1d8fd6d562"
-  integrity sha512-pVOUJKxN+Kn6LnOJZ4tTwdV5+N+fCkiRAb3bVnzcPtOj1ScxGNC3DyUhHuAHssBtMl5s45/aUcSUtApH+69V5A==
+winston-daily-rotate-file@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/winston-daily-rotate-file/-/winston-daily-rotate-file-4.5.0.tgz#3914ac57c4bdae1138170bec85af0c2217b253b1"
+  integrity sha512-/HqeWiU48dzGqcrABRlxYWVMdL6l3uKCtFSJyrqK+E2rLnSFNsgYpvwx15EgTitBLNzH69lQd/+z2ASryV2aqw==
   dependencies:
     file-stream-rotator "^0.5.7"
     object-hash "^2.0.1"
