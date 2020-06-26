@@ -41,7 +41,7 @@
     "gravatar": "1.8.0",
     "helmet": "3.23.2",
     "mongoose": "5.9.20",
-    "nest-access-control": "2.0.1",
+    "nest-access-control": "2.0.2",
     "passport": "0.4.1",
     "passport-jwt": "4.0.0",
     "reflect-metadata": "0.1.13",
