@@ -3057,10 +3057,19 @@ fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
-fast-json-stringify@^1.14.0, fast-json-stringify@^1.18.0:
+fast-json-stringify@^1.18.0:
   version "1.20.1"
   resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-1.20.1.tgz#07e30057718d85c39a798d43678a4a91ea7fa30e"
   integrity sha512-PEPWrRZvKqI11fY2uDhLLuoapIda9wVQ2mzAj8rkBfVD7jWvOSIICL0Om1knoReIWKF5y/5bbR/GzcZANaaJfQ==
+  dependencies:
+    ajv "^6.11.0"
+    deepmerge "^4.2.2"
+    string-similarity "^4.0.1"
+
+fast-json-stringify@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-2.2.1.tgz#bf429cc5ae126efadf33d283e5b0eb42c0823976"
+  integrity sha512-5s4KScgFR3cmrAoMip9K1m+oP9OsMtU8pG2oNbztbGKS9Xn4oDyPXdqefjpeMrZU4wgGga6/jyIOasghBPcpcQ==
   dependencies:
     ajv "^6.11.0"
     deepmerge "^4.2.2"
@@ -3119,7 +3128,7 @@ fastify-helmet@4.0.2:
     referrer-policy "^1.1.0"
     x-xss-protection "^1.1.0"
 
-fastify-plugin@^1.3.0, fastify-plugin@^1.6.0, fastify-plugin@^1.6.1:
+fastify-plugin@^1.6.0, fastify-plugin@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-1.6.1.tgz#122f5a5eeb630d55c301713145a9d188e6d5dd5b"
   integrity sha512-APBcb27s+MjaBIerFirYmBLatoPCgmHZM6XP0K+nDL9k0yX8NJPWDY1RAC3bh6z+AB5ULS2j31BUfLMT3uaZ4A==
@@ -3133,13 +3142,13 @@ fastify-plugin@^2.0.0:
   dependencies:
     semver "^7.3.2"
 
-fastify-rate-limit@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-3.0.1.tgz#44e4313ac85e3cb85c02f3de3bf6a526979d155d"
-  integrity sha512-yxPEgR5MzoBqo55y/X8rrVXbaU2KWLLK+woZGk0mAHifDYV2lUPKEb3R3FuHcazDLpabAbBOBZqFOi7iOPqnkQ==
+fastify-rate-limit@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.0.1.tgz#1029b05b33a775fdfe335e540956c594f4413d04"
+  integrity sha512-57O30Indo1X1aJ1iYikHABZKjoxV6MTN6eh0Qwe6Dd8rXzlJsC/grTIkXpKGuzUSVxIwajAOlJYWlP2jyJo0iQ==
   dependencies:
-    fast-json-stringify "^1.14.0"
-    fastify-plugin "^1.3.0"
+    fast-json-stringify "^2.2.1"
+    fastify-plugin "^2.0.0"
     ms "^2.1.1"
     tiny-lru "^7.0.0"
 
