@@ -3142,10 +3142,10 @@ fastify-plugin@^2.0.0:
   dependencies:
     semver "^7.3.2"
 
-fastify-rate-limit@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.0.1.tgz#1029b05b33a775fdfe335e540956c594f4413d04"
-  integrity sha512-57O30Indo1X1aJ1iYikHABZKjoxV6MTN6eh0Qwe6Dd8rXzlJsC/grTIkXpKGuzUSVxIwajAOlJYWlP2jyJo0iQ==
+fastify-rate-limit@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.0.2.tgz#ae1039e3b7005c068d82333d04d1d35ba4158b3b"
+  integrity sha512-ffl61Cn2SrGqNcZfnwvtKQQxLgT/QjzQHZe5f4NOvYlhThCRFNqzpna8BOTMXVtGWhqWmvqz1w4hp6XbuTx/gQ==
   dependencies:
     fast-json-stringify "^2.2.1"
     fastify-plugin "^2.0.0"
