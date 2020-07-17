@@ -38,7 +38,7 @@
     "fastify-helmet": "4.0.2",
     "fastify-rate-limit": "4.0.2",
     "fastify-swagger": "3.1.2",
-    "gravatar": "1.8.0",
+    "gravatar": "1.8.1",
     "helmet": "3.23.3",
     "mongoose": "5.9.25",
     "nest-access-control": "2.0.2",
