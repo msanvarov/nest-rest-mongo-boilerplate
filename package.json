@@ -64,7 +64,7 @@
     "@types/node": "13.13.5",
     "@types/supertest": "2.0.10",
     "chai": "4.2.0",
-    "jest": "26.2.2",
+    "jest": "26.3.0",
     "nodemon": "2.0.4",
     "prettier": "2.0.5",
     "supertest": "4.0.2",
