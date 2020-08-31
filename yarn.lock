@@ -611,10 +611,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/common@7.4.3":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.4.3.tgz#cd202a5ff03cb4cf8c576f6cc0b17f57b9cedbd1"
-  integrity sha512-OeNnzPbUOk2dUuvf8/X0yBzDMhaR5IZP4Qzq8KpXVHk6xJewrscYlEpyMxymlSlnEYW3NWzj5woacvLbeps4Vg==
+"@nestjs/common@7.4.4":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.4.4.tgz#400011464792e446949e9cb719bdf7ede31da725"
+  integrity sha512-Cj94FJrnLcAU4URJrRmnsHRODZPJpX+EKKJ/Or9qvL9ULQwRWYmFcGQYaJ0nVV0hSBjn/jaAV1Cgqw74uk21KA==
   dependencies:
     axios "0.20.0"
     cli-color "2.0.0"
@@ -622,10 +622,10 @@
     tslib "2.0.1"
     uuid "8.3.0"
 
-"@nestjs/core@7.4.3":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.4.3.tgz#86ca3d59e788b984cd80c7de5ebeb389aee10f88"
-  integrity sha512-YWC4x5G5cHhlBB/6oyw9ug781lSm9s6QqMRNKYjiR47A1HoxOcAJQ8NMrm9axgK9ZET547k0rl473vyjhPwwlg==
+"@nestjs/core@7.4.4":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.4.4.tgz#7733dad8f5d0836e2badb79b8279200480b4d040"
+  integrity sha512-e3iID6s0JIaWDlZMIO+gkk5KDwHW+VUexvZOKXbTjtsBidtusbiT4JLr4ODkj8y3QSfQN9vouY9hWfwwQrxa/Q==
   dependencies:
     "@nuxtjs/opencollective" "0.2.2"
     fast-safe-stringify "2.0.7"
@@ -658,10 +658,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/passport/-/passport-7.1.0.tgz#04cbb6dec4b6fd92b943e131a2ad89da42c2a9f0"
   integrity sha512-TdXqEwQ9PWWdpZsWp6jnora+zN+jg7h9Om9CAxXDMCqnmB+IJknkY0OyyplxbMjRyep1zvsc3IptuPHIXb27tA==
 
-"@nestjs/platform-express@7.4.3":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.4.3.tgz#6a3b8450df85fb84f0cd6cc6abe10f7a96e27105"
-  integrity sha512-CjumkTSbY9q15PlDlgwn5VSNzGJmNl8crJ17QV4ojSrgE3XYVNWO0aht4pVsjD9CXEXD8S2RZhqa4IC+k+YL7Q==
+"@nestjs/platform-express@7.4.4":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.4.4.tgz#03429ebd5ae4fe7e38556cd9af8ae38ee42e7d1f"
+  integrity sha512-LO0WuMZuP1P68t2kQbxb3GUh2SfkOGw5Ma2fR+QWNS7N63BL6Vsf/b8Ad43ht51FuVfqOQZo7AJVz8DljDRw3A==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
@@ -669,10 +669,10 @@
     multer "1.4.2"
     tslib "2.0.1"
 
-"@nestjs/platform-fastify@7.4.3":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-fastify/-/platform-fastify-7.4.3.tgz#45bc7ea6c845905e2f55cd7cf1467548603a75a9"
-  integrity sha512-cap8GcZmhbEZaiFi+EDLMw4MK1FbzqDcH5EZgP6A9/cYqf49GIGoG4AwnMXVNZpDUWMPJg+Qw4mcb9v+xYBmKQ==
+"@nestjs/platform-fastify@7.4.4":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-fastify/-/platform-fastify-7.4.4.tgz#b5b24576d17a04c9845890f21d9827161e9dd7e0"
+  integrity sha512-R350qpat4aQY1KV27yWWgMa0UZV/5vsPlp/LoNERZjKYjTkhDCbsVhfFxmTJhXRpEbU69P+XW/EDlLa7kiQj0Q==
   dependencies:
     fastify "3.3.0"
     fastify-cors "4.1.0"
@@ -691,10 +691,10 @@
     lodash "4.17.20"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@7.4.3":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.4.3.tgz#2c612bb5ff9c2f93903977cb54a65814c734dcdf"
-  integrity sha512-RWV9ILA5wFQmnrV4PWdtddFC59s/qVGYnHiWoBgfICllmgW6TNnfzM0QSvn+geI45NmB8CNkmYT61ESrwdbBFA==
+"@nestjs/testing@7.4.4":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.4.4.tgz#7a64b22e043b0f9db993c1c22467d20d3331f380"
+  integrity sha512-ZRIZcfql9Xc5M74jR05TvJ86z3VUUfsEYzHoEwunGnZLhcYXLT1Z3xSNE5T/MuSrJb5hPqp4DqaHmKdeuvgedw==
   dependencies:
     optional "0.1.4"
     tslib "2.0.1"
