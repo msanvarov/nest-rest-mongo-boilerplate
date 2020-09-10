@@ -39,7 +39,7 @@
     "fastify-rate-limit": "4.0.2",
     "fastify-swagger": "3.3.0",
     "gravatar": "1.8.1",
-    "helmet": "4.1.0",
+    "helmet": "4.1.1",
     "mongoose": "5.10.4",
     "nest-access-control": "2.0.2",
     "passport": "0.4.1",
