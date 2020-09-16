@@ -3098,10 +3098,10 @@ fastify-formbody@5.0.0:
   dependencies:
     fastify-plugin "^2.3.2"
 
-fastify-helmet@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/fastify-helmet/-/fastify-helmet-5.0.2.tgz#1fe86ba49aafcc89586921f9539770db1eccd7b7"
-  integrity sha512-1hhiSrGuQuY9VNByagE93zyXZsxx3tpbYFF2YP24eh2Nqq5Ecy2XiEyDPAqaG9ltUunnciGn3H1rY2IOEs08iA==
+fastify-helmet@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/fastify-helmet/-/fastify-helmet-5.0.3.tgz#6f72b998d0bc9f6acb6546f1a5bfb631a9429ed3"
+  integrity sha512-PLrmcRKMATmR/u613CSKsWyKy9n+Cnpr/uqv4uRTAkPdYGyE8yByZwE0E5cLJzIQHpfM0ba6aGPeYJMrGg5VnQ==
   dependencies:
     fastify-plugin "^2.1.1"
     helmet "^4.0.0"
