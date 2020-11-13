@@ -700,10 +700,10 @@
     path-to-regexp "3.2.0"
     tslib "2.0.3"
 
-"@nestjs/swagger@4.7.2":
-  version "4.7.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-4.7.2.tgz#2f7f1d8e76312df952749d303bbf30eb18183518"
-  integrity sha512-nZ24I9wG+Lg+317nOSmJBcz/76p/PeszYAl0PuA33g8paCanjwsvYL70ufMDu4LCrnU4JMYtx6st5C3UmhTfOw==
+"@nestjs/swagger@4.7.3":
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-4.7.3.tgz#b73b51214d6783d56238316259608029dc9e3756"
+  integrity sha512-rISljDHZEZLau8xRcL2ugNIrtVHzVojawScvYQUxSbV3col0fo1gs/SQBNU7qSbZPNqYGeocT0yXpu1gDs86BA==
   dependencies:
     "@nestjs/mapped-types" "0.1.1"
     lodash "4.17.20"
