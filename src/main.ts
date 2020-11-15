@@ -3,8 +3,8 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
-import * as headers from "fastify-helmet";
-import * as fastifyRateLimiter from "fastify-rate-limit";
+import headers from "fastify-helmet";
+import fastifyRateLimiter from "fastify-rate-limit";
 import { AppModule } from "./modules/app/app.module";
 import { ValidationPipe } from "@nestjs/common";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
@@ -33,7 +33,7 @@ export const SWAGGER_API_CURRENT_VERSION = "1.0";
 (async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter({ logger: console }),
+    new FastifyAdapter({ logger: true }),
   );
   const options = new DocumentBuilder()
     .setTitle(SWAGGER_API_NAME)
@@ -47,7 +47,7 @@ export const SWAGGER_API_CURRENT_VERSION = "1.0";
   app.register(headers);
   app.register(fastifyRateLimiter, {
     max: 100,
-    timeWindow: "1 minute",
+    timeWindow: 60000,
   });
   app.useGlobalPipes(new ValidationPipe());
 
