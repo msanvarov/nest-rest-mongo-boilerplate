@@ -963,10 +963,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@5.10.0":
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.10.0.tgz#15e1e22a087416342e1cca5451f917aa1e53ba63"
-  integrity sha512-inJhRgmsYC8JWB3ABUjCreNmMoML/ffu/y8LtTYe7GAW6/B8rVLQU16am73kkceasKX75p41WjU8yquUx/CSAw==
+"@types/mongoose@5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.10.1.tgz#41d5fe0fef5dce33c140467f1cb2a53b689a66e6"
+  integrity sha512-5yqbLHOyCQhUb7GPGW0A2dauUbhwgBvUWMzYcaUQiHdLZ8slgRp2R6i8FETZ+t5xeXpfhylYp9U7dAng7WamqQ==
   dependencies:
     "@types/mongodb" "*"
     "@types/node" "*"
