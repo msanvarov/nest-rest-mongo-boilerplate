@@ -2957,10 +2957,10 @@ expect@^26.6.2:
     jest-message-util "^26.6.2"
     jest-regex-util "^26.0.0"
 
-express-rate-limit@5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-5.2.2.tgz#024d9b7218c530142ae622fc18a66ce075ad3e58"
-  integrity sha512-4ibK8Xi3uUdUua1kJKEImA9J2kC/UtVshxmDOtV6FKA8cy+Qm3O1yd3kSYFPR9hIDJ3cMExp1faEpmcHzmaOQw==
+express-rate-limit@5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-5.2.3.tgz#ae73b3dc723decd697797611bd96e9b34a912f6c"
+  integrity sha512-cjQH+oDrEPXxc569XvxhHC6QXqJiuBT6BhZ70X3bdAImcnHnTNMVuMAJaT0TXPoRiEErUrVPRcOTpZpM36VbOQ==
 
 express@4.17.1:
   version "4.17.1"
