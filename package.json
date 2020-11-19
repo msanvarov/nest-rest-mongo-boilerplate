@@ -34,7 +34,7 @@
     "class-validator": "0.12.2",
     "crypto": "1.0.1",
     "dotenv": "8.2.0",
-    "express-rate-limit": "5.2.2",
+    "express-rate-limit": "5.2.3",
     "fastify-helmet": "5.0.3",
     "fastify-rate-limit": "4.0.3",
     "fastify-swagger": "3.5.0",
