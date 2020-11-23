@@ -671,10 +671,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-7.1.0.tgz#abcda46ac54ea5529e09bad1755ff4d052dc63a4"
   integrity sha512-cIUgz8Gg2o827S33GtsKIOCxQDA166BqY89CjPRCOtLI72+0JzIXOca05Ms80suRQNoJxcYJ6oOUZfUni9/apA==
 
-"@nestjs/passport@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/passport/-/passport-7.1.3.tgz#9b0860f9925ae410a30b4c3279343a5f11d46597"
-  integrity sha512-kQp1oDbfdsxlWxXCSshswysCjtfRCiBsYmpVD6s//fTEHpFZRM1XBuQ6jEVPCIQrtfhytqmi7wzMdgv8PVtKIA==
+"@nestjs/passport@7.1.4":
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/passport/-/passport-7.1.4.tgz#5ecffd34feed940c28c8e07208a34c26b291b28f"
+  integrity sha512-klqlosGXML5pMPRtq/jgjsSy5lzLwf6eJODvskIY9qOfEorIgiN2EjsMznY0szyXa9kAM3l9YAmrLQUgV/hp4Q==
 
 "@nestjs/platform-express@7.5.4":
   version "7.5.4"
