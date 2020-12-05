@@ -3151,13 +3151,6 @@ fastify-helmet@5.0.3:
     fastify-plugin "^2.1.1"
     helmet "^4.0.0"
 
-fastify-plugin@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-2.0.0.tgz#e1ac8fa0b4a9c65b83f40fc7f6a60f5ac6776326"
-  integrity sha512-5c7xwArjeY5T7PFw+TM66gz7E6mQpEK4PXKXVOmxLXUYh49D34pLAL+gbSRLgr7gg8fTOaNjB9fSj0adV5rrXg==
-  dependencies:
-    semver "^7.3.2"
-
 fastify-plugin@^2.1.1:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-2.3.4.tgz#b17abdc36a97877d88101fb86ad8a07f2c07de87"
@@ -3177,13 +3170,13 @@ fastify-plugin@^3.0.0:
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-3.0.0.tgz#cf1b8c8098e3b5a7c8c30e6aeb06903370c054ca"
   integrity sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w==
 
-fastify-rate-limit@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.0.3.tgz#efd1e2bee2afc1440665f7daf51130534b790e30"
-  integrity sha512-CSl91JWLNKA6lpf79PMM5KwqPGOaqDKKK9jNSGsExdge4o5FHlm16qZQsFJfo7seDEGyXdtel4NDGsGTNHVuyA==
+fastify-rate-limit@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.1.0.tgz#bac419278502120713887b12176d9dce8d7db924"
+  integrity sha512-n7Wiz4J2BnCbppsWhMLTlllZFTHSS3rtq3gm0lg/04w3VfqT4y5QokrCrbmoZULQoOzgoieKSy//+vt5KyM3Qg==
   dependencies:
     fast-json-stringify "^2.2.1"
-    fastify-plugin "^2.0.0"
+    fastify-plugin "^3.0.0"
     ms "^2.1.1"
     tiny-lru "^7.0.0"
 
