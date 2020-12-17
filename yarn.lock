@@ -630,20 +630,20 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/common@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.6.2.tgz#e3d4ba16be22f6068b61d5d640c30b7628507182"
-  integrity sha512-xsm/Arje/ePw8MrLFCmjyS8TXGPGG9vm0/E32CH87i27dmdlZ4OLwJ2NntLrhLWoa121bgIiRjVdxLIVWJk4EQ==
+"@nestjs/common@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.6.3.tgz#95cd05af4f8f023b7ba34fd27e9fa5f3ce2b8da7"
+  integrity sha512-y6aOMZfWSBnAPi2g/UuhK0IIGNafIvgxAmOVjw9punui1mFpkBe0c0hkEnUOG3iDEVncqooqEgln48D160JA5g==
   dependencies:
     axios "0.21.0"
     iterare "1.2.1"
     tslib "2.0.3"
     uuid "8.3.2"
 
-"@nestjs/core@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.6.2.tgz#059243524e004e31e92a9524a5b410dd64f13b75"
-  integrity sha512-cIL/fpd2rwniQtxQSfsDb+lFwj6Rwahtqb8iA8VCTLqsQISNxjJwtsyG+UKBuSmJjDWfYqNjb8Y124ZrKJpDgg==
+"@nestjs/core@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.6.3.tgz#0b3c3518b6ec5e2ca3d5751820d4142639e3c24f"
+  integrity sha512-sOtIcuEYoj0PXhF/aULIXAUS5SW9wYLGkIAtkk8DMjW2CJJkCuAPIQk7LIqAS6tRDnXTluexnQ6artolVd/iDg==
   dependencies:
     "@nuxtjs/opencollective" "0.3.2"
     fast-safe-stringify "2.0.7"
@@ -676,10 +676,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/passport/-/passport-7.1.5.tgz#b32fc0492008d73ebae4327fbc0012a738a83664"
   integrity sha512-Hu9hPxTdBZA0C4GrWTsSflzwsJ99oAk9jqAwpcszdFNqfjMjkPGuCM9QsVZbBP2bE8fxrVrPsNOILS6puY8e/A==
 
-"@nestjs/platform-express@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.6.2.tgz#dbcc4b8b6592b0da6331a993a97b4912ce5d5749"
-  integrity sha512-PkaLelrAZIeIHqcXiIWXhbMLfqiQ0xjHUO4ErR4fyAZ/hKQR2yfejm/z2Ix1e0Z7d0mpG1jPtLzSmQs8x/Sovw==
+"@nestjs/platform-express@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.6.3.tgz#a5181d0b9834f13a6faaf84ddba09705876358dc"
+  integrity sha512-KkO2qRC0lRhNCBUx3lM/9d78N852UQ6eiJHlh6uGOeei1tlRHOM9V+9aehzC+4/+K6+KSZmqG6a3ZXdibu6WiA==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
@@ -687,15 +687,15 @@
     multer "1.4.2"
     tslib "2.0.3"
 
-"@nestjs/platform-fastify@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-fastify/-/platform-fastify-7.6.2.tgz#288a726dc5ca50b8abd5218255852fab8d0e44a0"
-  integrity sha512-a+z+Gh8H6KT6ma4Y8SfrztIopC/0Vkz1vcPGzo3AgesPMOGdS5V60RnwFvYg5iTq4cBYdiu0Ut2EH0PRjdns/A==
+"@nestjs/platform-fastify@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-fastify/-/platform-fastify-7.6.3.tgz#18ff3eaba2c43bacf66d7f265763759a7afa065a"
+  integrity sha512-ZzMdc6LfS4XI/2+rCLjPFvyztJ1wGv0XWLnStzQabuQ7/nyWoFCy5a70jlexxkYJsCX9QRZ6RYCmnB53Bbr+xA==
   dependencies:
     fastify "3.9.2"
     fastify-cors "5.1.0"
     fastify-formbody "5.0.0"
-    light-my-request "4.3.0"
+    light-my-request "4.4.1"
     middie "5.2.0"
     path-to-regexp "3.2.0"
     tslib "2.0.3"
@@ -709,10 +709,10 @@
     lodash "4.17.20"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.6.2.tgz#0b29add9a86302e3b59b0665df4c382c1420c32d"
-  integrity sha512-mGRp9W8v8TXoHKuCu6Am+1dzO3q7lCNO0CW3JmmphVlUSa5BV4Dj3dHi7q3i6e1zQ7IK/gjJBjG59VWLwR4lPQ==
+"@nestjs/testing@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.6.3.tgz#011f8061375eed9761788e0d773b80215f7ec159"
+  integrity sha512-rc8Xh/Kq5VXKws0tQYahAxM6gXt310qJBpxTlhVWdXOjGSTYU6jCoZNLYYc3DgOsrBgEDF2db38Fy4h3ck7oLQ==
   dependencies:
     optional "0.1.4"
     tslib "2.0.3"
@@ -4927,10 +4927,10 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-light-my-request@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/light-my-request/-/light-my-request-4.3.0.tgz#0178dfe7f298089df976f8e4cc0e10998be50aad"
-  integrity sha512-WrEvI7V41ZbEUe0bsfuS170QrYSVADKA0JiWyK/lVtm4Ra26pl9CYKBdlr823/s37N2wMJze8YNkHbg11aZWAw==
+light-my-request@4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/light-my-request/-/light-my-request-4.4.1.tgz#bfa2220316eef4f6465bf2f0667780da6b7f6a71"
+  integrity sha512-FDNRF2mYjthIRWE7O8d/X7AzDx4otQHl4/QXbu3Q/FRwBFcgb+ZoDaUd5HwN53uQXLAiw76osN+Va0NEaOW6rQ==
   dependencies:
     ajv "^6.12.2"
     cookie "^0.4.0"
