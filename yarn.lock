@@ -3695,10 +3695,10 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-helmet@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.2.0.tgz#e81f5613cc1c90402af581794dc9878ad078b237"
-  integrity sha512-aoiSxXMd0ks1ojYpSCFoCRzgv4rY/uB9jKStaw8PkXwsdLYa/Gq+Nc5l0soH0cwBIsLAlujPnx4HLQs+LaXCrQ==
+helmet@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.3.0.tgz#1ceac7191c4643469277eb16ccbe32ca3cf14e76"
+  integrity sha512-Ab4a7b3Jt+E7Ifqc4jZ3oApIJ2JR+oAtLxT7Zhj9YyEY7/EtgVRbRABbUnpVwhjTh0vpsAwY/CdRxyPgTBAcbw==
 
 helmet@^4.0.0:
   version "4.0.0"
