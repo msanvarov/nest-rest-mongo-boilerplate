@@ -3170,12 +3170,11 @@ fastify-plugin@^3.0.0:
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-3.0.0.tgz#cf1b8c8098e3b5a7c8c30e6aeb06903370c054ca"
   integrity sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w==
 
-fastify-rate-limit@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-4.1.0.tgz#bac419278502120713887b12176d9dce8d7db924"
-  integrity sha512-n7Wiz4J2BnCbppsWhMLTlllZFTHSS3rtq3gm0lg/04w3VfqT4y5QokrCrbmoZULQoOzgoieKSy//+vt5KyM3Qg==
+fastify-rate-limit@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-5.0.0.tgz#700e5931f5da2c7b2e4e85b2305a2780231966c2"
+  integrity sha512-ue4u5dCmIbB2o/9Hs6RCBZ2jmBpxRAhgQzoRSA4pznOpP+q5vQzudtGXKtpAimH0sEq3JkrOp2KIwLcrf9ZunQ==
   dependencies:
-    fast-json-stringify "^2.2.1"
     fastify-plugin "^3.0.0"
     ms "^2.1.1"
     tiny-lru "^7.0.0"
