@@ -1273,6 +1273,11 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+
 arr-diff@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-4.0.0.tgz#d6461074febfec71e7e15235761a329a5dc7c520"
@@ -3204,15 +3209,15 @@ fastify-static@^3.3.0:
     readable-stream "^3.4.0"
     send "^0.17.1"
 
-fastify-swagger@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/fastify-swagger/-/fastify-swagger-3.5.0.tgz#dcd494256c9c13e9759b85aa5b590c3333ce2707"
-  integrity sha512-zB65DJAvmzQ+4Wad270dk1xHh5rLjePCkohlt3wcUDTbG8DrFDSt0mD9zAfB/jNspx1EX5xtUIX2ZxGMYWDP4A==
+fastify-swagger@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fastify-swagger/-/fastify-swagger-4.0.0.tgz#0b36ccb16893772a911af42eb64fe526f862465a"
+  integrity sha512-fP5MV7ITCPXqEfsX0pZXp8fxs8G+PvZ77gM0DvtOmQKj5tGlwYVOzwRSdlrpeXpbYyzIMCK/VO8OQBZgRnd1XA==
   dependencies:
     "@types/swagger-schema-official" "^2.0.20"
     fastify-plugin "^3.0.0"
     fastify-static "^3.3.0"
-    js-yaml "^3.14.0"
+    js-yaml "^4.0.0"
     json-schema-resolver "^1.2.0"
 
 fastify-warning@^0.2.0:
@@ -4725,6 +4730,13 @@ js-yaml@^3.14.0:
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+js-yaml@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
+  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+  dependencies:
+    argparse "^2.0.1"
 
 jsbn@~0.1.0:
   version "0.1.1"
