@@ -3114,10 +3114,10 @@ fastify-static@^3.3.0:
     readable-stream "^3.4.0"
     send "^0.17.1"
 
-fastify-swagger@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/fastify-swagger/-/fastify-swagger-4.0.1.tgz"
-  integrity sha512-K3CRNnpEUtBO+CZYGzXPgR+2dwQPqHppPRUI1Q0u2GcR89tT6wZhVOMbtxw8ks9Y6lt1IRRdV0C8ZbT+TC/yjg==
+fastify-swagger@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/fastify-swagger/-/fastify-swagger-4.1.0.tgz"
+  integrity sha512-YcbI0gWi583uGhnd+m9PXXhm9ZecbM/PABxG87g4duOd1jgvvS4lhfNCFTI5NKTSjujMm9NB/3wqSUaspPSVeQ==
   dependencies:
     fastify-plugin "^3.0.0"
     fastify-static "^3.3.0"
