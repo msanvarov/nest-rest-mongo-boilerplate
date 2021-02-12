@@ -685,10 +685,10 @@
     path-to-regexp "3.2.0"
     tslib "2.1.0"
 
-"@nestjs/swagger@4.7.12":
-  version "4.7.12"
-  resolved "https://registry.npmjs.org/@nestjs/swagger/-/swagger-4.7.12.tgz"
-  integrity sha512-Vkzdhc9EMbALvS2I/XHBffxHLZztuqhhyNt5FeMz2znh7GUvLxh/zQLiVPbTtHH6E8F0K9FQ01+EUgCfTkHcAA==
+"@nestjs/swagger@4.7.13":
+  version "4.7.13"
+  resolved "https://registry.npmjs.org/@nestjs/swagger/-/swagger-4.7.13.tgz"
+  integrity sha512-KqFjkx6NOhRVRU4EBu42es/SjopqDwnAfgBCUPer+rKoMUCDMp/hF6dRoH7Z874whPho9pzGcAXBNMxo4/AGdg==
   dependencies:
     "@nestjs/mapped-types" "0.3.0"
     lodash "4.17.20"
