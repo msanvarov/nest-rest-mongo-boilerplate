@@ -5272,10 +5272,10 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.npmjs.org/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
-mongoose@5.11.16:
-  version "5.11.16"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-5.11.16.tgz"
-  integrity sha512-qmolyGAskPuq0Xr3j2Tjm9jwRccGGnLRWtTuyRvYBZoyItajwIoQdetJH8oVzs3N7aZK/GKZ82xV/t97suF8Pg==
+mongoose@5.11.17:
+  version "5.11.17"
+  resolved "https://registry.npmjs.org/mongoose/-/mongoose-5.11.17.tgz"
+  integrity sha512-qggwwv+oTsjvlto9fhq17l2Mojl5Gn8GN7NxnaLjsZbjT4O5ONtKtGtymHZ23viGrlHn6rNFMJEnEql2G6tyrg==
   dependencies:
     "@types/mongodb" "^3.5.27"
     bson "^1.1.4"
