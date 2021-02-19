@@ -3095,10 +3095,10 @@ fastify-plugin@^3.0.0:
   resolved "https://registry.npmjs.org/fastify-plugin/-/fastify-plugin-3.0.0.tgz"
   integrity sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w==
 
-fastify-rate-limit@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/fastify-rate-limit/-/fastify-rate-limit-5.0.1.tgz"
-  integrity sha512-GHnJ0jAlbfckWLgMIdSPt+/C+N6WL53R92l7vjsd87aQR6Ad8CJogvV8ov8Omr4RXcmA4e8d0qr3pDwJC2A4jA==
+fastify-rate-limit@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/fastify-rate-limit/-/fastify-rate-limit-5.2.0.tgz"
+  integrity sha512-hi/QIQ+y8nt8tsDJe5nNubREOY+1QDkeGWvAuXfEI1hcE6rArdFNPAfvAV5z+wUUN91nBW6mVyLQJe0CmfUOyg==
   dependencies:
     fastify-plugin "^3.0.0"
     ms "^2.1.1"
