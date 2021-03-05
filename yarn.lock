@@ -3088,10 +3088,10 @@ fastify-formbody@5.0.0:
   dependencies:
     fastify-plugin "^2.3.2"
 
-fastify-helmet@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.npmjs.org/fastify-helmet/-/fastify-helmet-5.2.0.tgz"
-  integrity sha512-LI4CTeKmXtCRjklsuz0rP4mNDlJOO990s79ZF9tw4vc2JrHzJT3f4mX5zj7QBGBRj9yBHdKyPEBp1RRqx0uDjA==
+fastify-helmet@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.npmjs.org/fastify-helmet/-/fastify-helmet-5.3.0.tgz"
+  integrity sha512-YE2UBSXA89t4LIgr6cz8wz2zkDs+MtgaJa+NK1Wfyqfiao9SrDc8KqUXlJIMhugXDp1fwHI0CaB7Qdtd6HkoBQ==
   dependencies:
     fastify-plugin "^3.0.0"
     helmet "^4.0.0"
