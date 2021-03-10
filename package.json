@@ -28,7 +28,7 @@
     "@nestjs/passport": "7.1.5",
     "@nestjs/platform-express": "7.6.13",
     "@nestjs/platform-fastify": "7.6.13",
-    "@nestjs/swagger": "4.7.15",
+    "@nestjs/swagger": "4.7.16",
     "@nestjs/typeorm": "7.1.5",
     "class-transformer": "0.3.2",
     "class-validator": "0.13.1",
