@@ -60,7 +60,7 @@
     "@types/gravatar": "1.8.1",
     "@types/hapi__joi": "17.1.6",
     "@types/jest": "26.0.22",
-    "@types/mongoose": "5.10.4",
+    "@types/mongoose": "5.10.5",
     "@types/node": "13.13.50",
     "@types/supertest": "2.0.11",
     "chai": "4.3.4",
