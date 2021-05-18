@@ -628,20 +628,20 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/common@7.6.16":
-  version "7.6.16"
-  resolved "https://registry.npmjs.org/@nestjs/common/-/common-7.6.16.tgz"
-  integrity sha512-DE0NduLgkVB5vz058s8QwM6lpZkQCE1kNb5mNZNIn62JZAVyKVUmkwzDhd4nlgYko9IkIFLucIs2Utth8UYxKg==
+"@nestjs/common@7.6.17":
+  version "7.6.17"
+  resolved "https://registry.npmjs.org/@nestjs/common/-/common-7.6.17.tgz"
+  integrity sha512-RHvD32FxfV7yDWX9GPmn0ZSv7ka5kLeVamU5ZpoXSTUjkGqWFt3MTyIP+HUQD2778kDqT+CgEtVJ1fxDG5Oh9g==
   dependencies:
     axios "0.21.1"
     iterare "1.2.1"
     tslib "2.2.0"
     uuid "8.3.2"
 
-"@nestjs/core@7.6.16":
-  version "7.6.16"
-  resolved "https://registry.npmjs.org/@nestjs/core/-/core-7.6.16.tgz"
-  integrity sha512-j2u62+HdQFdAaolWFlLiHu0KX47A/K2KByZ0X5t8l7gCE/b72QXNvbYRgAecQ1wx1TwNA3BFCfPeT2T8mEXDiA==
+"@nestjs/core@7.6.17":
+  version "7.6.17"
+  resolved "https://registry.npmjs.org/@nestjs/core/-/core-7.6.17.tgz"
+  integrity sha512-dH7PGDj1dvBfOYgxJlxh54vdnFFSLst7+Spg3E7Jpo+n11Ht5Ee5mTjSzXieRVfFba/sI3NIHF/N1stn36bU9w==
   dependencies:
     "@nuxtjs/opencollective" "0.3.2"
     fast-safe-stringify "2.0.7"
@@ -674,10 +674,10 @@
   resolved "https://registry.npmjs.org/@nestjs/passport/-/passport-7.1.5.tgz"
   integrity sha512-Hu9hPxTdBZA0C4GrWTsSflzwsJ99oAk9jqAwpcszdFNqfjMjkPGuCM9QsVZbBP2bE8fxrVrPsNOILS6puY8e/A==
 
-"@nestjs/platform-express@7.6.16":
-  version "7.6.16"
-  resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-7.6.16.tgz"
-  integrity sha512-tT7KCCSoHqcW/9LyAHshhLNqkqseAnubgp8cexsCSllVWkXJpVpQ42nACqqi6mR9d4d5FwCXrHWBSKOQzuzSWA==
+"@nestjs/platform-express@7.6.17":
+  version "7.6.17"
+  resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-7.6.17.tgz"
+  integrity sha512-lyMwx8X/zTXZzxrd6Xn8BEcS/wuFyEgRVk9f15Z29hSaWHd78mUlBXvSnKJpzsN7wTjU8YWbAy/Ig9kIBS6efg==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
@@ -685,10 +685,10 @@
     multer "1.4.2"
     tslib "2.2.0"
 
-"@nestjs/platform-fastify@7.6.16":
-  version "7.6.16"
-  resolved "https://registry.npmjs.org/@nestjs/platform-fastify/-/platform-fastify-7.6.16.tgz"
-  integrity sha512-w9/8B2rgRFrhi4hoDdvY1gPcN3N+NkpbsrIptVvi5aYpNAcabtic/CeSL6kGhw62zok0OiyLDolaOF6nLVC6AA==
+"@nestjs/platform-fastify@7.6.17":
+  version "7.6.17"
+  resolved "https://registry.npmjs.org/@nestjs/platform-fastify/-/platform-fastify-7.6.17.tgz"
+  integrity sha512-948eWtSrWcOfxK5pvi1lw6GCn/nr2BKWiM49qz+pnrLdKVd9n8y5t9EbOQcLmtaFZWHoLq/tNE0uqVio8ANHjg==
   dependencies:
     fastify "3.14.0"
     fastify-cors "6.0.1"
@@ -707,10 +707,10 @@
     lodash "4.17.21"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@7.6.16":
-  version "7.6.16"
-  resolved "https://registry.npmjs.org/@nestjs/testing/-/testing-7.6.16.tgz"
-  integrity sha512-kVEznnhlPLdVe0HHyrksQL6az3qBqcTn5H4ACxDMZ1DPgw09zJ2Y6CBevP52vEWxyEVbRzihu16nNxlXlfsiJg==
+"@nestjs/testing@7.6.17":
+  version "7.6.17"
+  resolved "https://registry.npmjs.org/@nestjs/testing/-/testing-7.6.17.tgz"
+  integrity sha512-wWImNvfRapCCtLXMsxCs1Ax2Uj/qSytCnolSEXL7LnH80exwHRmBeLtTfGxArsv9Y1NHr24NarfN6H0QxysZ3g==
   dependencies:
     optional "0.1.4"
     tslib "2.2.0"
