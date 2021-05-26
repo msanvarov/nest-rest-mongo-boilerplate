@@ -7450,10 +7450,10 @@ ts-simple-ast@12.4.0:
     tslib "^1.9.0"
     typescript "2.9.1"
 
-tsc-watch@4.2.9:
-  version "4.2.9"
-  resolved "https://registry.npmjs.org/tsc-watch/-/tsc-watch-4.2.9.tgz"
-  integrity sha512-DlTaoDs74+KUpyWr7dCGhuscAUKCz6CiFduBN7R9RbLJSSN1moWdwoCLASE7+zLgGvV5AwXfYDiEMAsPGaO+Vw==
+tsc-watch@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/tsc-watch/-/tsc-watch-4.4.0.tgz"
+  integrity sha512-+0Yey6ptOOXAnt44OKTk2/EnQnmA0auL7VWXm9d9abMS4tabt0Xdr9B4AK6OJbWAre9ZdLA81+Nk8sz9unptyA==
   dependencies:
     cross-spawn "^7.0.3"
     node-cleanup "^2.1.2"
