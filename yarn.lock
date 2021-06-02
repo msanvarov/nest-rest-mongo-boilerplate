@@ -950,10 +950,10 @@
     "@types/mongodb" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@14.17.1":
-  version "14.17.1"
-  resolved "https://registry.npmjs.org/@types/node/-/node-14.17.1.tgz"
-  integrity sha512-/tpUyFD7meeooTRwl3sYlihx2BrJE7q9XF71EguPFIySj9B7qgnRtHsHTho+0AUm4m1SvWGm6uSncrR94q6Vtw==
+"@types/node@*", "@types/node@14.17.2":
+  version "14.17.2"
+  resolved "https://registry.npmjs.org/@types/node/-/node-14.17.2.tgz"
+  integrity sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
