@@ -942,10 +942,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@5.11.25":
-  version "5.11.25"
-  resolved "https://registry.npmjs.org/@types/mongoose/-/mongoose-5.11.25.tgz"
-  integrity sha512-xynW8Ca/sV1u4tAB5IopJQ3gMM/BiBwWBpod3pyPiBEN2FjMcqQq2G2eZm68GKf9fSFTkc+SAQbnpip10qhNUw==
+"@types/mongoose@5.11.86":
+  version "5.11.86"
+  resolved "https://registry.npmjs.org/@types/mongoose/-/mongoose-5.11.86.tgz"
+  integrity sha512-GsJH0B/WppXpl4tP56S/z85NT/AexgFUkMaOMQV7p5qMntKEUNloanywlr6xs2SbYymsGT0exVZAUy+YHX4T1A==
   dependencies:
     mongoose "*"
 
