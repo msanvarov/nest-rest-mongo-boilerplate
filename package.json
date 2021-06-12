@@ -57,7 +57,7 @@
     "@nestjs/testing": "7.6.17",
     "@types/dotenv": "8.2.0",
     "@types/express": "4.17.12",
-    "@types/gravatar": "1.8.1",
+    "@types/gravatar": "1.8.2",
     "@types/hapi__joi": "17.1.6",
     "@types/jest": "26.0.23",
     "@types/mongoose": "5.11.96",
