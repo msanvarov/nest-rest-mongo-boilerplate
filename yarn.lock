@@ -880,10 +880,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/gravatar@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/@types/gravatar/-/gravatar-1.8.1.tgz"
-  integrity sha512-j9yLS2opf24/ba3AwAdR3FuvCOuZfhwnLiKT6qhlwDI+aHMHKLuvW6K1rwkQ0JgPZVb56HSAY3l4APJdBxdKEQ==
+"@types/gravatar@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmjs.org/@types/gravatar/-/gravatar-1.8.2.tgz"
+  integrity sha512-uh841nlXT1GBu2fzgFXe06s2b2ybX/ZMgOofS7DNMiw6l3FpFJJOt8dtUgGylKQK5mcdQinrU4PNiQnXD8KIOw==
 
 "@types/hapi__joi@17.1.6":
   version "17.1.6"
