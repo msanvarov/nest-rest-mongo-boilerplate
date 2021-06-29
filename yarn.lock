@@ -5473,10 +5473,10 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.npmjs.org/nodemon/-/nodemon-2.0.7.tgz"
-  integrity sha512-XHzK69Awgnec9UzHr1kc8EomQh4sjTQ8oRf8TsGrSmHDx9/UmiGG9E/mM3BuTfNeFwdNBvrqQq/RHL0xIeyFOA==
+nodemon@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.npmjs.org/nodemon/-/nodemon-2.0.8.tgz"
+  integrity sha512-omq5AbNSMZjjZf12qd5vRpVobbuBJsLhTOS/vwy5ApnO6jpHbS/YuN97X4/zzB9YkdAa3q73HG5IuyM6kIQw8Q==
   dependencies:
     chokidar "^3.2.2"
     debug "^3.2.6"
