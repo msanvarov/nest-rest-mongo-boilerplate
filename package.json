@@ -48,7 +48,7 @@
     "rimraf": "3.0.2",
     "rxjs": "6.6.7",
     "swagger-ui-express": "4.1.6",
-    "typeorm": "0.2.34",
+    "typeorm": "0.2.35",
     "winston": "3.3.3",
     "winston-daily-rotate-file": "4.5.5"
   },
