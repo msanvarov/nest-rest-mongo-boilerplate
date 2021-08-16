@@ -3891,10 +3891,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.4.tgz"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-gravatar@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/gravatar/-/gravatar-1.8.1.tgz"
-  integrity sha512-18frnfVp4kRYkM/eQW32Mfwlsh/KMbwd3S6nkescBZHioobflFEFHsvM71qZAkUSLNifyi2uoI+TuGxJAnQIOA==
+gravatar@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npmjs.org/gravatar/-/gravatar-1.8.2.tgz"
+  integrity sha512-GdRwLM3oYpFQKy47MKuluw9hZ2gaCtiKPbDGdcDEuYDKlc8eNnW27KYL9LVbIDzEsx88WtDWQm2ClBcsgBnj6w==
   dependencies:
     blueimp-md5 "^2.16.0"
     email-validator "^2.0.4"
