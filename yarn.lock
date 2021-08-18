@@ -6928,10 +6928,10 @@ ts-morph@^11.0.3:
     "@ts-morph/common" "~0.10.1"
     code-block-writer "^10.1.1"
 
-ts-node@10.2.0:
-  version "10.2.0"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.2.0.tgz"
-  integrity sha512-FstYHtQz6isj8rBtYMN4bZdnXN1vq4HCbqn9vdNQcInRqtB86PePJQIxE6es0PhxKWhj2PHuwbG40H+bxkZPmg==
+ts-node@10.2.1:
+  version "10.2.1"
+  resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.2.1.tgz"
+  integrity sha512-hCnyOyuGmD5wHleOQX6NIjJtYVIO8bPP8F2acWkB4W06wdlkgyvJtubO/I9NkI88hCFECbsEgoLc0VNkYmcSfw==
   dependencies:
     "@cspotcode/source-map-support" "0.6.1"
     "@tsconfig/node10" "^1.0.7"
