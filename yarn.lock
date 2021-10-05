@@ -2259,7 +2259,7 @@ buffer-equal@0.0.1:
   resolved "https://registry.npmjs.org/buffer-equal/-/buffer-equal-0.0.1.tgz"
   integrity sha1-kbx0sR6kBbyRa8aqkI+q+ltKrEs=
 
-buffer-from@1.x, buffer-from@^1.0.0:
+buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
@@ -5207,17 +5207,17 @@ minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-mkdirp@1.x, mkdirp@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
-  integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
-
 mkdirp@^0.5.1, mkdirp@^0.5.3:
   version "0.5.5"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz"
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+mkdirp@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
+  integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
 moment@^2.11.2:
   version "2.26.0"
@@ -6836,19 +6836,17 @@ triple-beam@^1.2.0, triple-beam@^1.3.0:
   resolved "https://registry.npmjs.org/triple-beam/-/triple-beam-1.3.0.tgz"
   integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
 
-ts-jest@27.0.4:
-  version "27.0.4"
-  resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-27.0.4.tgz"
-  integrity sha512-c4E1ECy9Xz2WGfTMyHbSaArlIva7Wi2p43QOMmCqjSSjHP06KXv+aT+eSY+yZMuqsMi3k7pyGsGj2q5oSl5WfQ==
+ts-jest@27.0.5:
+  version "27.0.5"
+  resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-27.0.5.tgz"
+  integrity sha512-lIJApzfTaSSbtlksfFNHkWOzLJuuSm4faFAfo5kvzOiRAuoN4/eKxVJ2zEAho8aecE04qX6K1pAzfH5QHL1/8w==
   dependencies:
     bs-logger "0.x"
-    buffer-from "1.x"
     fast-json-stable-stringify "2.x"
     jest-util "^27.0.0"
     json5 "2.x"
     lodash "4.x"
     make-error "1.x"
-    mkdirp "1.x"
     semver "7.x"
     yargs-parser "20.x"
 
