@@ -5371,10 +5371,10 @@ node-releases@^1.1.75:
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.75.tgz"
   integrity sha512-Qe5OUajvqrqDSy6wrWFmMwfJ0jVgwiw4T3KqmbTcZ62qW0gQkheXYhcFM1+lOVcGUoRxcEcfyvFMAnDgaF1VWw==
 
-nodemon@2.0.13:
-  version "2.0.13"
-  resolved "https://registry.npmjs.org/nodemon/-/nodemon-2.0.13.tgz"
-  integrity sha512-UMXMpsZsv1UXUttCn6gv8eQPhn6DR4BW+txnL3IN5IHqrCwcrT/yWHfL35UsClGXknTH79r5xbu+6J1zNHuSyA==
+nodemon@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.npmjs.org/nodemon/-/nodemon-2.0.14.tgz"
+  integrity sha512-frcpDx+PviKEQRSYzwhckuO2zoHcBYLHI754RE9z5h1RGtrngerc04mLpQQCPWBkH/2ObrX7We9YiwVSYZpFJQ==
   dependencies:
     chokidar "^3.2.2"
     debug "^3.2.6"
