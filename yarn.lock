@@ -1821,11 +1821,6 @@ ansi-gray@^0.1.1:
   dependencies:
     ansi-wrap "0.1.0"
 
-ansi-regex@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz"
-  integrity sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
-
 ansi-regex@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz"
@@ -1835,11 +1830,6 @@ ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz"
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
-
-ansi-styles@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz"
-  integrity sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4=
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -2356,17 +2346,6 @@ chai@4.3.4:
     get-func-name "^2.0.0"
     pathval "^1.1.1"
     type-detect "^4.0.5"
-
-chalk@^1.1.1:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz"
-  integrity sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=
-  dependencies:
-    ansi-styles "^2.2.1"
-    escape-string-regexp "^1.0.2"
-    has-ansi "^2.0.0"
-    strip-ansi "^3.0.0"
-    supports-color "^2.0.0"
 
 chalk@^2.0.0, chalk@^2.3.0:
   version "2.4.2"
@@ -3191,7 +3170,7 @@ escape-html@~1.0.3:
   resolved "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
-escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
@@ -3595,11 +3574,6 @@ fecha@^4.2.0:
   resolved "https://registry.npmjs.org/fecha/-/fecha-4.2.0.tgz"
   integrity sha512-aN3pcx/DSmtyoovUudctc8+6Hl4T+hI9GBBHLjA76jdZl7+b1sgh5g4k+u/GL3dTy1/pnYzKp69FpJ0OicE3Wg==
 
-figlet@^1.1.1:
-  version "1.5.0"
-  resolved "https://registry.npmjs.org/figlet/-/figlet-1.5.0.tgz"
-  integrity sha512-ZQJM4aifMpz6H19AW1VqvZ7l4pOE9p7i/3LyxgO2kp+PO/VcDYNqIHEMtkccqIhTXMKci4kjueJr/iCQEaT/Ww==
-
 file-stream-rotator@^0.5.7:
   version "0.5.7"
   resolved "https://registry.npmjs.org/file-stream-rotator/-/file-stream-rotator-0.5.7.tgz"
@@ -3872,13 +3846,6 @@ handlebars@^4.7.7:
     wordwrap "^1.0.0"
   optionalDependencies:
     uglify-js "^3.1.4"
-
-has-ansi@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz"
-  integrity sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=
-  dependencies:
-    ansi-regex "^2.0.0"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -5594,11 +5561,6 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parent-require@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/parent-require/-/parent-require-1.0.0.tgz"
-  integrity sha1-dGoWdjgIOoYLDu9nMssn7UbDKXc=
-
 parse-json@^5.0.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/parse-json/-/parse-json-5.2.0.tgz"
@@ -6581,13 +6543,6 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-strip-ansi@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz"
-  integrity sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
-  dependencies:
-    ansi-regex "^2.0.0"
-
 strip-ansi@^5.1.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz"
@@ -6646,11 +6601,6 @@ supertest@6.1.6:
   dependencies:
     methods "^1.1.2"
     superagent "^6.1.0"
-
-supports-color@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz"
-  integrity sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
@@ -6925,15 +6875,20 @@ tslib@^1.8.1:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
-tslib@^2.1.0, tslib@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.1.0.tgz"
-  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
+tslib@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tslib@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
+tslib@~2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.1.0.tgz"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 tslint@6.1.3:
   version "6.1.3"
@@ -7013,10 +6968,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeorm@0.2.38:
-  version "0.2.38"
-  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.2.38.tgz"
-  integrity sha512-M6Y3KQcAREQcphOVJciywf4mv6+A0I/SeR+lWNjKsjnQ+a3XcMwGYMGL0Jonsx3H0Cqlf/3yYqVki1jIXSK/xg==
+typeorm@0.2.39:
+  version "0.2.39"
+  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.2.39.tgz"
+  integrity sha512-yQdvDpmmmn8wp1We25V76KIBPYR/lDbymNbGC++Uq8mSRhpHIPnlg26VAT4CF6Ypqx72zn8eqr+/72uSo7HdJQ==
   dependencies:
     "@sqltools/formatter" "^1.2.2"
     app-root-path "^3.0.0"
@@ -7032,7 +6987,6 @@ typeorm@0.2.38:
     sha.js "^2.4.11"
     tslib "^2.1.0"
     xml2js "^0.4.23"
-    yargonaut "^1.1.4"
     yargs "^17.0.1"
     zen-observable-ts "^1.0.0"
 
@@ -7450,15 +7404,6 @@ yaml@^1.10.0:
   resolved "https://registry.npmjs.org/yaml/-/yaml-1.10.2.tgz"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yargonaut@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/yargonaut/-/yargonaut-1.1.4.tgz"
-  integrity sha512-rHgFmbgXAAzl+1nngqOcwEljqHGG9uUZoPjsdZEs1w5JW9RXYzrSvH/u70C1JE5qFi0qjsdhnUX/dJRpWqitSA==
-  dependencies:
-    chalk "^1.1.1"
-    figlet "^1.1.1"
-    parent-require "^1.0.0"
-
 yargs-parser@20.x:
   version "20.2.4"
   resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.4.tgz"
@@ -7508,9 +7453,9 @@ yargs@^16.0.0, yargs@^16.2.0:
     yargs-parser "^20.2.2"
 
 yargs@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.npmjs.org/yargs/-/yargs-17.0.1.tgz"
-  integrity sha512-xBBulfCc8Y6gLFcrPvtqKz9hz8SO0l1Ni8GgDekvBX2ro0HRQImDGnikfc33cgzcYUSncapnNcZDjVFIH3f6KQ==
+  version "17.2.1"
+  resolved "https://registry.npmjs.org/yargs/-/yargs-17.2.1.tgz"
+  integrity sha512-XfR8du6ua4K6uLGm5S6fA+FIJom/MdJcFNVY8geLlp2v8GYbOXD4EB1tPNZsRn4vBzKGMgb5DRZMeWuFc2GO8Q==
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
