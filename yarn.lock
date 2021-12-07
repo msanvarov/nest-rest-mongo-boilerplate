@@ -1621,10 +1621,10 @@
   dependencies:
     mongoose "*"
 
-"@types/node@*", "@types/node@16.11.11":
-  version "16.11.11"
-  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.11.tgz"
-  integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==
+"@types/node@*", "@types/node@16.11.12":
+  version "16.11.12"
+  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.12.tgz"
+  integrity sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
