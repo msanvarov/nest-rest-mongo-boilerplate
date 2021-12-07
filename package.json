@@ -61,7 +61,7 @@
     "@types/hapi__joi": "17.1.7",
     "@types/jest": "27.0.3",
     "@types/mongoose": "5.11.96",
-    "@types/node": "16.11.11",
+    "@types/node": "16.11.12",
     "@types/supertest": "2.0.11",
     "chai": "4.3.4",
     "jest": "27.4.3",
