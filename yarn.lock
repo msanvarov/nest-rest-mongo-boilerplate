@@ -1565,10 +1565,10 @@
   resolved "https://registry.npmjs.org/@types/gravatar/-/gravatar-1.8.3.tgz"
   integrity sha512-F4Ij02yEI2+hr7aMCrM8syaU9pN16cSJIxnFf/ccVNQ+HrKzgVz8Kn0ZJhWzCJM+UnELHO/OGKTW0O646vk/HA==
 
-"@types/hapi__joi@17.1.7":
-  version "17.1.7"
-  resolved "https://registry.npmjs.org/@types/hapi__joi/-/hapi__joi-17.1.7.tgz"
-  integrity sha512-byC9slpuqyDeEKegl/ViT8PCQRSp0CYkhLzz0cPxqxV6QC53Ht1cr2jG5iwOvtt/RxylUbTpXNqpgbf9Qu8QFw==
+"@types/hapi__joi@17.1.8":
+  version "17.1.8"
+  resolved "https://registry.npmjs.org/@types/hapi__joi/-/hapi__joi-17.1.8.tgz"
+  integrity sha512-omVytnOAiAfzGUOQArujJr3heWxPrDHW7MF1ieqix1ngoGdhtJmSSDFVM+ZAOa7UmhlGJtltdgUAT03mfDu6kg==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.1"
