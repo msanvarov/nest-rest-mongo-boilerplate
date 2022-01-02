@@ -3322,10 +3322,10 @@ expect@^27.4.2:
     jest-message-util "^27.4.2"
     jest-regex-util "^27.4.0"
 
-express-rate-limit@6.0.3:
-  version "6.0.3"
-  resolved "https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-6.0.3.tgz"
-  integrity sha512-8uh5ua7doYEP5ISoh5t1uRKvySGIvrzHWz+Ssl0BXS8JEJzMXi8cNHCFr957eWLcmg0jdHdMH4xG53I8E7mUWA==
+express-rate-limit@6.0.4:
+  version "6.0.4"
+  resolved "https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-6.0.4.tgz"
+  integrity sha512-TratTfxxTAFb6ZUAxPIigqhcS0e7ql9XDTorjD+SihV5ua5h6agoKyr45iKM6m5OzTppesh9o/RCuvf5eTiwCw==
 
 express@4.17.1:
   version "4.17.1"
