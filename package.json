@@ -35,7 +35,7 @@
     "crypto": "1.0.1",
     "dotenv": "10.0.0",
     "express-rate-limit": "6.0.5",
-    "fastify-helmet": "5.3.2",
+    "fastify-helmet": "6.0.0",
     "fastify-rate-limit": "5.7.0",
     "fastify-swagger": "4.13.1",
     "gravatar": "1.8.2",
