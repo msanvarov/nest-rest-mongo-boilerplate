@@ -942,15 +942,15 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@compodoc/compodoc@1.1.17":
-  version "1.1.17"
-  resolved "https://registry.npmjs.org/@compodoc/compodoc/-/compodoc-1.1.17.tgz"
-  integrity sha512-I1SXPeCKfH8vJhbwZ2bD/sooEpVPFZhrhwNvxSi/Od09/JB5EIVZNlHW3PNEDdXk/kzjxSeQfxF/1h9CXuAZwA==
+"@compodoc/compodoc@1.1.18":
+  version "1.1.18"
+  resolved "https://registry.npmjs.org/@compodoc/compodoc/-/compodoc-1.1.18.tgz"
+  integrity sha512-+AFtcj2U3AJq6r8a2+PTdajIlS7m3pgvDhqgoYZJ4Rg/Zp9xvuDvUJU+5oHu8iHCAWwda3NoLUDjOZMNR8uIKg==
   dependencies:
     "@angular-devkit/schematics" "^13.1.2"
     "@babel/core" "^7.16.7"
     "@babel/preset-env" "^7.16.7"
-    "@compodoc/live-server" "^1.2.2"
+    "@compodoc/live-server" "^1.2.3"
     "@compodoc/ngd-transformer" "^2.1.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
@@ -983,22 +983,22 @@
     ts-morph "^13.0.2"
     uuid "^8.3.2"
 
-"@compodoc/live-server@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/@compodoc/live-server/-/live-server-1.2.2.tgz"
-  integrity sha512-TaLC0IfrXc74B/csSaEQhQ2aZrHOC5lSiGT30UqGJ+vBaS9M+JSji0eYCLXScgbp7fSohQA56p0quNmHnHlXUw==
+"@compodoc/live-server@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@compodoc/live-server/-/live-server-1.2.3.tgz"
+  integrity sha512-hDmntVCyjjaxuJzPzBx68orNZ7TW4BtHWMnXlIVn5dqhK7vuFF/11hspO1cMmc+2QTYgqde1TBcb3127S7Zrow==
   dependencies:
     chokidar "^3.5.2"
-    colors latest
+    colors "1.4.0"
     connect "^3.7.0"
     cors latest
     event-stream "4.0.1"
     faye-websocket "0.11.x"
-    http-auth "4.1.7"
+    http-auth "4.1.9"
     http-auth-connect "^1.0.5"
     morgan "^1.10.0"
     object-assign latest
-    open "8.2.1"
+    open "8.4.0"
     proxy-middleware latest
     send latest
     serve-index "^1.9.1"
@@ -2623,7 +2623,7 @@ color@3.0.x:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
-colors@1.4.0, colors@latest:
+colors@1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/colors/-/colors-1.4.0.tgz"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -3974,15 +3974,15 @@ http-auth-connect@^1.0.5:
   resolved "https://registry.npmjs.org/http-auth-connect/-/http-auth-connect-1.0.5.tgz"
   integrity sha512-zykAOKpVAXyzhOLm6+xyB/RtRcfN3uDfH4Al73DIfeSb6B7nr0WToLI6UyyM6ohtcLmbBPksWXzVbEDStz8ObQ==
 
-http-auth@4.1.7:
-  version "4.1.7"
-  resolved "https://registry.npmjs.org/http-auth/-/http-auth-4.1.7.tgz"
-  integrity sha512-LdftJKxCOpEE56ESgg8uODQ+f+P+0ZHN+PZblIT3YX+c1hDINiI6eNDZ/jm+ji+oqeP+RAW7RuIvt76vqiOLnQ==
+http-auth@4.1.9:
+  version "4.1.9"
+  resolved "https://registry.npmjs.org/http-auth/-/http-auth-4.1.9.tgz"
+  integrity sha512-kvPYxNGc9EKGTXvOMnTBQw2RZfuiSihK/mLw/a4pbtRueTE45S55Lw/3k5CktIf7Ak0veMKEIteDj4YkNmCzmQ==
   dependencies:
     apache-crypt "^1.1.2"
     apache-md5 "^1.0.6"
     bcryptjs "^2.4.3"
-    uuid "^3.4.0"
+    uuid "^8.3.2"
 
 http-cache-semantics@^4.0.0:
   version "4.1.0"
@@ -5544,10 +5544,10 @@ onetime@^5.1.0, onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-open@8.2.1:
-  version "8.2.1"
-  resolved "https://registry.npmjs.org/open/-/open-8.2.1.tgz"
-  integrity sha512-rXILpcQlkF/QuFez2BJDf3GsqpjGKbkUUToAIGo9A0Q6ZkoSGogZJulrUdwRkrAsoQvoZsrjCYt8+zblOk7JQQ==
+open@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.npmjs.org/open/-/open-8.4.0.tgz"
+  integrity sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
@@ -7221,11 +7221,6 @@ uuid@8.3.2, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
-
-uuid@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
-  integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 v8-to-istanbul@^8.1.0:
   version "8.1.0"
