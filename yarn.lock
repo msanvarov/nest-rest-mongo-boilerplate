@@ -3073,10 +3073,10 @@ dot@^1.1.3:
   resolved "https://registry.npmjs.org/dot/-/dot-1.1.3.tgz"
   integrity sha512-/nt74Rm+PcfnirXGEdhZleTwGC2LMnuKTeeTIlI82xb5loBBoXNYzr2ezCroPSMtilK8EZIfcNZwOcHN+ib1Lg==
 
-dotenv@*, dotenv@12.0.4:
-  version "12.0.4"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-12.0.4.tgz"
-  integrity sha512-oWdqbSywffzH1l4WXKPHWA0TWYpqp7IyLfqjipT4upoIFS0HPMqtNotykQpD4iIg0BqtNmdgPCh2WMvMt7yTiw==
+dotenv@*, dotenv@13.0.1:
+  version "13.0.1"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-13.0.1.tgz"
+  integrity sha512-u3KAkK+VHk01+D7V6SFtSJl2JScX1Yi4anKsKXS4oT8s8LnL5xgJe7XFAZ1bSsOfAmxU54OwOuhaLv3v70oXgw==
 
 dotenv@^8.2.0:
   version "8.6.0"
