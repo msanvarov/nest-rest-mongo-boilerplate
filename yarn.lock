@@ -3415,10 +3415,10 @@ expect@^27.4.6:
     jest-matcher-utils "^27.4.6"
     jest-message-util "^27.4.6"
 
-express-rate-limit@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-6.1.0.tgz"
-  integrity sha512-OWyJUDYVq/hRxGU3ufTnXDer5bRBwFiq5D35ZSZ9B2EHdjulWO4bwrbg+iIrapodDZse/35obeOj7igRHuP3Zw==
+express-rate-limit@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-6.2.0.tgz"
+  integrity sha512-q9xfttbPX79HiBsHA4LT3PZEeJR96CJ5/2jloAKSEECMx8XlOOOpjxx6iK/kBw3hFJ8uhx6Q9lCfSGp70yV0tQ==
 
 express@4.17.1:
   version "4.17.1"
