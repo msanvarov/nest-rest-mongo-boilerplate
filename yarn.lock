@@ -3556,10 +3556,10 @@ fastify-formbody@5.0.0:
   dependencies:
     fastify-plugin "^2.3.2"
 
-fastify-helmet@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/fastify-helmet/-/fastify-helmet-7.0.0.tgz"
-  integrity sha512-2VmtzyT0B3IWJ3WhrZiM4coCW9Hx08GyMewPY9WT6fk3GXvxAXrzDZF6IVJl7FnTxyn1+xxqeFIErQpeCJbkIg==
+fastify-helmet@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.npmjs.org/fastify-helmet/-/fastify-helmet-7.0.1.tgz"
+  integrity sha512-/PSKDJZkBhJ0ioY1swOUfYNYQRfRnXD5X2eKD9TSVBuPKbH+OYg/IYBxad33uaOGlWn28MNOd+kw5sQKSWY1yA==
   dependencies:
     fastify-plugin "^3.0.0"
     helmet "^5.0.1"
