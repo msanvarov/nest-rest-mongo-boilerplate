@@ -5330,10 +5330,10 @@ mongodb@4.2.2:
   optionalDependencies:
     saslprep "^1.0.3"
 
-mongoose@*, mongoose@6.1.8:
-  version "6.1.8"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.1.8.tgz"
-  integrity sha512-/voqwU2dtet3zAR73r8jdPhqluU1VzIAnk7ecXPJBgyXKREnwQrz40lfW7fLpaqhmMhsAbA+JQ7ICUn2vAVFLw==
+mongoose@*, mongoose@6.1.9:
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.1.9.tgz"
+  integrity sha512-dh6ZeYNGUAW4Gc4MxxgPwU+0d1tZZgse6xTejDjFwyXJArBcyI4xLqNrO9W6Umu2iQzlT701RTtN+iJ0gipM4A==
   dependencies:
     "@types/node" "< 17.0.6"
     bson "^4.2.2"
