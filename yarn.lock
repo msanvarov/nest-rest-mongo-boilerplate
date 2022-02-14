@@ -5198,9 +5198,9 @@ map-stream@~0.1.0:
   integrity sha1-5WqpTEyAVaFkBKBnS3jyFffI4ZQ=
 
 marked@^4.0.9:
-  version "4.0.9"
-  resolved "https://registry.npmjs.org/marked/-/marked-4.0.9.tgz"
-  integrity sha512-HmoFvQwFLxNESeGupeOC+6CLb5WzcCWQmqvVetsErmrI3vrZ6gBumty5IP0ynLPR0zYSoVY7ITC1GffsYIGkog==
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.12.tgz#2262a4e6fd1afd2f13557726238b69a48b982f7d"
+  integrity sha512-hgibXWrEDNBWgGiK18j/4lkS6ihTe9sxtV4Q1OQppb/0zzyPSzoFANBa5MfsG/zgsWklmNnhm0XACZOH/0HBiQ==
 
 media-typer@0.3.0:
   version "0.3.0"
