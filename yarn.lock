@@ -7173,10 +7173,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeorm@0.2.44:
-  version "0.2.44"
-  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.2.44.tgz"
-  integrity sha512-yFyb9Ts73vGaS/O06TvLpzvT5U/ngO31GeciNc0eoH7P1QcG8kVZdOy9FHJqkTeDmIljMRgWjbYUoMw53ZY7Xw==
+typeorm@0.2.45:
+  version "0.2.45"
+  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.2.45.tgz"
+  integrity sha512-c0rCO8VMJ3ER7JQ73xfk0zDnVv0WDjpsP6Q1m6CVKul7DB9iVdWLRjPzc8v2eaeBuomsbZ2+gTaYr8k1gm3bYA==
   dependencies:
     "@sqltools/formatter" "^1.2.2"
     app-root-path "^3.0.0"
@@ -7619,9 +7619,9 @@ yargs-parser@^18.1.2:
     decamelize "^1.2.0"
 
 yargs-parser@^21.0.0:
-  version "21.0.0"
-  resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.0.0.tgz"
-  integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
+  version "21.0.1"
+  resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.0.1.tgz"
+  integrity sha512-9BK1jFpLzJROCI5TzwZL/TU4gqjK5xiHV/RfWLOahrjAko/e4DJkRDZQXfvqAsiZzzYhgAzbgz6lg48jcm4GLg==
 
 yargs@^15.4.1:
   version "15.4.1"
