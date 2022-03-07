@@ -5466,10 +5466,10 @@ neo-async@^2.6.0:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nest-access-control@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/nest-access-control/-/nest-access-control-2.1.1.tgz"
-  integrity sha512-SmrD94Z9g4ql1A8B+Bf88DIg49EWRUIBilfPU6KAd0jJoGjqzluptRHUFlirlWVqkzO+wLPyjuFWPmFIkMfOqg==
+nest-access-control@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/nest-access-control/-/nest-access-control-2.2.0.tgz"
+  integrity sha512-2H9tJHsC8XBb//yYnmVlCGcYsEaCFnoOMp4OeJreTG/CusaTH9jQT+PE4yp4ZSlJm4xabk6A466KVbdd04ZXNQ==
   dependencies:
     accesscontrol "^2.2.1"
 
