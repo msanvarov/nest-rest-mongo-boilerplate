@@ -62,7 +62,7 @@
     "@types/jest": "27.4.1",
     "@types/mongoose": "5.11.96",
     "@types/node": "16.11.26",
-    "@types/supertest": "2.0.11",
+    "@types/supertest": "2.0.12",
     "chai": "4.3.6",
     "jest": "27.5.1",
     "nodemon": "2.0.15",
