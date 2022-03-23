@@ -2327,9 +2327,9 @@ bser@2.1.1:
     node-int64 "^0.4.0"
 
 bson@^4.2.2, bson@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.npmjs.org/bson/-/bson-4.6.1.tgz"
-  integrity sha512-I1LQ7Hz5zgwR4QquilLNZwbhPw0Apx7i7X9kGMBTsqPdml/03Q9NBtD9nt/19ahjlphktQImrnderxqpzeVDjw==
+  version "4.6.2"
+  resolved "https://registry.npmjs.org/bson/-/bson-4.6.2.tgz"
+  integrity sha512-VeJKHShcu1b/ugl0QiujlVuBepab714X9nNyBdA1kfekuDGecxgpTA2Z6nYbagrWFeiIyzSWIOzju3lhj+RNyQ==
   dependencies:
     buffer "^5.6.0"
 
@@ -5372,10 +5372,10 @@ mongodb@4.3.1:
   optionalDependencies:
     saslprep "^1.0.3"
 
-mongoose@*, mongoose@6.2.7:
-  version "6.2.7"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.2.7.tgz"
-  integrity sha512-yqTZcM3u0+aLzl6cirtXy6vr24kt+kFyTucCQ3pyncvO1jGn/M1R09qkC/v54QoPXeVJdpcuS5eQWn0NLlDvKA==
+mongoose@*, mongoose@6.2.8:
+  version "6.2.8"
+  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.2.8.tgz"
+  integrity sha512-Wq6HG0sOJEQHp5YqMlxrnf93vBFwdY2zlAwqI97EPPSt69kiVV21pTv4cDanrCNWi4upG8ajQ/p9jpDjcECjkQ==
   dependencies:
     bson "^4.2.2"
     kareem "2.3.4"
