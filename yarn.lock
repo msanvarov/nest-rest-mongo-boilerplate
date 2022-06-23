@@ -1438,12 +1438,12 @@
     optional "0.1.4"
     tslib "2.2.0"
 
-"@nestjs/typeorm@7.1.5":
-  version "7.1.5"
-  resolved "https://registry.npmjs.org/@nestjs/typeorm/-/typeorm-7.1.5.tgz"
-  integrity sha512-utE1FkYM/gyCXUqw3zKYYS0YZ3DfkAnzsCx4T48cNnSDTCeWS+u3yt0FMDFjwSiQSaLrzpiSff/FaxJQvRlYow==
+"@nestjs/typeorm@8.1.4":
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-8.1.4.tgz#ab2286b39b69d1ce74e039d1847708d56c2c3e60"
+  integrity sha512-hKv0Y9PG7YkHQfjsrNqM1s/VajlT7Mla8gaoblmuLzgMKsOQFsZXSHlXNxXZ8CA4aCPeDUiXtvqc4zocadGiIQ==
   dependencies:
-    uuid "8.3.1"
+    uuid "8.3.2"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -7326,11 +7326,6 @@ utils-merge@1.0.1, utils-merge@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
-
-uuid@8.3.1:
-  version "8.3.1"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.1.tgz"
-  integrity sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
 
 uuid@8.3.2, uuid@^8.3.2:
   version "8.3.2"
