@@ -67,7 +67,7 @@
     "jest": "27.5.1",
     "nodemon": "2.0.18",
     "prettier": "2.7.1",
-    "supertest": "6.2.2",
+    "supertest": "6.2.3",
     "ts-jest": "27.1.4",
     "ts-loader": "9.2.8",
     "ts-node": "10.7.0",
