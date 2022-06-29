@@ -7009,10 +7009,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeorm@0.3.6:
-  version "0.3.6"
-  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.3.6.tgz"
-  integrity sha512-DRqgfqcelMiGgWSMbBmVoJNFN2nPNA3EeY2gC324ndr2DZoGRTb9ILtp2oGVGnlA+cu5zgQ6it5oqKFNkte7Aw==
+typeorm@0.3.7:
+  version "0.3.7"
+  resolved "https://registry.npmjs.org/typeorm/-/typeorm-0.3.7.tgz"
+  integrity sha512-MsPJeP6Zuwfe64c++l80+VRqpGEGxf0CkztIEnehQ+CMmQPSHjOnFbFxwBuZ2jiLqZTjLk2ZqQdVF0RmvxNF3Q==
   dependencies:
     "@sqltools/formatter" "^1.2.2"
     app-root-path "^3.0.0"
