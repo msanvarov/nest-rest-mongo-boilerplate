@@ -65,7 +65,7 @@
     "@types/supertest": "2.0.12",
     "chai": "4.3.6",
     "jest": "28.1.2",
-    "nodemon": "2.0.18",
+    "nodemon": "2.0.19",
     "prettier": "2.7.1",
     "supertest": "6.2.4",
     "ts-jest": "28.0.5",
