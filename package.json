@@ -40,7 +40,7 @@
     "fastify-swagger": "5.2.0",
     "gravatar": "1.8.2",
     "helmet": "5.1.0",
-    "mongoose": "6.4.4",
+    "mongoose": "6.4.5",
     "nest-access-control": "2.2.0",
     "passport": "0.6.0",
     "passport-jwt": "4.0.0",
