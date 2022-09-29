@@ -1,19 +1,18 @@
-FROM node:carbon
-# App directory
-WORKDIR /app
+FROM node:lts-alpine as build
 
-# App dependencies
-COPY package*.json ./
-RUN npm i
+WORKDIR /usr/local/app
 
-# Copy app source code
+# Copy application code to working directory
+COPY package*.json .
 COPY . .
 
-# Env setup
-COPY .env.example .env
+# Download dependencies
+RUN npm install
+
+# Generate build artifacts
+RUN npm run build
 
 #Expose port and begin application
-EXPOSE 9001
+EXPOSE 3333
 
-# Start the app
-CMD [ "npm", "run", "start:dev"]
+CMD ["node", "dist/apps/api/main.js"]

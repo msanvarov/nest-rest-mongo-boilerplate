@@ -1,0 +1,19 @@
+name: Deploy Typedocs to Github Pages on PR
+'on': pull_request
+permissions:
+  contents: write
+jobs:
+  build_and_preview:
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Download Deps and Build Typedocs 🔧
+        run: npm i && npm run typedocs:api
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/api

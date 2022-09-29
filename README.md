@@ -1,214 +1,98 @@
+# Starter
 
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+This project was generated using [Nx](https://nx.dev).
 
-<p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-<p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate"><img src="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate.svg?branch=master" alt="Travis" /></a>
-<a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-<a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-    
-### 📚 Description
+🔎 **Smart, Fast and Extensible Build System**
 
-This boilerplate is made to quickly prototype backend applications. It comes with database, logging, security, and authentication features out of the box.
+## Quick Start & Documentation
 
----
+[Nx Documentation](https://nx.dev/angular)
 
-### 🛠️ Prerequisites
+[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
 
-#### Non Docker
+[Interactive Tutorial](https://nx.dev/react-tutorial/01-create-application)
 
-- Please make sure to either have MongoDB Community installed locally or a subscription to Mongo on the cloud by configuration a cluster in [atlas](https://www.mongodb.com/cloud/atlas). 
+## Adding capabilities to your workspace
 
-#### Docker 🐳
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-- Please make sure to have docker desktop setup on any preferred operating system to quickly compose the required dependencies. Then follow the docker procedure outlined below.
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-**Note**: Docker Desktop comes free on both Mac and Windows, but it only works with Windows 10 Pro. A workaround is to get [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) which will bypass the Windows 10 Pro prerequisite by executing in a VM.
+Below are our core plugins:
 
----
+- [Angular](https://angular.io)
+  - `ng add @nrwl/angular`
+- [React](https://reactjs.org)
+  - `ng add @nrwl/react`
+- Web (no framework frontends)
+  - `ng add @nrwl/web`
+- [Nest](https://nestjs.com)
+  - `ng add @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `ng add @nrwl/express`
+- [Node](https://nodejs.org)
+  - `ng add @nrwl/node`
 
-### 🚀 Deployment
+There are also many [community plugins](https://nx.dev/community) you could add.
 
-#### Manual Deployment without Docker
+## Generate an application
 
-- Create a `.env` file using the `cp .env.example .env` command and replace the existing env variables with personal settings (MongoDB URL either `srv` or `localhost`)
-	- Modify the connection string by modifying the following [line](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/.env.example#L10).
+Run `ng g @nrwl/angular:app my-app` to generate an application.
 
-- Download dependencies using `npm i` or `yarn`
+> You can use any of the plugins above to generate applications as well.
 
-- Start the app in pre-production mode using `npm run start` or `npm run start:dev` for development (the app will be exposed on the port 9000; not to conflict with React, Angular, or Vue)
+When using Nx, you can create multiple applications and libraries in the same workspace.
 
-#### Deploying with Docker 🐳
+## Generate a library
 
-- Execute the following command in-app directory:
+Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
-```bash
-# creates and loads the docker container with required configuration
-$ docker-compose up -d 
-```
-- The following command will set up and run the docker project for quick use. Then the web application, and MongoDB will be exposed to http://localhost:9000 and http://localhost:27017 respectively.
+> You can also use any of the plugins above to generate libraries as well.
 
-### 🔒 Environment Configuration
+Libraries are shareable across libraries and applications. They can be imported from `@starter/mylib`.
 
-By default, the application comes with a config module that can read in every environment variable from the `.env` file.
+## Development server
 
-**APP_ENV** - the application environment to execute as, either in development or production. Determines the type of logging options to utilize. Options: `dev` or `prod`. 
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-**APP_URL** - the base URL for the application. Made mainly to showcase the power of `ConfigService` and can be removed as it doesn't serve any other purpose
+## Code scaffolding
 
-**WEBTOKEN_SECRET_KEY** - the secret key to encrypt/decrypt web tokens with. Make sure to generate a random alphanumeric string for this.
+Run `ng g component my-component --project=my-app` to generate a new component.
 
-**WEBTOKEN_EXPIRATION_TIME** - **the time in seconds** indicating when the web token will expire; by default, it's 2400 seconds which is 40 mins.
+## Build
 
-**DB_URL** - the URL to the MongoDB collection
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
----
+## Running unit tests
 
-### 🏗 Choosing a Web Framework
+Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
 
-This boilerplate comes with [Fastify](https://github.com/fastify/fastify) out of the box as it offers [performance benefits](https://github.com/nestjs/nest/blob/master/benchmarks/all_output.txt) over Express. But this can be changed to use [Express](https://expressjs.com/) framework instead of Fastify. 
+Run `nx affected:test` to execute the unit tests affected by a change.
 
-For interchangeability:
+## Running end-to-end tests
 
-- Replace the following lines of code in the [main.ts file](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/main.ts) with the ones detailed below.
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-Fastify:
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
-```ts
-// for fastify:
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
-import * as headers from 'fastify-helmet';
-import * as fastifyRateLimiter from 'fastify-rate-limit';
-const app = await NestFactory.create<NestFastifyApplication>(
-  AppModule,
-  new FastifyAdapter({ logger: console }),
-);
-app.register(headers);
-app.register(fastifyRateLimiter, {
-  max: 100,
-  timeWindow: '1 minute',
-});
-```
+## Understand your workspace
 
-Express:
+Run `nx graph` to see a diagram of the dependencies of your projects.
 
-```ts
-// for express:
-import * as headers from 'helmet';
-import * as rateLimiter from 'express-rate-limit';
-const app = await NestFactory.create(AppModule, {
-  logger: console,
-});
-app.use(headers());
-app.use(
-  rateLimiter({
-    windowMs: 60, // 1 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
-  }),
-);
-```
+## Further help
 
-**Note**: The boilerplate comes with production dependencies for both Express and Fastify to support moving between two. But this is going to leave it bloated especially when only **one web framework is used at a time**. Thus, **it is recommended that when deploying to production, unused dependencies are purged.** 
+Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
-If you choose to **use Fastify**, this command will **purge all of the Express dependencies**:
+## ☁ Nx Cloud
 
-```bash
-# removing Express dependencies
-$ npm rm @nestjs/platform-express express-rate-limit helmet swagger-ui-express @types/express --save
-```
+### Distributed Computation Caching & Distributed Task Execution
 
-If you choose to **use Express**, this command will **purge all of the Fastify dependencies**:
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
 
-```bash
-# removing Fastify dependencies
-$ npm rm @nestjs/platform-fastify fastify-helmet fastify-rate-limit fastify-swagger --save
-```
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
 
----
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
-### ✅ Testing
-
-#### Docker 🐳
-
-```bash
-# unit tests
-$ docker exec -it nest yarn test
-
-# e2e tests
-$ docker exec -it nest yarn test:e2e
-
-# test coverage
-$ docker exec -it nest yarn test:cov
-```
-
-#### Non-Docker
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
----
-
-### 💡 TypeDocs
-
-The documentation for this boilerplate can be found [on Github pages](https://msanvarov.github.io/nest-rest-mongo-boilerplate/).
-
-The docs can be generated on-demand, simply, by typing `npm run typedocs`. This will produce a **docs** folder with the required front-end files and **start hosting on [localhost](http://localhost:8080)**.
-
-```bash
-# generate docs for code
-$ npm run typedocs
-```
-
----
-
-### 📝 Open API
-
-Out of the box, the web app comes with Swagger; an [open api specification](https://swagger.io/specification/), that is used to describe RESTful APIs. Nest provides a [dedicated module to work with it](https://docs.nestjs.com/recipes/swagger).
-
-The configuration for Swagger can be found at this [location](https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/master/src/swagger).
-
----
-
-### ✨ Mongoose
-
-Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. Please view the [documentation](https://mongoosejs.com) for further details.
-
-The configuration for Mongoose can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L17).
-
----
-
-### 🔊 Logs
-
-This boilerplate comes with an integrated Winston module for logging, the configurations for Winston can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L27).
-
----
-
-### 👥 Support
-
-Nest has been able to grown because of sponsors and support from backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
----
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-
-[Author](https://msanvarov.github.io/personal-portfolio/)
-
+Visit [Nx Cloud](https://nx.app/) to learn more.

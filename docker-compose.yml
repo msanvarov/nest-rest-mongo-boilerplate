@@ -1,22 +1,41 @@
-version: "3"
+version: '3'
 services:
-  nest:
-    container_name: nest
+  api:
     build: .
-    ports:
-      - "9001:9001"
-    volumes:
-      - .:/app
+    container_name: nest-rest-mongo-api
+    depends_on:
+      - db
+    environment:
+      APP_ENV: production
+      WEBTOKEN_ENCRYPTION_KEY: uAsBw6WxqD
+      WEBTOKEN_EXPIRATION_TIME: 2400
+      DB_URL: mongodb://localhost:27017/nest
     links:
-      - mongo
-  mongo:
-    image: mongo:latest
-    container_name: mongo
+      - db
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-Nginx
+    container_name: nest-rest-mongo-api-nginx
+    depends_on:
+      - api
+    environment:
+      NEST_HOST: api
+      NGINX_SERVER_NAME: localhost
+      NEST_PORT: 3333
+      NGINX_MAX_BODY: 100M
     ports:
-      - "80:80"
+      - 80:80
+    links:
+      - api
+  db:
+    image: mongo:latest
+    container_name: nest-db
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_DATABASE: nest
     volumes:
-      - data-volume:/data/db
+      - mongodbdata:/data/db
 volumes:
-  data-volume:
+  mongodbdata:
