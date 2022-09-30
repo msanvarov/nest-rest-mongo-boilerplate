@@ -1,3 +1,4 @@
+<h1 align="center">API Starter</h1>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
@@ -6,16 +7,31 @@
 <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate"><img src="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate.svg?branch=master" alt="Travis" /></a>
-<a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-<a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+	<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+	<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+	<a href="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate"><img src="https://travis-ci.org/msanvarov/nest-rest-mongo-boilerplate.svg?branch=master" alt="Travis" /></a>
+	<a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
+	<a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
-    
+
+Table of Contents:
+
+1. [Description](#-description)
+2. [Prerequisites](#%EF%B8%8F-prerequisites)
+3. [Deployment](#-deployment)
+4. [Environment Configuration](#-environment-configuration)
+5. [Choosing a Web Framework](#-choosing-a-web-framework)
+6. [HTTP2](#-http2)
+7. [Choosing a Database](#-choosing-a-database)
+8. [Testing](#-testing)
+9. [TypeDocs](#-typedocs)
+10. [Logs](#-logs)
+
+🔎 This repo was created with [Nx](https://nx.dev/).
+
 ### 📚 Description
 
-This boilerplate is made to quickly prototype backend applications. It comes with database, logging, security, and authentication features out of the box.
+This boilerplate is made to quickly prototype backend applications. It comes with authentication/authorization, logging, crud features and database persistence out of the box.
 
 ---
 
@@ -23,13 +39,15 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 
 #### Non Docker
 
-- Please make sure to either have MongoDB Community installed locally or a subscription to Mongo on the cloud by configuration a cluster in [atlas](https://www.mongodb.com/cloud/atlas). 
+- Please make sure to have [Node.js](https://nodejs.org/en/download/) (16+) locally by downloading the Javascript runtime via `brew`, `choco`, or `apt-get`.
+
+- Please make sure to have MongoDB locally by following the guide on the [MongoDB website](https://www.mongodb.com/docs/manual/installation/). MongoDB can be downloaded standalone via `brew`, `choco`, or `apt-get`.
+
+> Remark: MongoDB can be easily deployed on a cloud provider like [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - comes with a free tier option to get started quickly. This will bypass the requirement to have MongoDB locally.
 
 #### Docker 🐳
 
-- Please make sure to have docker desktop setup on any preferred operating system to quickly compose the required dependencies. Then follow the docker procedure outlined below.
-
-**Note**: Docker Desktop comes free on both Mac and Windows, but it only works with Windows 10 Pro. A workaround is to get [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) which will bypass the Windows 10 Pro prerequisite by executing in a VM.
+- Please make sure to have [Docker Desktop](https://www.docker.com/products/docker-desktop/) operational to quickly compose the required dependencies. Then follow the docker procedure outlined below.
 
 ---
 
@@ -37,101 +55,74 @@ This boilerplate is made to quickly prototype backend applications. It comes wit
 
 #### Manual Deployment without Docker
 
-- Create a `.env` file using the `cp .env.example .env` command and replace the existing env variables with personal settings (MongoDB URL either `srv` or `localhost`)
-	- Modify the connection string by modifying the following [line](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/.env.example#L10).
+- Clone the repo via `git clone https://github.com/msanvarov/nest-rest-mongo-boilerplate`.
 
-- Download dependencies using `npm i` or `yarn`
+- Download dependencies via `npm i` or `yarn`.
 
-- Start the app in pre-production mode using `npm run start` or `npm run start:dev` for development (the app will be exposed on the port 9000; not to conflict with React, Angular, or Vue)
+- Create a **.env file** via the `cp .env.example .env` command and replace the existing environment variable placeholders with valid responses.
+
+- Start the api in development mode by using `npm run start` (the app will be exposed on http://localhost:3333; not to conflict with React, Angular, or Vue ports).
+
+<details open>
+<summary>Optional deployment of the UI</summary>
+<br>
+
+- This repo comes with a UI built with [Angular](https://angular.io/) - that can be accessed via `http://localhost:4200`.
+
+- To start the UI, start a new terminal window and run `npm run start --project ui`.
+
+> Remark: In the docker deployment, the UI is automatically started and served by the API.
+
+</details>
+<br/>
+
+> Remark: For SQL databases, I created a boilerplate for [Nest and TypeORM](https://github.com/msanvarov/nest-rest-typeorm-boilerplate).
 
 #### Deploying with Docker 🐳
 
 - Execute the following command in-app directory:
 
 ```bash
-# creates and loads the docker container with required configuration
-$ docker-compose up -d 
+# creates and loads the docker container in detached mode with the required configuration
+$ docker-compose up -d
 ```
-- The following command will set up and run the docker project for quick use. Then the web application, and MongoDB will be exposed to http://localhost:9000 and http://localhost:27017 respectively.
+
+- The following command will download dependencies and execute the web application on http://localhost:80 (deployed behind a Nginx reverse proxy).
+
+---
 
 ### 🔒 Environment Configuration
 
 By default, the application comes with a config module that can read in every environment variable from the `.env` file.
 
-**APP_ENV** - the application environment to execute as, either in development or production. Determines the type of logging options to utilize. Options: `dev` or `prod`. 
+**APP_ENV** - the application environment to execute as, either in development or production. Determines the type of logging options to utilize. Options: `development` or `production`.
 
-**APP_URL** - the base URL for the application. Made mainly to showcase the power of `ConfigService` and can be removed as it doesn't serve any other purpose
+**WEBTOKEN_ENCRYPTION_KEY** - the key to encrypt/decrypt web tokens with. Make sure to generate a random alphanumeric string for this.
 
-**WEBTOKEN_SECRET_KEY** - the secret key to encrypt/decrypt web tokens with. Make sure to generate a random alphanumeric string for this.
+**WEBTOKEN_EXPIRATION_TIME** - **the time in seconds** when the web token will expire; by default, it's 2400 seconds which is 40 mins.
 
-**WEBTOKEN_EXPIRATION_TIME** - **the time in seconds** indicating when the web token will expire; by default, it's 2400 seconds which is 40 mins.
-
-**DB_URL** - the URL to the MongoDB collection
+**DB_URL** - the connnection string to the MongoDB database.
 
 ---
 
 ### 🏗 Choosing a Web Framework
 
-This boilerplate comes with [Fastify](https://github.com/fastify/fastify) out of the box as it offers [performance benefits](https://github.com/nestjs/nest/blob/master/benchmarks/all_output.txt) over Express. But this can be changed to use [Express](https://expressjs.com/) framework instead of Fastify. 
+This boilerplate comes with [Fastify](https://github.com/fastify/fastify) out of the box as it offers [performance benefits](https://github.com/nestjs/nest/blob/master/benchmarks/all_output.txt) over Express. But the Express adapter is still accessible on a [different branch](https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/express).
 
-For interchangeability:
+---
 
-- Replace the following lines of code in the [main.ts file](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/main.ts) with the ones detailed below.
+### 🦾 HTTP/2
 
-Fastify:
+Luckily, Fastify can enable HTTP2 over either HTTPS (h2) or plaintext (h2c) out of the box. This boilerplate makes use of this on the [feat/http2 branch](https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/feat/http2) where a self-signed certificate was created for testing this capability. The certificate is located in the [certs folder](https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/feat/http2/apps/api/src/assets/certs). **For production, please use a valid certificate.**
 
-```ts
-// for fastify:
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
-import * as headers from 'fastify-helmet';
-import * as fastifyRateLimiter from 'fastify-rate-limit';
-const app = await NestFactory.create<NestFastifyApplication>(
-  AppModule,
-  new FastifyAdapter({ logger: console }),
-);
-app.register(headers);
-app.register(fastifyRateLimiter, {
-  max: 100,
-  timeWindow: '1 minute',
-});
-```
-
-Express:
-
-```ts
-// for express:
-import * as headers from 'helmet';
-import * as rateLimiter from 'express-rate-limit';
-const app = await NestFactory.create(AppModule, {
-  logger: console,
-});
-app.use(headers());
-app.use(
-  rateLimiter({
-    windowMs: 60, // 1 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
-  }),
-);
-```
-
-**Note**: The boilerplate comes with production dependencies for both Express and Fastify to support moving between two. But this is going to leave it bloated especially when only **one web framework is used at a time**. Thus, **it is recommended that when deploying to production, unused dependencies are purged.** 
-
-If you choose to **use Fastify**, this command will **purge all of the Express dependencies**:
+The self signed certificate can be generated via OpenSSL:
 
 ```bash
-# removing Express dependencies
-$ npm rm @nestjs/platform-express express-rate-limit helmet swagger-ui-express @types/express --save
+$ openssl req -x509 -newkey rsa:4096 -keyout api-key.pem -out api-cert.pem -days 365 -nodes
+
 ```
 
-If you choose to **use Express**, this command will **purge all of the Fastify dependencies**:
-
-```bash
-# removing Fastify dependencies
-$ npm rm @nestjs/platform-fastify fastify-helmet fastify-rate-limit fastify-swagger --save
-```
+> Remark: Express can be ran with HTTP/2 by employing the [spdy](https://www.npmjs.com/package/spdy) library.
 
 ---
 
@@ -140,27 +131,19 @@ $ npm rm @nestjs/platform-fastify fastify-helmet fastify-rate-limit fastify-swag
 #### Docker 🐳
 
 ```bash
+# Start the docker container if it's not running
+$ docker start nest-rest-typeorm-api
+
 # unit tests
-$ docker exec -it nest yarn test
+$ docker exec -it nest-rest-typeorm-api npm run test
 
-# e2e tests
-$ docker exec -it nest yarn test:e2e
-
-# test coverage
-$ docker exec -it nest yarn test:cov
 ```
 
 #### Non-Docker
 
 ```bash
-# unit tests
+# execute test
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
 ---
@@ -169,46 +152,58 @@ $ npm run test:cov
 
 The documentation for this boilerplate can be found [on Github pages](https://msanvarov.github.io/nest-rest-mongo-boilerplate/).
 
-The docs can be generated on-demand, simply, by typing `npm run typedocs`. This will produce a **docs** folder with the required front-end files and **start hosting on [localhost](http://localhost:8080)**.
+The docs can be generated on-demand, by typing `npm run typedocs:api:start`. This will produce a **docs/api** folder with the required front-end files and **start hosting on [localhost](http://localhost:8080/)**.
+
+> Remark: The docs for the ui are generated on-demand, by typing `npm run typedocs:ui:start`. This will produce a **docs/ui** folder with the required front-end files and **start hosting on [localhost](http://localhost:8080/)**.
 
 ```bash
-# generate docs for code
-$ npm run typedocs
+# generate docs for api code
+$ npm run typedocs:api:start
 ```
 
 ---
 
 ### 📝 Open API
 
-Out of the box, the web app comes with Swagger; an [open api specification](https://swagger.io/specification/), that is used to describe RESTful APIs. Nest provides a [dedicated module to work with it](https://docs.nestjs.com/recipes/swagger).
+Out of the box, the web app comes with Swagger; an [open api specification](https://swagger.io/specification/), that is used to describe RESTful APIs. Nest provides a [dedicated module to work with it](https://docs.nestjs.com/openapi/introduction).
 
-The configuration for Swagger can be found at this [location](https://github.com/msanvarov/nest-rest-mongo-boilerplate/tree/master/src/swagger).
+The configuration for Swagger can be found at this [location](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/apps/api/src/main.ts).
 
 ---
 
-### ✨ Mongoose
+### ✨ TypeORM
 
-Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. Please view the [documentation](https://mongoosejs.com) for further details.
+TypeORM is an object-relational mapping that acts as an abstraction layer over operations on databases. Please view the [documentation](https://typeorm.io/#/) for further details.
 
-The configuration for Mongoose can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L17).
+The configuration for TypeORM can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/apps/api/src/app.module.ts#L33-L51).
 
 ---
 
 ### 🔊 Logs
 
-This boilerplate comes with an integrated Winston module for logging, the configurations for Winston can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/src/modules/app/app.module.ts#L27).
+This boilerplate comes with a Winston module for **extensive logging**, the configurations for Winston can be found in the [app module](https://github.com/msanvarov/nest-rest-mongo-boilerplate/blob/master/apps/api/src/app.module.ts#L52-L89).
+
+---
+
+### 🏗️ Progress
+
+|                                                                     Branches | Status |
+| ---------------------------------------------------------------------------: | :----- |
+|             [main](https://github.com/msanvarov/nest-rest-mongo-boilerplate) | ✅     |
+| [feat/\*](https://github.com/msanvarov/nest-rest-mongo-boilerplate/branches) | 🚧     |
+
+<!-- > Remark: This template was employed to create a [Real World example app](https://github.com/gothinkster/realworld) on [Github](). -->
 
 ---
 
 ### 👥 Support
 
-Nest has been able to grown because of sponsors and support from backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+PRs are appreciated, I fully rely on the passion ❤️ of the OS developers.
 
 ---
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This starter API is [MIT licensed](LICENSE).
 
-[Author](https://msanvarov.github.io/personal-portfolio/)
-
+[Author](https://sal-anvarov.tech/)

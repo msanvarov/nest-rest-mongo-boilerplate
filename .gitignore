@@ -1,33 +1,25 @@
-# compiled output
-/dist
-/node_modules
+### Node ###
 
-# logs
+# Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
+docs
 
-# OS
-.DS_Store
-lerna-debug.log
-npm-debug.log
-yarn-error.log
-**/npm-debug.log
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# environment
-.env
-
-# build
+# compiled output
 /dist
+/tmp
+/out-tsc
 
-# tests
-/test
-/coverage
-/.nyc_output
-build/config\.gypi
+# dependencies
+node_modules
 
 # IDEs and editors
 /.idea
@@ -44,3 +36,37 @@ build/config\.gypi
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.angular
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+### Node Patch ###
+# Webpack directories
+.webpack/
