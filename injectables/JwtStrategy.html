@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>nest-mongoose-boilerplate documentation</title>
+        <title>starter documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <a href="../" class="navbar-brand">starter documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>JwtStrategy</li>
+  <li >JwtStrategy</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,8 +58,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/auth/jwt.strategy.ts</code>
+            <code>apps/api/src/auth/jwt.strategy.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -84,7 +87,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#validate">validate</a>
+                                <a href="#validate" >validate</a>
                             </li>
                         </ul>
                     </td>
@@ -104,12 +107,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(configService: <a href="../classes/ConfigService.html">ConfigService</a>, profileService: <a href="../injectables/ProfileService.html">ProfileService</a>)</code>
+<code>constructor(configService: ConfigService, usersService: <a href="../injectables/UsersService.html" target="_self">UsersService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/modules/auth/jwt.strategy.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">apps/api/src/auth/jwt.strategy.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -132,7 +135,7 @@
                                                         <td>configService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/ConfigService.html" target="_self" >ConfigService</a></code>
+                                                                    <code>ConfigService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -141,10 +144,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>profileService</td>
+                                                        <td>usersService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/ProfileService.html" target="_self" >ProfileService</a></code>
+                                                                        <code><a href="../injectables/UsersService.html" target="_self" >UsersService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -172,10 +175,8 @@
                 <td class="col-md-4">
                     <a name="validate"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            validate
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>validate</b></span>
                         <a href="#validate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -183,7 +184,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validate(undefined: JwtPayload, done)</code>
+                    <code>validate(undefined: Record<string | number>)</code>
                 </td>
             </tr>
 
@@ -191,7 +192,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/modules/auth/jwt.strategy.ts:35</a></div>
+                            class="link-to-prism">apps/api/src/auth/jwt.strategy.ts:35</a></div>
                 </td>
             </tr>
 
@@ -203,19 +204,19 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                            <code>JwtPayload</code>
+                                            <code>Record&lt;string | number&gt;</code>
                                     </td>
 
                                     <td>
@@ -223,23 +224,6 @@
                                     </td>
 
 
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>done</td>
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>callback to resolve the request user with</p>
-
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -247,11 +231,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>whether or not to validate the jwt token</p>
+                        <p>a object to be signed</p>
 
                     </div>
                 </td>
@@ -264,12 +248,13 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExtractJwt, JwtPayload, Strategy } from &quot;passport-jwt&quot;;
-import { PassportStrategy } from &quot;@nestjs/passport&quot;;
-import { Injectable, UnauthorizedException } from &quot;@nestjs/common&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, UnauthorizedException } from &#x27;@nestjs/common&#x27;;
+import { ConfigService } from &#x27;@nestjs/config&#x27;;
+import { PassportStrategy } from &#x27;@nestjs/passport&#x27;;
+import { ExtractJwt, Strategy } from &#x27;passport-jwt&#x27;;
 
-import { ConfigService } from &quot;../config/config.service&quot;;
-import { ProfileService } from &quot;../profile/profile.service&quot;;
+import { User } from &#x27;../users/user.schema&#x27;;
+import { UsersService } from &#x27;../users/users.service&#x27;;
 
 /**
  * Jwt Strategy Class
@@ -279,38 +264,36 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   /**
    * Constructor
    * @param {ConfigService} configService
-   * @param {ProfileService} profileService
+   * @param {ProfileService} usersService
    */
   constructor(
-    readonly configService: ConfigService,
-    private readonly profileService: ProfileService,
+    private readonly configService: ConfigService,
+    private readonly usersService: UsersService
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
-      secretOrKey: configService.get(&quot;WEBTOKEN_SECRET_KEY&quot;),
+      secretOrKey: configService.get(&#x27;WEBTOKEN_ENCRYPTION_KEY&#x27;),
     });
   }
 
   /**
    * Checks if the bearer token is a valid token
-   * @param {JwtPayload} jwtPayload validation method for jwt token
-   * @param {any} done callback to resolve the request user with
-   * @returns {Promise&lt;boolean&gt;} whether or not to validate the jwt token
+   * @param {Record&lt;string, unknown&gt;} jwtPayload validation method for jwt token
+   * @returns {Promise&lt;Record&lt;string, unknown&gt;&gt;} a object to be signed
    */
-  async validate({ iat, exp, _id }: JwtPayload, done): Promise&lt;boolean&gt; {
+  async validate({ iat, exp, id }: Record&lt;string, number&gt;): Promise&lt;User&gt; {
     const timeDiff &#x3D; exp - iat;
     if (timeDiff &lt;&#x3D; 0) {
       throw new UnauthorizedException();
     }
 
-    const user &#x3D; await this.profileService.get(_id);
+    const user &#x3D; await this.usersService.get(id);
     if (!user) {
       throw new UnauthorizedException();
     }
 
-    done(null, user);
-    return true;
+    return user;
   }
 }
 </code></pre>
@@ -324,14 +307,15 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -343,17 +327,27 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'JwtStrategy.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

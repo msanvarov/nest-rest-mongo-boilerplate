@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>nest-mongoose-boilerplate documentation</title>
+        <title>starter documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <a href="../" class="navbar-brand">starter documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -36,7 +37,7 @@
 
 <ol class="breadcrumb">
   <li>Controllers</li>
-  <li>AuthController</li>
+  <li >AuthController</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -54,15 +55,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/auth/auth.controller.ts</code>
+            <code>apps/api/src/auth/auth.controller.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Prefix</h3>
             </p>
             <p class="comment">
-                <code>api/auth</code>
+                <code>v1/auth</code>
             </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -90,11 +92,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#login">login</a>
+                                <a href="#login" >login</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#register">register</a>
+                                <a href="#register" >register</a>
                             </li>
                         </ul>
                     </td>
@@ -119,10 +121,8 @@
                 <td class="col-md-4">
                     <a name="login"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            login
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>login</b></span>
                         <a href="#login"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -130,7 +130,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>login(payload: <a href="../classes/LoginPayload.html">LoginPayload</a>)</code>
+                    <code>login(payload: <a href="../classes/LoginDto.html" target="_self">LoginDto</a>)</code>
                 </td>
             </tr>
 
@@ -138,14 +138,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;login&#x27;)<br />@ApiResponse({status: 201, description: &#x27;Login Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Bad Request&#x27;})<br />@ApiResponse({status: 401, description: &#x27;Unauthorized&#x27;})<br /></code>
+                    <code>@Public()<br />@Post(&#x27;login&#x27;)<br />@ApiResponse({status: 201, description: &#x27;Login Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Bad Request&#x27;})<br />@ApiResponse({status: 401, description: &#x27;Unauthorized&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/modules/auth/auth.controller.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">apps/api/src/auth/auth.controller.ts:37</a></div>
                 </td>
             </tr>
 
@@ -157,6 +157,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -170,7 +171,7 @@
                                 <tr>
                                     <td>payload</td>
                                     <td>
-                                                <code><a href="../classes/LoginPayload.html" target="_self" >LoginPayload</a></code>
+                                                <code><a href="../classes/LoginDto.html" target="_self" >LoginDto</a></code>
                                     </td>
 
                                     <td>
@@ -189,7 +190,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/ITokenReturnBody.html" target="_self" >Promise&lt;ITokenReturnBody&gt;</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;IJWTResponseBody&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -205,10 +206,8 @@
                 <td class="col-md-4">
                     <a name="register"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            register
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>register</b></span>
                         <a href="#register"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -216,7 +215,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>register(payload: <a href="../classes/RegisterPayload.html">RegisterPayload</a>)</code>
+                    <code>register(payload: <a href="../classes/RegisterDto.html" target="_self">RegisterDto</a>)</code>
                 </td>
             </tr>
 
@@ -224,25 +223,26 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;register&#x27;)<br />@ApiResponse({status: 201, description: &#x27;Registration Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Bad Request&#x27;})<br />@ApiResponse({status: 401, description: &#x27;Unauthorized&#x27;})<br /></code>
+                    <code>@Public()<br />@Post(&#x27;register&#x27;)<br />@ApiResponse({status: 201, description: &#x27;Registration Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Bad Request&#x27;})<br />@ApiResponse({status: 401, description: &#x27;Unauthorized&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/modules/auth/auth.controller.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">apps/api/src/auth/auth.controller.ts:51</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Registration route to create and generate tokens for users</p>
+                    <div class="io-description"><p>Authentication route to register</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -256,7 +256,7 @@
                                 <tr>
                                     <td>payload</td>
                                     <td>
-                                                <code><a href="../classes/RegisterPayload.html" target="_self" >RegisterPayload</a></code>
+                                                <code><a href="../classes/RegisterDto.html" target="_self" >RegisterDto</a></code>
                                     </td>
 
                                     <td>
@@ -275,7 +275,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/ITokenReturnBody.html" target="_self" >Promise&lt;ITokenReturnBody&gt;</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -289,53 +289,59 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Body, Post } from &quot;@nestjs/common&quot;;
-import { ApiResponse, ApiUseTags } from &quot;@nestjs/swagger&quot;;
-import { AuthService, ITokenReturnBody } from &quot;./auth.service&quot;;
-import { LoginPayload } from &quot;./payload/login.payload&quot;;
-import { RegisterPayload } from &quot;./payload/register.payload&quot;;
-import { ProfileService } from &quot;../profile/profile.service&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Post } from &#x27;@nestjs/common&#x27;;
+import { ApiResponse, ApiTags } from &#x27;@nestjs/swagger&#x27;;
+
+import { IJWTResponseBody } from &#x27;@starter/api-types&#x27;;
+
+import { UsersService } from &#x27;../users/users.service&#x27;;
+import { AuthService } from &#x27;./auth.service&#x27;;
+import { LoginDto } from &#x27;./dto/login.dto&#x27;;
+import { RegisterDto } from &#x27;./dto/register.dto&#x27;;
+import { Public } from &#x27;./public.decorator&#x27;;
 
 /**
  * Authentication Controller
  */
-@Controller(&quot;api/auth&quot;)
-@ApiUseTags(&quot;authentication&quot;)
+@ApiTags(&#x27;authentication&#x27;)
+@Controller(&#x27;v1/auth&#x27;)
 export class AuthController {
   /**
    * Constructor
    * @param {AuthService} authService authentication service
-   * @param {ProfileService} profileService profile service
+   * @param {ProfileService} usersService profile service
    */
   constructor(
     private readonly authService: AuthService,
-    private readonly profileService: ProfileService,
+    private readonly usersService: UsersService,
   ) {}
 
   /**
    * Login route to validate and create tokens for users
-   * @param {LoginPayload} payload the login dto
+   * @param {LoginDto} payload the login dto
    */
-  @Post(&quot;login&quot;)
-  @ApiResponse({ status: 201, description: &quot;Login Completed&quot; })
-  @ApiResponse({ status: 400, description: &quot;Bad Request&quot; })
-  @ApiResponse({ status: 401, description: &quot;Unauthorized&quot; })
-  async login(@Body() payload: LoginPayload): Promise&lt;ITokenReturnBody&gt; {
+  @Public()
+  @Post(&#x27;login&#x27;)
+  @ApiResponse({ status: 201, description: &#x27;Login Completed&#x27; })
+  @ApiResponse({ status: 400, description: &#x27;Bad Request&#x27; })
+  @ApiResponse({ status: 401, description: &#x27;Unauthorized&#x27; })
+  async login(@Body() payload: LoginDto): Promise&lt;IJWTResponseBody&gt; {
     const user &#x3D; await this.authService.validateUser(payload);
-    return await this.authService.createToken(user);
+    return this.authService.createToken(user);
   }
 
   /**
-   * Registration route to create and generate tokens for users
-   * @param {RegisterPayload} payload the registration dto
+   * Authentication route to register
+   * @param {RegisterDto} payload the registration dto
    */
-  @Post(&quot;register&quot;)
-  @ApiResponse({ status: 201, description: &quot;Registration Completed&quot; })
-  @ApiResponse({ status: 400, description: &quot;Bad Request&quot; })
-  @ApiResponse({ status: 401, description: &quot;Unauthorized&quot; })
-  async register(@Body() payload: RegisterPayload): Promise&lt;ITokenReturnBody&gt; {
-    const user &#x3D; await this.profileService.create(payload);
-    return await this.authService.createToken(user);
+  @Public()
+  @Post(&#x27;register&#x27;)
+  @ApiResponse({ status: 201, description: &#x27;Registration Completed&#x27; })
+  @ApiResponse({ status: 400, description: &#x27;Bad Request&#x27; })
+  @ApiResponse({ status: 401, description: &#x27;Unauthorized&#x27; })
+  async register(@Body() payload: RegisterDto) {
+    const user &#x3D; await this.usersService.create(payload);
+    return this.authService.createToken(user);
   }
 }
 </code></pre>
@@ -350,14 +356,16 @@ export class AuthController {
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -369,17 +377,27 @@ export class AuthController {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
             var COMPODOC_CURRENT_PAGE_URL = 'AuthController.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>nest-mongoose-boilerplate documentation</title>
+        <title>starter documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <a href="../" class="navbar-brand">starter documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>AppService</li>
+  <li >AppService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,8 +58,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/app/app.service.ts</code>
+            <code>apps/api/src/app.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -83,7 +86,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#root">root</a>
+                                <a href="#startingMessage" >startingMessage</a>
                             </li>
                         </ul>
                     </td>
@@ -103,12 +106,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(config: <a href="../classes/ConfigService.html">ConfigService</a>, logger: Logger)</code>
+<code>constructor(logger: Logger)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/modules/app/app.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/api/src/app.service.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -129,22 +132,6 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>config</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../classes/ConfigService.html" target="_self" >ConfigService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>configuration service</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
                                                         <td>logger</td>
                                                   
                                                         <td>
@@ -156,8 +143,8 @@
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>logger service</p>
-</code>
+                                                                <p>logging service</p>
+
                                                         </td>
                                                 </tr>
                                         </tbody>
@@ -178,18 +165,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="root"></a>
+                    <a name="startingMessage"></a>
                     <span class="name">
-                        <b>
-                            root
-                        </b>
-                        <a href="#root"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>startingMessage</b></span>
+                        <a href="#startingMessage"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>root()</code>
+<code>startingMessage()</code>
                 </td>
             </tr>
 
@@ -197,24 +182,24 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/modules/app/app.service.ts:24</a></div>
+                            class="link-to-prism">apps/api/src/app.service.ts:24</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Fetches and logs the APP_URL environment variable from the configuration file.</p>
+                    <div class="io-description"><p>Returns a welcome message.</p>
 </div>
 
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Returns : </b>    <code>IMessage</code>
 
                     </div>
                     <div class="io-description">
-                        <p>the application url</p>
+                        <p>welcome message</p>
 
                     </div>
                 </td>
@@ -227,9 +212,11 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Inject } from &quot;@nestjs/common&quot;;
-import { ConfigService } from &quot;../config/config.service&quot;;
-import { Logger } from &quot;winston&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable } from &#x27;@nestjs/common&#x27;;
+import { WINSTON_MODULE_PROVIDER } from &#x27;nest-winston&#x27;;
+import { Logger } from &#x27;winston&#x27;;
+
+import { IMessage } from &#x27;@starter/api-types&#x27;;
 
 /**
  * Application Service
@@ -238,22 +225,22 @@ import { Logger } from &quot;winston&quot;;
 export class AppService {
   /**
    * Constructor
-   * @param {ConfigService} config configuration service
-   * @param {Logger} logger logger service
+   * @param {Logger} logger logging service
    */
   constructor(
-    private config: ConfigService,
-    @Inject(&quot;winston&quot;) private readonly logger: Logger,
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger
   ) {}
 
   /**
-   * Fetches and logs the APP_URL environment variable from the configuration file.
-   * @returns {string} the application url
+   * Returns a welcome message.
+   * @returns {string} welcome message
    */
-  root(): string {
-    const appURL &#x3D; this.config.get(&quot;APP_URL&quot;);
-    this.logger.info(&quot;Logging the APP_URL -&gt; &quot; + appURL);
-    return appURL;
+  startingMessage(): IMessage {
+    this.logger.info(&#x27;Calling welcomeMessage -&gt; &#x27;, AppService.name);
+
+    return {
+      message: &#x27;Welcome to api! Navigate to api/v1/docs for documentation.&#x27;,
+    };
   }
 }
 </code></pre>
@@ -267,14 +254,15 @@ export class AppService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -286,17 +274,27 @@ export class AppService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'AppService.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

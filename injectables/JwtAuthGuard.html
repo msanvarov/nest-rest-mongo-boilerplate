@@ -28,16 +28,19 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content controller">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
 
+
+
+
 <ol class="breadcrumb">
-  <li>Controllers</li>
-  <li >AppController</li>
+  <li>Injectables</li>
+  <li >JwtAuthGuard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,19 +58,17 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/api/src/app.controller.ts</code>
+            <code>apps/api/src/auth/jwt-auth.guard.ts</code>
         </p>
-
 
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>App Controller</p>
+                <p>JWT Authentication Guard</p>
 
             </p>
-
 
 
 
@@ -85,8 +86,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#getStartingMessage" >getStartingMessage</a>
+                                <a href="#canActivate" >canActivate</a>
                             </li>
                         </ul>
                     </td>
@@ -101,6 +101,55 @@
 </section>
 
             <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(reflector: Reflector)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/api/src/auth/jwt-auth.guard.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>reflector</td>
+                                                  
+                                                        <td>
+                                                                    <code>Reflector</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
     
     <h3 id="methods">
         Methods
@@ -109,98 +158,107 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getStartingMessage"></a>
+                    <a name="canActivate"></a>
                     <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>getStartingMessage</b></span>
-                        <a href="#getStartingMessage"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>canActivate</b></span>
+                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getStartingMessage()</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Public()<br />@Get(&#x27;/&#x27;)<br />@ApiResponse({status: 200, description: &#x27;Root Request Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Root Request Failed&#x27;})<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">apps/api/src/app.controller.ts:29</a></div>
+<code>canActivate(context: ExecutionContext)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Returns a welcome message</p>
-</div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">apps/api/src/auth/jwt-auth.guard.ts:16</a></div>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>context</td>
+                                    <td>
+                                            <code>ExecutionContext</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;IMessage&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>a welcome message</p>
-
+                        
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>    </div>
+</section>
+
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
-import { ApiBearerAuth, ApiResponse } from &#x27;@nestjs/swagger&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExecutionContext, Injectable } from &#x27;@nestjs/common&#x27;;
+import { Reflector } from &#x27;@nestjs/core&#x27;;
+import { AuthGuard } from &#x27;@nestjs/passport&#x27;;
 
-import { IMessage } from &#x27;@starter/api-types&#x27;;
-
-import { AppService } from &#x27;./app.service&#x27;;
-import { Public } from &#x27;./auth/public.decorator&#x27;;
+import { IS_PUBLIC_KEY } from &#x27;./public.decorator&#x27;;
 
 /**
- * App Controller
+ * JWT Authentication Guard
  */
-@ApiBearerAuth()
-@Controller()
-export class AppController {
-  /**
-   * Constructor
-   * @param {AppService} appService app service
-   */
-  constructor(private readonly appService: AppService) {}
+@Injectable()
+export class JwtAuthGuard extends AuthGuard(&#x27;jwt&#x27;) {
+  constructor(private reflector: Reflector) {
+    super();
+  }
 
-  /**
-   * Returns a welcome message
-   * @returns {string} a welcome message
-   */
-  @Public()
-  @Get(&#x27;/&#x27;)
-  @ApiResponse({ status: 200, description: &#x27;Root Request Completed&#x27; })
-  @ApiResponse({ status: 400, description: &#x27;Root Request Failed&#x27; })
-  async getStartingMessage(): Promise&lt;IMessage&gt; {
-    return this.appService.startingMessage();
+  canActivate(context: ExecutionContext) {
+    const isPublic &#x3D; this.reflector.getAllAndOverride&lt;boolean&gt;(IS_PUBLIC_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+    if (isPublic) {
+      return true;
+    }
+    return super.canActivate(context);
   }
 }
 </code></pre>
     </div>
+
 </div>
-
-
-
 
 
 
@@ -239,8 +297,8 @@ export class AppController {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppController.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'JwtAuthGuard.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

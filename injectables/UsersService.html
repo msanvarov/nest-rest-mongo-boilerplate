@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>nest-mongoose-boilerplate documentation</title>
+        <title>starter documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">nest-mongoose-boilerplate documentation</a>
+            <a href="../" class="navbar-brand">starter documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>ProfileService</li>
+  <li >UsersService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,14 +58,15 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/profile/profile.service.ts</code>
+            <code>apps/api/src/users/users.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Profile Service</p>
+                <p>Users Service</p>
 
             </p>
 
@@ -84,23 +87,24 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#create">create</a>
-                            </li>
-                            <li>
-                                <a href="#delete">delete</a>
+                                <a href="#create" >create</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#edit">edit</a>
+                                <a href="#delete" >delete</a>
                             </li>
                             <li>
-                                <a href="#get">get</a>
+                                    <span class="modifier">Async</span>
+                                <a href="#edit" >edit</a>
                             </li>
                             <li>
-                                <a href="#getByUsername">getByUsername</a>
+                                <a href="#get" >get</a>
                             </li>
                             <li>
-                                <a href="#getByUsernameAndPass">getByUsernameAndPass</a>
+                                <a href="#getByUsername" >getByUsername</a>
+                            </li>
+                            <li>
+                                <a href="#getByUsernameAndPass" >getByUsernameAndPass</a>
                             </li>
                         </ul>
                     </td>
@@ -120,12 +124,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(profileModel: <a href="../interfaces/IProfile.html">Model<IProfile></a>)</code>
+<code>constructor(userModel: <a href="../classes/User.html" target="_self">Model&lt;UserDocument&gt;</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/modules/profile/profile.service.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">apps/api/src/users/users.service.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -145,10 +149,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>profileModel</td>
+                                                        <td>userModel</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../interfaces/IProfile.html" target="_self" >Model&lt;IProfile&gt;</a></code>
+                                                                        <code><a href="../classes/User.html" target="_self" >Model&lt;UserDocument&gt;</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -176,10 +180,8 @@
                 <td class="col-md-4">
                     <a name="create"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            create
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>create</b></span>
                         <a href="#create"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -187,26 +189,27 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(payload: <a href="../classes/RegisterPayload.html">RegisterPayload</a>)</code>
+                    <code>create(payload: <a href="../classes/RegisterDto.html" target="_self">RegisterDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:69</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create a profile with RegisterPayload fields</p>
+                    <div class="io-description"><p>Create a user with RegisterPayload fields</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -220,7 +223,7 @@
                                 <tr>
                                     <td>payload</td>
                                     <td>
-                                                <code><a href="../classes/RegisterPayload.html" target="_self" >RegisterPayload</a></code>
+                                                <code><a href="../classes/RegisterDto.html" target="_self" >RegisterDto</a></code>
                                     </td>
 
                                     <td>
@@ -229,7 +232,7 @@
 
 
                                     <td>
-                                        <p>profile payload</p>
+                                        <p>user payload</p>
 
                                     </td>
                                 </tr>
@@ -239,11 +242,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>created profile data</p>
+                        <p>data from the created user</p>
 
                     </div>
                 </td>
@@ -256,35 +259,36 @@
                 <td class="col-md-4">
                     <a name="delete"></a>
                     <span class="name">
-                        <b>
-                            delete
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>delete</b></span>
                         <a href="#delete"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>delete(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="123"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:123</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:116</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Delete profile given a username</p>
+                    <div class="io-description"><p>Delete user given a username</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -312,11 +316,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IGenericMessageBody.html" target="_self" >Promise&lt;IGenericMessageBody&gt;</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;IGenericMessageBody&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        <p>whether or not the crud operation was completed</p>
+                        <p>whether or not the delete operation was completed</p>
 
                     </div>
                 </td>
@@ -329,10 +333,8 @@
                 <td class="col-md-4">
                     <a name="edit"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            edit
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>edit</b></span>
                         <a href="#edit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -340,26 +342,27 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>edit(payload: <a href="../classes/PatchProfilePayload.html">PatchProfilePayload</a>)</code>
+                    <code>edit(payload: <a href="../classes/PatchUserDto.html" target="_self">PatchUserDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:97</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Edit profile data</p>
+                    <div class="io-description"><p>Edit user data</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -372,7 +375,7 @@
                                 <tr>
                                     <td>payload</td>
                                     <td>
-                                                <code><a href="../classes/PatchProfilePayload.html" target="_self" >PatchProfilePayload</a></code>
+                                                <code><a href="../classes/PatchUserDto.html" target="_self" >PatchUserDto</a></code>
                                     </td>
 
                                     <td>
@@ -387,11 +390,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>mutated profile data</p>
+                        <p>mutated user data</p>
 
                     </div>
                 </td>
@@ -404,35 +407,34 @@
                 <td class="col-md-4">
                     <a name="get"></a>
                     <span class="name">
-                        <b>
-                            get
-                        </b>
+                        <span ><b>get</b></span>
                         <a href="#get"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>get(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>get(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Fetches a profile from database by UUID</p>
+                    <div class="io-description"><p>Fetches user from database by UUID</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -445,7 +447,7 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
 
                                     <td>
@@ -460,11 +462,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>queried profile data</p>
+                        <p>data from queried user</p>
 
                     </div>
                 </td>
@@ -477,9 +479,7 @@
                 <td class="col-md-4">
                     <a name="getByUsername"></a>
                     <span class="name">
-                        <b>
-                            getByUsername
-                        </b>
+                        <span ><b>getByUsername</b></span>
                         <a href="#getByUsername"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -493,19 +493,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:45</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Fetches a profile from database by username</p>
+                    <div class="io-description"><p>Fetches user from database by username</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -533,11 +534,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>queried profile data</p>
+                        <p>data from queried user</p>
 
                     </div>
                 </td>
@@ -550,9 +551,7 @@
                 <td class="col-md-4">
                     <a name="getByUsernameAndPass"></a>
                     <span class="name">
-                        <b>
-                            getByUsernameAndPass
-                        </b>
+                        <span ><b>getByUsernameAndPass</b></span>
                         <a href="#getByUsernameAndPass"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -566,19 +565,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/modules/profile/profile.service.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">apps/api/src/users/users.service.ts:55</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Fetches a profile by their username and hashed password</p>
+                    <div class="io-description"><p>Fetches user by username and hashed password</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -618,11 +618,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/IProfile.html" target="_self" >Promise&lt;IProfile&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>queried profile data</p>
+                        <p>data from queried user</p>
 
                     </div>
                 </td>
@@ -635,135 +635,128 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as crypto from &quot;crypto&quot;;
-import * as gravatar from &quot;gravatar&quot;;
-import { Model } from &quot;mongoose&quot;;
-import { InjectModel } from &quot;@nestjs/mongoose&quot;;
-import {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
   BadRequestException,
   Injectable,
   NotAcceptableException,
-} from &quot;@nestjs/common&quot;;
-import { IProfile } from &quot;./profile.model&quot;;
-import { RegisterPayload } from &quot;modules/auth/payload/register.payload&quot;;
-import { AppRoles } from &quot;../app/app.roles&quot;;
-import { PatchProfilePayload } from &quot;./payload/patch.profile.payload&quot;;
+} from &#x27;@nestjs/common&#x27;;
+import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
+import * as crypto from &#x27;crypto&#x27;;
+import { url } from &#x27;gravatar&#x27;;
+
+import { IGenericMessageBody, UserRolesEnum } from &#x27;@starter/api-types&#x27;;
+
+import { Model } from &#x27;mongoose&#x27;;
+import { RegisterDto } from &#x27;../auth/dto/register.dto&#x27;;
+import { PatchUserDto } from &#x27;./dto/patch-user.dto&#x27;;
+import { User, UserDocument } from &#x27;./user.schema&#x27;;
 
 /**
- * Models a typical response for a crud operation
- */
-export interface IGenericMessageBody {
-  /**
-   * Status message to return
-   */
-  message: string;
-}
-
-/**
- * Profile Service
+ * Users Service
  */
 @Injectable()
-export class ProfileService {
+export class UsersService {
   /**
    * Constructor
-   * @param {Model&lt;IProfile&gt;} profileModel
+   * @param {Model&lt;UserDocument&gt;} userModel
    */
   constructor(
-    @InjectModel(&quot;Profile&quot;) private readonly profileModel: Model&lt;IProfile&gt;,
+    @InjectModel(User.name)
+    private readonly userModel: Model&lt;UserDocument&gt;
   ) {}
 
   /**
-   * Fetches a profile from database by UUID
-   * @param {string} id
-   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   * Fetches user from database by UUID
+   * @param {number} id
+   * @returns {Promise&lt;User&gt;} data from queried user
    */
-  get(id: string): Promise&lt;IProfile&gt; {
-    return this.profileModel.findById(id).exec();
+  get(id: number): Promise&lt;User&gt; {
+    return this.userModel.findById(id).exec();
   }
 
   /**
-   * Fetches a profile from database by username
+   * Fetches user from database by username
    * @param {string} username
-   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   * @returns {Promise&lt;User&gt;} data from queried user
    */
-  getByUsername(username: string): Promise&lt;IProfile&gt; {
-    return this.profileModel.findOne({ username }).exec();
+  getByUsername(username: string): Promise&lt;User&gt; {
+    return this.userModel.findOne({ username }).exec();
   }
 
   /**
-   * Fetches a profile by their username and hashed password
+   * Fetches user by username and hashed password
    * @param {string} username
    * @param {string} password
-   * @returns {Promise&lt;IProfile&gt;} queried profile data
+   * @returns {Promise&lt;User&gt;} data from queried user
    */
-  getByUsernameAndPass(username: string, password: string): Promise&lt;IProfile&gt; {
-    return this.profileModel
+  getByUsernameAndPass(username: string, password: string): Promise&lt;User&gt; {
+    return this.userModel
       .findOne({
         username,
-        password: crypto.createHmac(&quot;sha256&quot;, password).digest(&quot;hex&quot;),
+        password: crypto.createHmac(&#x27;sha256&#x27;, password).digest(&#x27;hex&#x27;),
       })
       .exec();
   }
 
   /**
-   * Create a profile with RegisterPayload fields
-   * @param {RegisterPayload} payload profile payload
-   * @returns {Promise&lt;IProfile&gt;} created profile data
+   * Create a user with RegisterPayload fields
+   * @param {RegisterDto} payload user payload
+   * @returns {Promise&lt;User&gt;} data from the created user
    */
-  async create(payload: RegisterPayload): Promise&lt;IProfile&gt; {
+  async create(payload: RegisterDto): Promise&lt;User&gt; {
     const user &#x3D; await this.getByUsername(payload.username);
     if (user) {
       throw new NotAcceptableException(
-        &quot;The account with the provided username currently exists. Please choose another one.&quot;,
+        &#x27;The account with the provided username currently exists. Please choose another one.&#x27;
       );
     }
     // this will auto assign the admin role to each created user
-    const createdProfile &#x3D; new this.profileModel({
+    const createdProfile &#x3D; new this.userModel({
       ...payload,
-      password: crypto.createHmac(&quot;sha256&quot;, payload.password).digest(&quot;hex&quot;),
-      avatar: gravatar.url(payload.email, {
-        protocol: &quot;http&quot;,
-        s: &quot;200&quot;,
-        r: &quot;pg&quot;,
-        d: &quot;404&quot;,
+      password: crypto.createHmac(&#x27;sha256&#x27;, payload.password).digest(&#x27;hex&#x27;),
+      avatar: url(payload.email, {
+        protocol: &#x27;http&#x27;,
+        s: &#x27;200&#x27;,
+        r: &#x27;pg&#x27;,
+        d: &#x27;404&#x27;,
       }),
-      roles: AppRoles.ADMIN,
+      roles: UserRolesEnum.SUDO,
     });
 
     return createdProfile.save();
   }
 
   /**
-   * Edit profile data
-   * @param {PatchProfilePayload} payload
-   * @returns {Promise&lt;IProfile&gt;} mutated profile data
+   * Edit user data
+   * @param {PatchUserDto} payload
+   * @returns {Promise&lt;User&gt;} mutated user data
    */
-  async edit(payload: PatchProfilePayload): Promise&lt;IProfile&gt; {
+  async edit(payload: PatchUserDto): Promise&lt;User&gt; {
     const { username } &#x3D; payload;
-    const updatedProfile &#x3D; await this.profileModel.updateOne(
+    const updatedProfile &#x3D; await this.userModel.updateOne(
       { username },
-      payload,
+      payload
     );
-    if (updatedProfile.nModified !&#x3D;&#x3D; 1) {
+    if (updatedProfile.modifiedCount !&#x3D;&#x3D; 1) {
       throw new BadRequestException(
-        &quot;The profile with that username does not exist in the system. Please try another username.&quot;,
+        &#x27;The user with that username does not exist in the system. Please try another username.&#x27;
       );
     }
     return this.getByUsername(username);
   }
 
   /**
-   * Delete profile given a username
+   * Delete user given a username
    * @param {string} username
-   * @returns {Promise&lt;IGenericMessageBody&gt;} whether or not the crud operation was completed
+   * @returns {Promise&lt;IGenericMessageBody&gt;} whether or not the delete operation was completed
    */
-  delete(username: string): Promise&lt;IGenericMessageBody&gt; {
-    return this.profileModel.deleteOne({ username }).then(profile &#x3D;&gt; {
-      if (profile.deletedCount &#x3D;&#x3D;&#x3D; 1) {
+  async delete(username: string): Promise&lt;IGenericMessageBody&gt; {
+    return this.userModel.deleteOne({ username }).then((user) &#x3D;&gt; {
+      if (user.deletedCount &#x3D;&#x3D;&#x3D; 1) {
         return { message: &#x60;Deleted ${username} from records&#x60; };
       } else {
         throw new BadRequestException(
-          &#x60;Failed to delete a profile by the name of ${username}.&#x60;,
+          &#x60;Failed to delete a user by the name of ${username}.&#x60;
         );
       }
     });
@@ -780,14 +773,15 @@ export class ProfileService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -799,17 +793,27 @@ export class ProfileService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'ProfileService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UsersService.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

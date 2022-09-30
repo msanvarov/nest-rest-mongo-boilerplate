@@ -28,16 +28,26 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content controller">
+               <div class="content interface">
                    <div class="content-data">
 
 
 
 
 
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-  <li>Controllers</li>
-  <li >AppController</li>
+  <li>Interfaces</li>
+  <li
+  >
+  IPolicyHandler</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,50 +65,36 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/api/src/app.controller.ts</code>
+            <code>apps/api/src/casl/policy-handlers.ts</code>
         </p>
 
 
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>App Controller</p>
 
-            </p>
-
-
-
-
-            <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#getStartingMessage" >getStartingMessage</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Methods</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#handle" 
+>
+                                        handle
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
             <section>
     
@@ -109,103 +105,100 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getStartingMessage"></a>
+                    <a name="handle"></a>
                     <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>getStartingMessage</b></span>
-                        <a href="#getStartingMessage"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>handle</b></span>
+                        <a href="#handle"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getStartingMessage()</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Public()<br />@Get(&#x27;/&#x27;)<br />@ApiResponse({status: 200, description: &#x27;Root Request Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Root Request Failed&#x27;})<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">apps/api/src/app.controller.ts:29</a></div>
+<code>handle(ability: <a href="../undefineds/AppAbility.html" target="_self">AppAbility</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Returns a welcome message</p>
-</div>
+                    <div class="io-line">Defined in <a href="" data-line="7"
+                            class="link-to-prism">apps/api/src/casl/policy-handlers.ts:7</a></div>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ability</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AppAbility" target="_self" >AppAbility</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;IMessage&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>a welcome message</p>
-
+                        
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>    </div>
+</section>
+
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
-import { ApiBearerAuth, ApiResponse } from &#x27;@nestjs/swagger&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { UserActionsEnum } from &#x27;@starter/api-types&#x27;;
 
-import { IMessage } from &#x27;@starter/api-types&#x27;;
+import { User } from &#x27;../users/user.schema&#x27;;
+import { AppAbility } from &#x27;./casl.factory&#x27;;
 
-import { AppService } from &#x27;./app.service&#x27;;
-import { Public } from &#x27;./auth/public.decorator&#x27;;
+interface IPolicyHandler {
+  handle(ability: AppAbility): boolean;
+}
 
-/**
- * App Controller
- */
-@ApiBearerAuth()
-@Controller()
-export class AppController {
-  /**
-   * Constructor
-   * @param {AppService} appService app service
-   */
-  constructor(private readonly appService: AppService) {}
+type PolicyHandlerCallback &#x3D; (ability: AppAbility) &#x3D;&gt; boolean;
 
-  /**
-   * Returns a welcome message
-   * @returns {string} a welcome message
-   */
-  @Public()
-  @Get(&#x27;/&#x27;)
-  @ApiResponse({ status: 200, description: &#x27;Root Request Completed&#x27; })
-  @ApiResponse({ status: 400, description: &#x27;Root Request Failed&#x27; })
-  async getStartingMessage(): Promise&lt;IMessage&gt; {
-    return this.appService.startingMessage();
+export type PolicyHandler &#x3D; IPolicyHandler | PolicyHandlerCallback;
+
+// Policy Handlers
+
+export class DeleteUserPolicyHandler implements IPolicyHandler {
+  handle(ability: AppAbility) {
+    return ability.can(UserActionsEnum.Delete, User);
   }
 }
 </code></pre>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -239,8 +232,8 @@ export class AppController {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppController.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'IPolicyHandler.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

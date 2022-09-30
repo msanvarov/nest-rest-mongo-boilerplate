@@ -28,16 +28,19 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content controller">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
 
+
+
+
 <ol class="breadcrumb">
-  <li>Controllers</li>
-  <li >AppController</li>
+  <li>Injectables</li>
+  <li >CaslFactory</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,18 +58,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/api/src/app.controller.ts</code>
+            <code>apps/api/src/casl/casl.factory.ts</code>
         </p>
 
-
-
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>App Controller</p>
-
-            </p>
 
 
 
@@ -85,8 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#getStartingMessage" >getStartingMessage</a>
+                                <a href="#createForUser" >createForUser</a>
                             </li>
                         </ul>
                     </td>
@@ -100,6 +93,7 @@
     </table>
 </section>
 
+
             <section>
     
     <h3 id="methods">
@@ -109,98 +103,122 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getStartingMessage"></a>
+                    <a name="createForUser"></a>
                     <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>getStartingMessage</b></span>
-                        <a href="#getStartingMessage"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>createForUser</b></span>
+                        <a href="#createForUser"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getStartingMessage()</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Public()<br />@Get(&#x27;/&#x27;)<br />@ApiResponse({status: 200, description: &#x27;Root Request Completed&#x27;})<br />@ApiResponse({status: 400, description: &#x27;Root Request Failed&#x27;})<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">apps/api/src/app.controller.ts:29</a></div>
+<code>createForUser(user: <a href="../classes/User.html" target="_self">User</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Returns a welcome message</p>
-</div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">apps/api/src/casl/casl.factory.ts:21</a></div>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;IMessage&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>a welcome message</p>
-
+                        
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>    </div>
+</section>
+
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
-import { ApiBearerAuth, ApiResponse } from &#x27;@nestjs/swagger&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Ability,
+  AbilityBuilder,
+  AbilityClass,
+  ExtractSubjectType,
+  InferSubjects,
+} from &#x27;@casl/ability&#x27;;
+import { Injectable } from &#x27;@nestjs/common&#x27;;
 
-import { IMessage } from &#x27;@starter/api-types&#x27;;
+import { UserActionsEnum, UserRolesEnum } from &#x27;@starter/api-types&#x27;;
 
-import { AppService } from &#x27;./app.service&#x27;;
-import { Public } from &#x27;./auth/public.decorator&#x27;;
+import { User } from &#x27;../users/user.schema&#x27;;
 
-/**
- * App Controller
- */
-@ApiBearerAuth()
-@Controller()
-export class AppController {
-  /**
-   * Constructor
-   * @param {AppService} appService app service
-   */
-  constructor(private readonly appService: AppService) {}
+// Creating CASL subjects to manage. Remark: all is a special keyword in CASL that represents &quot;any subject&quot;.
+type Subjects &#x3D; InferSubjects&lt;typeof User&gt; | &#x27;all&#x27;;
 
-  /**
-   * Returns a welcome message
-   * @returns {string} a welcome message
-   */
-  @Public()
-  @Get(&#x27;/&#x27;)
-  @ApiResponse({ status: 200, description: &#x27;Root Request Completed&#x27; })
-  @ApiResponse({ status: 400, description: &#x27;Root Request Failed&#x27; })
-  async getStartingMessage(): Promise&lt;IMessage&gt; {
-    return this.appService.startingMessage();
+export type AppAbility &#x3D; Ability&lt;[UserActionsEnum, Subjects]&gt;;
+
+@Injectable()
+export class CaslFactory {
+  createForUser(user: User) {
+    // Remark: the user is coming from the req.user.
+    const { can, build } &#x3D; new AbilityBuilder&lt;
+      Ability&lt;[UserActionsEnum, Subjects]&gt;
+    &gt;(Ability as AbilityClass&lt;AppAbility&gt;);
+
+    if (user.roles.some((role) &#x3D;&gt; role &#x3D;&#x3D;&#x3D; UserRolesEnum.SUDO)) {
+      can(UserActionsEnum.Manage, &#x27;all&#x27;); // read-write access to everything
+    } else {
+      can(UserActionsEnum.Read, &#x27;all&#x27;); // read-only access to everything
+    }
+
+    can(UserActionsEnum.Update, User, { username: user.username }); // update own user
+
+    return build({
+      // Read https://casl.js.org/v5/en/guide/subject-type-detection#use-classes-as-subject-types for details
+      detectSubjectType: (item) &#x3D;&gt;
+        item.constructor as ExtractSubjectType&lt;Subjects&gt;,
+    });
   }
 }
 </code></pre>
     </div>
+
 </div>
-
-
-
 
 
 
@@ -239,8 +257,8 @@ export class AppController {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppController.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CaslFactory.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
