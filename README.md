@@ -200,7 +200,7 @@ This boilerplate comes with an integrated Winston module for logging, the config
 
 ---
 
-### 👥 Support
+### 👥 Contribution
 
 Nest has been able to grown because of sponsors and support from backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
@@ -210,5 +210,5 @@ Nest has been able to grown because of sponsors and support from backers. If you
 
 Nest is [MIT licensed](LICENSE).
 
-[Author](https://msanvarov.github.io/personal-portfolio/)
+[Author](https://sal-anvarov.com/)
 
