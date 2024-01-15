@@ -1,22 +1,33 @@
-version: "3"
+version: "3.7"
 services:
   nest:
     container_name: nest
-    build: .
+    build:
+      context: .
+      target: development
     ports:
-      - "9001:9001"
+      - "9000:9000"
     volumes:
       - .:/app
     links:
       - mongo
+    networks:
+      - boilerplate-network
+    command: npm run start
   mongo:
     image: mongo:latest
     container_name: mongo
     ports:
-      - "80:80"
+      - "27017:27017"
     environment:
-      MONGO_INITDB_DATABASE: nest
+      MONGO_INITDB_DATABASE: ${DB_DATABASE_NAME}
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - data-volume:/data/db
+      - ./data-volume:/data/db
+    networks:
+      - boilerplate-network
+networks:
+  boilerplate-network:
 volumes:
   data-volume:

@@ -1,19 +1,28 @@
-FROM node:carbon
-# App directory
-WORKDIR /app
+FROM node:20-alpine as development-install
+WORKDIR /usr/src/app
 
-# App dependencies
 COPY package*.json ./
-RUN npm i
+COPY yarn.lock ./
+RUN yarn install
 
-# Copy app source code
+FROM development-install as development
 COPY . .
-
-# Env setup
 COPY .env.example .env
+RUN npm run build
 
-#Expose port and begin application
-EXPOSE 9001
+##
 
-# Start the app
-CMD [ "npm", "run", "start:dev"]
+FROM node:20-alpine as production-install
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+COPY yarn.lock ./
+RUN yarn install --production
+
+FROM production-install as production
+COPY . .
+COPY --from=development /usr/src/app/dist ./dist
+
+CMD ["node", "dist/main"]

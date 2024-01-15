@@ -107,7 +107,7 @@ export class ProfileService {
       { username },
       payload,
     );
-    if (updatedProfile.nModified !== 1) {
+    if (updatedProfile.modifiedCount !== 1) {
       throw new BadRequestException(
         "The profile with that username does not exist in the system. Please try another username.",
       );
@@ -121,7 +121,7 @@ export class ProfileService {
    * @returns {Promise<IGenericMessageBody>} whether or not the crud operation was completed
    */
   delete(username: string): Promise<IGenericMessageBody> {
-    return this.profileModel.deleteOne({ username }).then(profile => {
+    return this.profileModel.deleteOne({ username }).then((profile) => {
       if (profile.deletedCount === 1) {
         return { message: `Deleted ${username} from records` };
       } else {

@@ -1,9 +1,9 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { ConfigService } from "../config/config.service";
 import { ProfileService } from "../profile/profile.service";
 import { IProfile } from "../profile/profile.model";
 import { LoginPayload } from "./payload/login.payload";
+import { ConfigService } from "@nestjs/config";
 
 /**
  * Models a typical Login/Register route return body

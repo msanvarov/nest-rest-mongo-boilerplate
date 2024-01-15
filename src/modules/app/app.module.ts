@@ -3,32 +3,44 @@ import * as rotateFile from "winston-daily-rotate-file";
 import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
-import { MongooseModule, MongooseModuleAsyncOptions } from "@nestjs/mongoose";
-import { ConfigModule } from "../config/config.module";
-import { ConfigService } from "../config/config.service";
+import { MongooseModule, MongooseModuleFactoryOptions } from "@nestjs/mongoose";
+import { ConfigModule, ConfigService } from "@nestjs/config";
 import { AuthModule } from "../auth/auth.module";
 import { ProfileModule } from "../profile/profile.module";
 import { WinstonModule } from "../winston/winston.module";
 import { AccessControlModule } from "nest-access-control";
 import { roles } from "./app.roles";
+import * as joi from "joi";
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: [".env.development.local", ".env.development", ".env"],
+      validationSchema: joi.object({
+        APP_ENV: joi.string().valid("dev", "prod").default("dev"),
+        APP_URL: joi.string().uri({
+          scheme: [/https?/],
+        }),
+        WEBTOKEN_SECRET_KEY: joi.string().required(),
+        WEBTOKEN_EXPIRATION_TIME: joi.number().default(1800),
+        DB_URL: joi.string().regex(/^mongodb/),
+      }),
+    }),
     MongooseModule.forRootAsync({
-      imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) =>
-        ({
+      useFactory: (
+        configService: ConfigService,
+      ): MongooseModuleFactoryOptions => {
+        return {
           uri: configService.get("DB_URL"),
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-        } as MongooseModuleAsyncOptions),
+        };
+      },
     }),
     WinstonModule.forRootAsync({
-      imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
-        return configService.isEnv("dev")
+        return configService.get("APP_ENV") === "dev"
           ? {
               level: "info",
               format: winston.format.json(),

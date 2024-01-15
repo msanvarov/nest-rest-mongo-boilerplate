@@ -1,6 +1,6 @@
 import { Injectable, Inject } from "@nestjs/common";
-import { ConfigService } from "../config/config.service";
 import { Logger } from "winston";
+import { ConfigService } from "@nestjs/config";
 
 /**
  * Application Service

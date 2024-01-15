@@ -1,30 +1,46 @@
-import { Schema, Document } from "mongoose";
+import { Document, Types } from "mongoose";
 import { AppRoles } from "modules/app/app.roles";
+import { Prop, SchemaFactory, Schema } from "@nestjs/mongoose";
 
 /**
  * Mongoose Profile Schema
  */
-export const Profile = new Schema({
-  username: { type: String, required: true },
-  email: { type: String, required: true },
-  name: { type: String, required: true },
-  password: { type: String, required: true },
-  avatar: { type: String, required: true },
-  roles: [{ type: String }],
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
+@Schema()
+export class IProfile extends Document implements IIProfile {
+  _id: Types.ObjectId;
+
+  @Prop()
+  username: string;
+
+  @Prop({ required: true, unique: true, lowercase: true })
+  email: string;
+
+  @Prop()
+  name: string;
+
+  @Prop({ select: false })
+  password: string;
+
+  @Prop()
+  avatar: string;
+
+  @Prop()
+  roles: Array<AppRoles>;
+
+  @Prop({ default: Date.now() })
+  date: Date;
+}
+
+export const Profile = SchemaFactory.createForClass(IProfile);
 
 /**
  * Mongoose Profile Document
  */
-export interface IProfile extends Document {
+export interface IIProfile {
   /**
    * UUID
    */
-  readonly _id: Schema.Types.ObjectId;
+  readonly _id: Types.ObjectId;
   /**
    * Username
    */
@@ -48,7 +64,7 @@ export interface IProfile extends Document {
   /**
    * Roles
    */
-  readonly roles: AppRoles;
+  readonly roles: Array<AppRoles>;
   /**
    * Date
    */
